@@ -1,8 +1,8 @@
-// "use client"
-// import { Anton } from 'next/font/google';
+"use client"
+import { Anton } from 'next/font/google';
+import Card from "@/components/Card"
 
-
-// const anton = Anton({ subsets: ['latin'],weight: "400" });
+const anton = Anton({ subsets: ['latin'],weight: "400" });
 
 
 // export default function Home() {
@@ -31,7 +31,28 @@
 export default function home(){
   return (
     <>
-    
+      <div className="h-screen w-full flex-col flex justify-center items-center">
+      <div className="h-[9.375rem] w-[36.625rem] bg-transparent mr-[21.5rem]">
+            <main className=''>
+              <h1 className='text-5xl mb-2'>Hi,we're ViZack Enterprises</h1>
+            </main>
+             <h1 className='text-4xl'>We're The Experts Of</h1>
+           </div>
+           <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mr-[49.5rem]">
+            Get In Touch
+         </button>
+         </div >     
+        
+        <main className={anton.className}>
+        <h1 className='ml-10 border-b-2 text-5xl text-[#f2932f]'>Our services.</h1>
+        </main>
+        <div className='h-[100%] w-[100%] flex justify-center space-x-10 mt-10'>
+      <Card />
+      <Card />
+      <Card />
+
+      </div>
+      
     </>
   )
 }

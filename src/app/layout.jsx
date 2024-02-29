@@ -45,8 +45,9 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="shortcut icon" href="/assets/logo/logo.webp" type="image/x-icon" />
       </head>
-      <body className={inter.className}>{children}
+      <body className={inter.className}>
         <Navbar />
+        {children}
       </body>
     </html>
   );
