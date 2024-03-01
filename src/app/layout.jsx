@@ -24,6 +24,8 @@ import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import "@/styles/icofont.css"
 import Navbar from "@/components/Navbar";
+import NextTopLoader from 'nextjs-toploader';
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -46,6 +48,7 @@ export default function RootLayout({ children }) {
         <link rel="shortcut icon" href="/assets/logo/logo.webp" type="image/x-icon" />
       </head>
       <body className={inter.className}>
+        <NextTopLoader showSpinner={false} color="orange"/>
         <Navbar />
         {children}
       </body>

@@ -4,9 +4,13 @@ import Image from "next/image";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect, useState } from "react";
+import { Anton } from 'next/font/google';
 
 const logo = "/assets/logo/vizack.webp"
+const anton = Anton({ subsets: ['latin'],weight: "400" });
+
 export default function Navbar() {
+    
     useEffect(() => {
         AOS.init({})
     }, [])
@@ -84,14 +88,15 @@ export default function Navbar() {
             <div className="hamburger-menu my-6 lg:hidden max-lg:mx-6" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">
                 <i className="icofont-navigation-menu cursor-pointer text-default-gray hover:text-default text-4xl" onClick={clickCall}></i>
             </div>
-
+            <font className={anton.className}>
             <ul className="max-lg:hidden flex my-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">
-                <Link href={"/"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="300" className="transition-colors mx-4 text-xl cursor-pointer text-default hover:text-default tracking-wider uppercase font-normal">Home</li></Link>
-                <Link href={"/about"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="600" className="transition-colors mx-4 text-xl cursor-pointer text-default-gray hover:text-default tracking-wider uppercase font-normal">About</li></Link>
-                <Link href={"/services"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="900" className="transition-colors mx-4 text-xl cursor-pointer text-default-gray hover:text-default tracking-wider uppercase font-normal">Services</li></Link>
-                <Link href={"/contact"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1200" className="transition-colors mx-4 text-xl cursor-pointer text-default-gray hover:text-default tracking-wider uppercase font-normal">Contact</li></Link>
-                <Link href={"/blogs"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1500" className="transition-colors mx-4 text-xl cursor-pointer text-default-gray hover:text-default tracking-wider uppercase font-normal">Blogs</li></Link>
-     </ul>
+                <Link href={"/"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="300" className="transition-colors mx-4 text-xl cursor-pointer text-default hover:text-default tracking-wider capitalise font-normal">Home</li></Link>
+                <Link href={"/about"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="600" className="transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal">About</li></Link>
+                <Link href={"/services"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="900" className="transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal">Services</li></Link>
+                <Link href={"/contact"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1200" className="transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal">Contact</li></Link>
+                <Link href={"/blogs"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1500" className="transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal">Blogs</li></Link>
+            </ul>
+            </font>
             <div className="search my-6 hover:text-default cursor-pointer max-lg:hidden " data-aos="fade-up" data-aos-delay="600" data-aos-duration="900">
                 <span className="bg-default rounded-md py-4 px-4 cursor-pointer font-semibold tracking-wider text-white hover:text-default hover:bg-white transition-colors"><i className="icofont-touch text-2xl"></i><span>Get In Touch</span></span>
             </div>
