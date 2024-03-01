@@ -36,7 +36,7 @@ export default function home(){
       <div className="h-screen w-full flex-col flex justify-center items-center">
           <div className="h-[9.375rem] w-[36.625rem] bg-transparent mr-[21.5rem] mb-[11rem]">
             <main className={anton.className}>
-              <h1 className='text-5xl mb-2'>Hi,we're <font className="text-default-gray"><span class name="text-default">V</span>i<span class name="text-default">Z</span>ack Enterprises</font></h1>
+              <h1 className='text-5xl mb-2'>Hi,we're <font><span class name="text-default">V</span>i<span class name="text-default">Z</span>ack Enterprises</font></h1>
             </main>
             <font className={anton.className}>
              <h1 className='text-4xl mt-3'>We're The <em className='normal font-serif'> Experts </em> of</h1>
