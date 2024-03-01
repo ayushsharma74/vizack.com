@@ -68,8 +68,8 @@ export default function Blogs() {
                             <div className="content">
                                 <p className="text-default-gray h-[11rem] text-wrap my-4 -mt-4 mx-2 truncate">
                                     Launching a startup is an exhilarating journey filled with challenges, triumphs, and the pursuit of innovation. However, amidst the
-                                    excitement, it's crucial to establish a strong foundation to ensure the long-term success and sustainability of your venture. In
-                                    this blog post, we'll explore the essential steps every entrepreneur...
+                                    excitement, it&apos;s crucial to establish a strong foundation to ensure the long-term success and sustainability of your venture. In
+                                    this blog post, we&apos;ll explore the essential steps every entrepreneur...
                                 </p>
                             </div>
                             <div className="from w-full h-fit flex mt-2 py-2 px-3 justify-between bg-default">
@@ -106,8 +106,8 @@ export default function Blogs() {
                             <div className="content">
                                 <p className="text-default-gray h-[11rem] text-wrap my-4 -mt-4 mx-2 truncate">
                                     Launching a startup is an exhilarating journey filled with challenges, triumphs, and the pursuit of innovation. However, amidst the
-                                    excitement, it's crucial to establish a strong foundation to ensure the long-term success and sustainability of your venture. In
-                                    this blog post, we'll explore the essential steps every entrepreneur...
+                                    excitement, it&apos;s crucial to establish a strong foundation to ensure the long-term success and sustainability of your venture. In
+                                    this blog post, we&apos;ll explore the essential steps every entrepreneur...
                                 </p>
                             </div>
                             <div className="from w-full h-fit flex mt-2 py-2 px-3 justify-between bg-default">
@@ -144,8 +144,8 @@ export default function Blogs() {
                             <div className="content">
                                 <p className="text-default-gray h-[11rem] text-wrap my-4 -mt-4 mx-2 truncate">
                                     Launching a startup is an exhilarating journey filled with challenges, triumphs, and the pursuit of innovation. However, amidst the
-                                    excitement, it's crucial to establish a strong foundation to ensure the long-term success and sustainability of your venture. In
-                                    this blog post, we'll explore the essential steps every entrepreneur...
+                                    excitement, it&apos;s crucial to establish a strong foundation to ensure the long-term success and sustainability of your venture. In
+                                    this blog post, we&apos;ll explore the essential steps every entrepreneur...
                                 </p>
                             </div>
                             <div className="from w-full h-fit flex mt-2 py-2 px-3 justify-between bg-default">
@@ -182,8 +182,8 @@ export default function Blogs() {
                             <div className="content">
                                 <p className="text-default-gray h-[11rem] text-wrap my-4 -mt-4 mx-2 truncate">
                                     Launching a startup is an exhilarating journey filled with challenges, triumphs, and the pursuit of innovation. However, amidst the
-                                    excitement, it's crucial to establish a strong foundation to ensure the long-term success and sustainability of your venture. In
-                                    this blog post, we'll explore the essential steps every entrepreneur...
+                                    excitement, it&apos;s crucial to establish a strong foundation to ensure the long-term success and sustainability of your venture. In
+                                    this blog post, we&apos;ll explore the essential steps every entrepreneur...
                                 </p>
                             </div>
                             <div className="from w-full h-fit flex mt-2 py-2 px-3 justify-between bg-default">
@@ -220,8 +220,8 @@ export default function Blogs() {
                             <div className="content">
                                 <p className="text-default-gray h-[11rem] text-wrap my-4 -mt-4 mx-2 truncate">
                                     Launching a startup is an exhilarating journey filled with challenges, triumphs, and the pursuit of innovation. However, amidst the
-                                    excitement, it's crucial to establish a strong foundation to ensure the long-term success and sustainability of your venture. In
-                                    this blog post, we'll explore the essential steps every entrepreneur...
+                                    excitement, it&apos;s crucial to establish a strong foundation to ensure the long-term success and sustainability of your venture. In
+                                    this blog post, we&apos;ll explore the essential steps every entrepreneur...
                                 </p>
                             </div>
                             <div className="from w-full h-fit flex mt-2 py-2 px-3 justify-between bg-default">
@@ -258,8 +258,8 @@ export default function Blogs() {
                             <div className="content">
                                 <p className="text-default-gray h-[11rem] text-wrap my-4 -mt-4 mx-2 truncate">
                                     Launching a startup is an exhilarating journey filled with challenges, triumphs, and the pursuit of innovation. However, amidst the
-                                    excitement, it's crucial to establish a strong foundation to ensure the long-term success and sustainability of your venture. In
-                                    this blog post, we'll explore the essential steps every entrepreneur...
+                                    excitement, it&apos;s crucial to establish a strong foundation to ensure the long-term success and sustainability of your venture. In
+                                    this blog post, we&apos;ll explore the essential steps every entrepreneur...
                                 </p>
                             </div>
                             <div className="from w-full h-fit flex mt-2 py-2 px-3 justify-between bg-default">
