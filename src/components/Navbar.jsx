@@ -87,10 +87,10 @@ export default function Navbar() {
 
             <ul className="max-lg:hidden flex my-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">
                 <Link href={"/"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="300" className="transition-colors mx-4 text-xl cursor-pointer text-default hover:text-default tracking-wider uppercase font-normal">Home</li></Link>
-                <Link href={"/About"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="600" className="transition-colors mx-4 text-xl cursor-pointer text-default-gray hover:text-default tracking-wider uppercase font-normal">About</li></Link>
-                <Link href={"/Services"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="900" className="transition-colors mx-4 text-xl cursor-pointer text-default-gray hover:text-default tracking-wider uppercase font-normal">Services</li></Link>
-                <Link href={"/Contact"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1200" className="transition-colors mx-4 text-xl cursor-pointer text-default-gray hover:text-default tracking-wider uppercase font-normal">Contact</li></Link>
-                <Link href={"/Blogs"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1500" className="transition-colors mx-4 text-xl cursor-pointer text-default-gray hover:text-default tracking-wider uppercase font-normal">Blogs</li></Link>
+                <Link href={"/about"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="600" className="transition-colors mx-4 text-xl cursor-pointer text-default-gray hover:text-default tracking-wider uppercase font-normal">About</li></Link>
+                <Link href={"/services"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="900" className="transition-colors mx-4 text-xl cursor-pointer text-default-gray hover:text-default tracking-wider uppercase font-normal">Services</li></Link>
+                <Link href={"/contact"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1200" className="transition-colors mx-4 text-xl cursor-pointer text-default-gray hover:text-default tracking-wider uppercase font-normal">Contact</li></Link>
+                <Link href={"/blogs"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1500" className="transition-colors mx-4 text-xl cursor-pointer text-default-gray hover:text-default tracking-wider uppercase font-normal">Blogs</li></Link>
      </ul>
             <div className="search my-6 hover:text-default cursor-pointer max-lg:hidden " data-aos="fade-up" data-aos-delay="600" data-aos-duration="900">
                 <span className="bg-default rounded-md py-4 px-4 cursor-pointer font-semibold tracking-wider text-white hover:text-default hover:bg-white transition-colors"><i className="icofont-touch text-2xl"></i><span>Get In Touch</span></span>
