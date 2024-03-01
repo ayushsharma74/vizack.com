@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.heading{
+    text-shadow: 2px 1px 1px #737373;
+}

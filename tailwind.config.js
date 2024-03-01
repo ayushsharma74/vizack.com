@@ -14,10 +14,18 @@ module.exports = {
       },
       colors: {
         "default": "#F2932F",
-        "default-gray": "#737373"
+        "default-gray": "#737373",
       },
       dropShadow: {
-        "default": "2px 0 3px #737373"
+        "default": "2px 0 3px #737373",
+      },
+      letterSpacing: {
+        "long": "1.5rem",
+      },
+      screens: {
+        "md-lg": "912px",
+        "min-sm": "600px",
+        "min-end": "500px"
       }
       
     },
