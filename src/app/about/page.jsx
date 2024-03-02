@@ -12,7 +12,7 @@ const about = () => {
             <p className="mb-6 text-gray-500 sm:text-lg md:mb-8">Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion,
               where commitment meets excellence. At ViZack Enterprises, we pride
 
-              ourselves on being more than just a startup organization &lsquo we&aposre a
+              ourselves on being more than just a startup organization &lsquo; we&apos;re a
               dedicated team of professionals driven by a singular mission: to provide
               unparalleled customer service and empower small businesses to achieve
               remarkable growth.</p>
@@ -20,10 +20,10 @@ const about = () => {
             <h2 className="mb-2 text-xl font-semibold text-gray-800 sm:text-2xl md:mb-4">Our Goal</h2>
 
             <p className="mb-6 text-gray-500 sm:text-lg md:mb-8">From the moment you connect with us, you become our top priority.
-              Whether you&aposre a budding entrepreneur or an established business looking
-              to expand, we&aposre here to support you every step of the way. Our
+              Whether you&apos;re a budding entrepreneur or an established business looking
+              to expand, we&apos;re here to support you every step of the way. Our
               unwavering dedication to your success means that when you choose ViZack
-              Enterprises, you&aposre choosing a partner who will stop at nothing to help you
+              Enterprises, you&apos;re choosing a partner who will stop at nothing to help you
               realize your business goals.</p>
 
             <ul className="mb-6 list-inside list-disc text-gray-500 sm:text-lg md:mb-8">
@@ -32,7 +32,7 @@ const about = () => {
               <li>dbaskdnasdkaldnal</li>
             </ul>
 
-            <blockquote className="mb-6 border-l-4 pl-4 italic text-gray-500 sm:text-lg md:mb-8 md:pl-6">Join us on this exciting journey, and let&aposs make great things happen &lsquo
+            <blockquote className="mb-6 border-l-4 pl-4 italic text-gray-500 sm:text-lg md:mb-8 md:pl-6">Join us on this exciting journey, and let&apos;s make great things happen &lsquo;
               together.</blockquote>
 
             <div className="relative mb-6 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:mb-8">
@@ -42,17 +42,17 @@ const about = () => {
             <h2 className="mb-2 text-xl font-semibold text-gray-800 sm:text-2xl md:mb-4">Our Approach</h2>
 
             <p className="mb-6 text-gray-500 sm:text-lg">Our approach is simple yet powerful: we listen, we understand, and we
-              deliver. No request is too big or too small &lsquo we&aposre committed to going
+              deliver. No request is too big or too small &lsquo; we&apos;re committed to going
               above and beyond to ensure that every client receives the personalized
               attention and tailored solutions they deserve. When you entrust us with
-              your business, you can rest assured that we&aposll give it everything we&aposve got to
+              your business, you can rest assured that we&apos;ll give it everything we&apos;ve got to
               help you thrive and prosper.</p>
 
             <p className="mb-2 text-gray-500 sm:text-lg md:mb-8">
-              At ViZack Enterprises Pvt Ltd, growth isn&apost just a goal &lsquo it&aposs a promise. So
-              whether you&aposre dreaming of taking your small business to new heights or
+              At ViZack Enterprises Pvt Ltd, growth isn&apos;t just a goal &lsquo; it&apos;s a promise. So
+              whether you&apos;re dreaming of taking your small business to new heights or
               embarking on a journey of expansion and innovation, let ViZack Enterprises
-              be your guide. Together, let&aposs turn your vision into reality and build a
+              be your guide. Together, let&apos;s turn your vision into reality and build a
               brighter future for your business.</p>
           </div>
         </div>
