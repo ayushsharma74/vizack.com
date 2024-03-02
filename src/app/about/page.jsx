@@ -12,7 +12,7 @@ const about = () => {
             <p className="mb-6 text-gray-500 sm:text-lg md:mb-8">Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion,
               where commitment meets excellence. At ViZack Enterprises, we pride
 
-              ourselves on being more than just a startup organization – we&aposre a
+              ourselves on being more than just a startup organization &lsquo we&aposre a
               dedicated team of professionals driven by a singular mission: to provide
               unparalleled customer service and empower small businesses to achieve
               remarkable growth.</p>
@@ -32,7 +32,7 @@ const about = () => {
               <li>dbaskdnasdkaldnal</li>
             </ul>
 
-            <blockquote className="mb-6 border-l-4 pl-4 italic text-gray-500 sm:text-lg md:mb-8 md:pl-6">Join us on this exciting journey, and let&aposs make great things happen –
+            <blockquote className="mb-6 border-l-4 pl-4 italic text-gray-500 sm:text-lg md:mb-8 md:pl-6">Join us on this exciting journey, and let&aposs make great things happen &lsquo
               together.</blockquote>
 
             <div className="relative mb-6 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:mb-8">
@@ -42,14 +42,14 @@ const about = () => {
             <h2 className="mb-2 text-xl font-semibold text-gray-800 sm:text-2xl md:mb-4">Our Approach</h2>
 
             <p className="mb-6 text-gray-500 sm:text-lg">Our approach is simple yet powerful: we listen, we understand, and we
-              deliver. No request is too big or too small – we&aposre committed to going
+              deliver. No request is too big or too small &lsquo we&aposre committed to going
               above and beyond to ensure that every client receives the personalized
               attention and tailored solutions they deserve. When you entrust us with
               your business, you can rest assured that we&aposll give it everything we&aposve got to
               help you thrive and prosper.</p>
 
             <p className="mb-2 text-gray-500 sm:text-lg md:mb-8">
-              At ViZack Enterprises Pvt Ltd, growth isn&apost just a goal – it&aposs a promise. So
+              At ViZack Enterprises Pvt Ltd, growth isn&apost just a goal &lsquo it&aposs a promise. So
               whether you&aposre dreaming of taking your small business to new heights or
               embarking on a journey of expansion and innovation, let ViZack Enterprises
               be your guide. Together, let&aposs turn your vision into reality and build a
