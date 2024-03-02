@@ -50,7 +50,7 @@ export default function home(){
         <Mainpage />
       
         <main className={anton.className}>
-        <h1 className='ml-10 border-b-2 text-5xl text-[#f2932f]'>Our services.</h1>
+        <h1 className='ml-10 border-b-2 text-5xl text-default'>Our services.</h1>
         </main>
         <div className='h-[100%] w-[100%] flex justify-center space-x-10 mt-10'>
       <Card />
@@ -58,6 +58,7 @@ export default function home(){
       <Card />
 
       </div>
+      
     </>
   )
 }

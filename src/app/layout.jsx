@@ -25,7 +25,7 @@ import "@/styles/globals.css";
 import "@/styles/icofont.css"
 import Navbar from "@/components/Navbar";
 import NextTopLoader from 'nextjs-toploader';
-
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -51,6 +51,7 @@ export default function RootLayout({ children }) {
         <NextTopLoader showSpinner={false} color="orange"/>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
