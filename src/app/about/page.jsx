@@ -1,10 +1,10 @@
 import React from 'react'
-
+import Upperbanner from '@/components/Upperbanner'
 const about = () => {
   return (
-    <div>
-      this is my about component
-    </div>
+    <>
+      <Upperbanner content={'ABOUT'} route={'about'} routeName={'About'}/>
+    </>
   )
 }
 
