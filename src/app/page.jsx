@@ -2,6 +2,7 @@
 import { Anton } from 'next/font/google';
 import Card from "@/components/Card"
 import Mainpage from '@/components/Frontpage';
+import CountUp from 'react-countup';
 
 
 const anton = Anton({ subsets: ['latin'], weight: "400" });
@@ -181,25 +182,25 @@ export default function home() {
           <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:gap-8">
 
             <div class="flex flex-col items-center justify-center rounded-lg bg-gray-100 p-4 lg:p-8">
-              <div class="text-xl font-bold text-default sm:text-2xl md:text-3xl">200</div>
+              <div class="text-xl font-bold text-default sm:text-2xl md:text-3xl"><CountUp end={200} enableScrollSpy/></div>
               <div class="text-sm font-semibold sm:text-base">People</div>
             </div>
 
             <div class="flex flex-col items-center justify-center rounded-lg bg-gray-100 p-4 md:p-8">
-              <div class="text-xl font-bold text-default sm:text-2xl md:text-3xl">500+</div>
+              <div class="text-xl font-bold text-default sm:text-2xl md:text-3xl"><CountUp end={500} enableScrollSpy/>+</div>
               <div class="text-sm font-semibold sm:text-base">People</div>
             </div>
 
 
             <div class="flex flex-col items-center justify-center rounded-lg bg-gray-100 p-4 md:p-8">
-              <div class="text-xl font-bold text-default sm:text-2xl md:text-3xl">1000+</div>
+              <div class="text-xl font-bold text-default sm:text-2xl md:text-3xl"><CountUp end={1000} enableScrollSpy/>+</div>
               <div class="text-sm font-semibold sm:text-base">Happy clients</div>
             </div>
 
 
 
             <div class="flex flex-col items-center justify-center rounded-lg bg-gray-100 p-4 md:p-8">
-              <div class="text-xl font-bold text-default sm:text-2xl md:text-3xl">47+</div>
+              <div class="text-xl font-bold text-default sm:text-2xl md:text-3xl"><CountUp end={47} enableScrollSpy/>+</div>
               <div class="text-sm font-semibold sm:text-base">Projects</div>
             </div>
 
