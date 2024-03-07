@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         "default": "#F2932F",
         "default-gray": "#737373",
+        "dark": "#030637",
       },
       dropShadow: {
         "default": "2px 0 3px #737373",

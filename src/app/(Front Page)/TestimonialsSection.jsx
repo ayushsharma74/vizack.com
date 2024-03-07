@@ -17,7 +17,7 @@ function Testimonialssection() {
                 </div>
 
                 <div>
-                  <div class="text-center text-sm font-bold text-indigo-500 sm:text-left md:text-base">Naveen Ghai</div>
+                  <div class="text-center text-sm font-bold text-indigo-500 sm:text-left md:text-base">Gajender</div>
                   <p class="text-center text-sm text-gray-500 sm:text-left md:text-sm">CEO / Datadrift</p>
                 </div>
               </div>

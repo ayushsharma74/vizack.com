@@ -1,25 +1,26 @@
 export default function Footer(){
     const logo = "/assets/logo/logo.ico"
     return(
-        <section class="relative overflow-hidden py-10">
+        <section class="relative overflow-hidden py-10 bg-dark">
   <div class="relative z-10 mx-auto max-w-7xl px-4">
     <div class="-m-6 flex flex-wrap">
       <div class="w-full p-6 md:w-1/2 lg:w-5/12">
         <div class="flex h-full flex-col justify-between">
-          <div class="mb-4 inline-flex items-center">
+          <div class="mb-4 inline-flex rounded-lg items-center">
             <img 
             src={logo} 
             alt=""
             height={50}
-            width={50} 
+                    width={50} 
+                    className="rounded-full"
             />
-            <span class="ml-4 text-lg font-bold">ViZack Enterprises</span>
+            <span class="ml-4 text-lg font-bold text-default">ViZack Enterprises</span>
           </div>
           <div>
-            <p class="mb-4  text-base font-medium">
+            <p class="mb-4  text-base text-default font-medium">
               ViZack Enterprises
             </p>
-            <p class="text-sm text-gray-600">
+            <p class="text-sm text-default-gray">
               © Copyright 2024. All Rights Reserved by ViZack Enterprises.
             </p>
           </div>
@@ -27,13 +28,13 @@ export default function Footer(){
       </div>
       <div class="w-full p-6 md:w-1/2 lg:w-2/12">
         <div class="h-full">
-          <h3 class="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
+          <h3 class="tracking-px mb-9  text-xs font-semibold uppercase text-default">
             Socials
           </h3>
           <ul>
             <li class="mb-4">
               <a
-                class=" text-base font-medium text-gray-900 hover:text-gray-700"
+                      class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
                 href="#"
               >
                 Linkedin
@@ -41,7 +42,7 @@ export default function Footer(){
             </li>
             <li class="mb-4">
               <a
-                class=" text-base font-medium text-gray-900 hover:text-gray-700"
+                      class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
                 href="#"
               >
                 Facebook
@@ -49,7 +50,7 @@ export default function Footer(){
             </li>
             <li class="mb-4">
               <a
-                class=" text-base font-medium text-gray-900 hover:text-gray-700"
+                      class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
                 href="#"
               >
                 Instagram
@@ -57,7 +58,7 @@ export default function Footer(){
             </li>
             <li className='mb-4'>
               <a
-                class=" text-base font-medium text-gray-900 hover:text-gray-700"
+                      class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
                 href="#"
               >
                 Youtube
@@ -65,7 +66,7 @@ export default function Footer(){
             </li>
             <li className=''>
               <a
-                class=" text-base font-medium text-gray-900 hover:text-gray-700"
+                      class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
                 href="#"
               >
                 X
@@ -77,14 +78,14 @@ export default function Footer(){
       </div>
       <div class="w-full p-6 md:w-1/2 lg:w-2/12">
         <div class="h-full">
-          <h3 class="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
+          <h3 class="tracking-px mb-9  text-xs text-default font-semibold uppercase">
             Support
           </h3>
           <ul>
             
             <li class="mb-4">
               <a
-                class=" text-base font-medium text-gray-900 hover:text-gray-700"
+                      class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
                 href="#"
               >
                 Help
@@ -92,7 +93,7 @@ export default function Footer(){
             </li>
             <li class="mb-4">
               <a
-                class=" text-base font-medium text-gray-900 hover:text-gray-700"
+                      class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
                 href="#"
               >
                 Contact Us
@@ -100,7 +101,7 @@ export default function Footer(){
             </li>
             <li>
               <a
-                class=" text-base font-medium text-gray-900 hover:text-gray-700"
+                      class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
                 href="#"
               >
                 Customer Support
@@ -111,13 +112,13 @@ export default function Footer(){
       </div>
       <div class="w-full p-6 md:w-1/2 lg:w-3/12">
         <div class="h-full">
-          <h3 class="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
+          <h3 class="tracking-px mb-9  text-xs font-semibold uppercase text-default">
             Legals
           </h3>
           <ul>
             <li class="mb-4">
               <a
-                class=" text-base font-medium text-gray-900 hover:text-gray-700"
+                      class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
                 href="#"
               >
                 Terms &amp; Conditions
@@ -125,7 +126,7 @@ export default function Footer(){
             </li>
             <li class="mb-4">
               <a
-                class=" text-base font-medium text-gray-900 hover:text-gray-700"
+                      class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
                 href="#"
               >
                 Privacy Policy
@@ -133,7 +134,7 @@ export default function Footer(){
             </li>
             <li>
               <a
-                class=" text-base font-medium text-gray-900 hover:text-gray-700"
+                      class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
                 href="#"
               >
                 Licensing

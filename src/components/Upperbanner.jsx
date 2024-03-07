@@ -6,7 +6,7 @@ export default function Upperbanner({content , route,routeName}){
             <div className="w-full h-72 bg-default flex justify-between max-md-lg:h-64 transition-all max-md:h-52 max-sm:h-36">
       <div className="w-fit h-fit">
                     <div className="h-fit w-fit">
-                        <h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500" className="max-lg:text-8xl text-9xl text-white tracking-long font-extrabold mx-6 py-12 max-md-lg:text-7xl max-md:text-5xl max-min-sm:text-4xl max-min-sm:py-16">
+                        <h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500" className="max-lg:text-8xl text-9xl text-default-gray headings text-shadow-sm shadow-white tracking-long font-extrabold mx-6 py-12 max-md-lg:text-7xl max-md:text-5xl max-min-sm:text-4xl max-min-sm:py-16">
                             {content}
                         </h1>
 

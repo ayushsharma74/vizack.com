@@ -5,3 +5,11 @@
 .heading{
     text-shadow: 2px 1px 1px #737373;
 }
+
+.headings{
+    text-shadow: 2px 1px 1px #fff;
+}
+
+/* .card .image:nth-child(even){
+
+} */

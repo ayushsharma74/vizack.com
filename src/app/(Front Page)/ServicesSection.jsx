@@ -2,8 +2,8 @@ import React from 'react'
 
 function Servicessection() {
   return (
-    <section class="text-gray-600 body-font">
-        <div class="px-5 py-24 mx-auto bg-gray-900">
+    <section class="text-gray-600 body-font w-full">
+        <div class="px-5 py-24 mx-auto bg-gray-900 w-full">
           <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
             <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-default">Our Services</h1>
             <p class="lg:w-1/2 w-full leading-relaxed text-white">where your success is our passion,
