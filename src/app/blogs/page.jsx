@@ -1,4 +1,5 @@
 "use client"
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -14,6 +15,8 @@ const img = {
     img6: ["/assets/background/blogs/strong foundation.jpg", "Startup needs strong foundation", "/assets/background/profile/p1.jpeg", "Jatin Jain", "Feb 21, 2024"],
 }
 export default function blogs() {
+    
+
     return (
         <>
             {/* Header */}
@@ -48,10 +51,11 @@ export default function blogs() {
 
                 </div>
 
-                <div data-aos="fade-left" data-aos-delay="100" data-aos-duration="1500" className="text-default-gray mx-24 my-10 w-[50%] text-3xl max-lg:w-full max-lg:mx-0 max-lg:px-12 max-sm:my-16">A great headline mixed with a weak opening is like iniviting someone into tyour house, only to slam the door in their face as they approach.</div>
+                <div data-aos="fade-left" data-aos-delay="100" data-aos-duration="1500" className="text-default-gray mx-24 my-10 w-[50%] text-3xl max-lg:w-full max-lg:mx-0 max-lg:px-2 max-sm:my-16">A great headline mixed with a weak opening is like iniviting someone into tyour house, only to slam the door in their face as they approach.</div>
             </div>
             <main className="flex w-full h-fit max-lg:flex-col py-16 px-4 gap-2">
                 <div className="left w-[60%] max-lg:w-full ">
+                    {/* Blogs Container */}
                     <div className="card-holder flex flex-col gap-6 pl-32 max-lg:pl-6">
                         <Blog
                             blogImg={img.img1[0]}
@@ -99,6 +103,7 @@ export default function blogs() {
                 </div>
                 <div className="right py-6 pr-16  max-lg:pr-6 pl-6 max-lg:w-full rounded-xl w-[40%]">
                     <div className="container flex flex-col gap-y-8">
+                        {/* Search Bar */}
                         {/* <div className="search">
                             <h1 className="text-default text-2xl font-bold">Search</h1>
                             <div className="sear flex w-full">
@@ -106,35 +111,39 @@ export default function blogs() {
                                 <i className="icofont-search p-6 bg-default text-white absolute right-0 hover:text-default-gray cursor-pointer rounded-full"></i>
                             </div>
                         </div>  */}
+
+                        {/* Categories */}
                         <div className="category flex flex-col">
                             <h1 className="text-2xl text-default tracking-wide font-semibold">Category</h1>
                             <div className="flex flex-col border px-4 my-4 bg-dark py-6 rounded-3xl">
                                 <ul className="flex flex-col gap-4">
-                                    <li className="cursor-pointer bg-white transition-colors duration-200 hover:bg-gradient-to-r hover:from-default-gray hover:to-white py-5 rounded-full px-6 flex justify-between text-xl tracking-normal font-semibold">
+                                    <li className="cursor-pointer bg-white transition-colors duration-200 hover:bg-gradient-to-r hover:from-default-gray hover:to-white py-5 rounded-full px-6 flex justify-between text-xl max-min-end:text-lg tracking-normal font-semibold">
                                         <span>Business Growth</span><span>(1)</span>
                                     </li>
-                                    <li className="cursor-pointer bg-white transition-colors duration-200 hover:bg-gradient-to-r hover:from-default-gray hover:to-white py-5 rounded-full px-6 flex justify-between text-xl tracking-normal font-semibold">
+                                    <li className="cursor-pointer bg-white transition-colors duration-200 hover:bg-gradient-to-r hover:from-default-gray hover:to-white py-5 rounded-full px-6 flex justify-between text-xl max-min-end:text-lg tracking-normal font-semibold">
                                         <span>Business Strategy</span><span>(5)</span>
                                     </li>
-                                    <li className="cursor-pointer bg-white transition-colors duration-200 hover:bg-gradient-to-r hover:from-default-gray hover:to-white py-5 rounded-full px-6 flex justify-between text-xl tracking-normal font-semibold">
+                                    <li className="cursor-pointer bg-white transition-colors duration-200 hover:bg-gradient-to-r hover:from-default-gray hover:to-white py-5 rounded-full px-6 flex justify-between text-xl max-min-end:text-lg tracking-normal font-semibold">
                                         <span>Insurance Consulting</span><span>(1)</span>
                                     </li>
-                                    <li className="cursor-pointer bg-white transition-colors duration-200 hover:bg-gradient-to-r hover:from-default-gray hover:to-white py-5 rounded-full px-6 flex justify-between text-xl tracking-normal font-semibold">
+                                    <li className="cursor-pointer bg-white transition-colors duration-200 hover:bg-gradient-to-r hover:from-default-gray hover:to-white py-5 rounded-full px-6 flex justify-between text-xl max-min-end:text-lg tracking-normal font-semibold">
                                         <span>Law Consulting</span><span>(3)</span>
                                     </li>
-                                    <li className="cursor-pointer bg-white transition-colors duration-200 hover:bg-gradient-to-r hover:from-default-gray hover:to-white py-5 rounded-full px-6 flex justify-between text-xl tracking-normal font-semibold">
+                                    <li className="cursor-pointer bg-white transition-colors duration-200 hover:bg-gradient-to-r hover:from-default-gray hover:to-white py-5 rounded-full px-6 flex justify-between text-xl max-min-end:text-lg tracking-normal font-semibold">
                                         <span>Media</span><span>(4)</span>
                                     </li>
-                                    <li className="cursor-pointer bg-white transition-colors duration-200 hover:bg-gradient-to-r hover:from-default-gray hover:to-white py-5 rounded-full px-6 flex justify-between text-xl tracking-normal font-semibold">
+                                    <li className="cursor-pointer bg-white transition-colors duration-200 hover:bg-gradient-to-r hover:from-default-gray hover:to-white py-5 rounded-full px-6 flex justify-between text-xl max-min-end:text-lg tracking-normal font-semibold">
                                         <span>Web Design</span><span>(11)</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
+
+                        {/* Recent Posts */}
                         <div className="recent flex flex-col">
                             <h1 className="text-2xl text-default tracking-wide font-semibold">Recent Posts</h1>
                             <div className="flex flex-col border px-4 my-4 bg-dark py-6 rounded-3xl">
-                                <ul className="flex flex-col py-4 rounded-2xl gap-4 bg-white">
+                                <ul className="flex flex-col py-4 rounded-2xl gap-4 gap-y-8 max-min-end:text-lg bg-white">
                                     <li className="cursor-pointer px-6 flex flex-col">
                                         
                                         <div className="relative">
@@ -148,8 +157,9 @@ export default function blogs() {
                                             />
                                             <h3 className="absolute bottom-5 z-10 bg-dark px-2 py-1 text-xs left-3 text-default">{img.img1[4] }</h3>
                                         </div>
-                                        <h1 className="text-default text-2xl truncate">{img.img1[1] }</h1>
+                                        <h1 className="text-default-gray hover:text-default transition-colors duration-300 text-2xl truncate">{img.img1[1] }</h1>
                                     </li>
+                                    
                                     <li className="cursor-pointer px-6 flex flex-col">
 
                                         <div className="relative">
@@ -163,7 +173,7 @@ export default function blogs() {
                                             />
                                             <h3 className="absolute bottom-5 z-10 bg-dark px-2 py-1 text-xs left-3 text-default">{img.img2[4]}</h3>
                                         </div>
-                                        <h1 className="text-default text-2xl truncate">{img.img2[1]}</h1>
+                                        <h1 className="text-default-gray hover:text-default transition-colors duration-300 text-2xl truncate">{img.img2[1]}</h1>
                                     </li>
                                     <li className="cursor-pointer px-6 flex flex-col">
 
@@ -178,7 +188,7 @@ export default function blogs() {
                                             />
                                             <h3 className="absolute bottom-5 z-10 bg-dark px-2 py-1 text-xs left-3 text-default">{img.img3[4]}</h3>
                                         </div>
-                                        <h1 className="text-default text-2xl truncate">{img.img3[1]}</h1>
+                                        <h1 className="text-default-gray hover:text-default transition-colors duration-300 text-2xl truncate">{img.img3[1]}</h1>
                                     </li>
                                     <li className="cursor-pointer px-6 flex flex-col">
 
@@ -193,12 +203,29 @@ export default function blogs() {
                                             />
                                             <h3 className="absolute bottom-5 z-10 bg-dark px-2 py-1 text-xs left-3 text-default">{img.img4[4]}</h3>
                                         </div>
-                                        <h1 className="text-default text-2xl truncate">{img.img4[1]}</h1>
+                                        <h1 className="text-default-gray hover:text-default transition-colors duration-300 text-2xl truncate">{img.img4[1]}</h1>
+                                    </li>
+                                    <li className="cursor-pointer px-6 flex flex-col">
+
+                                        <div className="relative">
+                                            <Image
+                                                src={img.img5[0]}
+                                                width={500}
+                                                height={500}
+                                                alt={img.img5[1]}
+
+                                                className="rounded-xl relative"
+                                            />
+                                            <h3 className="absolute bottom-5 z-10 bg-dark px-2 py-1 text-xs left-3 text-default">{img.img5[4]}</h3>
+                                        </div>
+                                        <h1 className="text-default-gray hover:text-default transition-colors duration-300 text-2xl truncate">{img.img5[1]}</h1>
                                     </li>
 
                                 </ul>
                             </div>
                         </div>
+
+                        {/* Tags */}
                         <div className="category flex flex-col">
                             <h1 className="text-2xl text-default tracking-wide font-semibold">Category</h1>
                             <div className="flex border flex-wrap gap-6 px-4 my-4 flex-auto bg-dark py-6 rounded-3xl">

@@ -16,30 +16,30 @@ export default function Blog(props,blogImg, profileImg, profileName, Time, blogT
                         alt={props.blogTitle}
                     />
                 </div>
-                <div className="publisher flex justify-between px-4">
+                <div className="publisher flex max-min-end:flex-col justify-between px-4">
                     <div className="left flex h-16 gap-2 w-full items-center ">
                         <div className="image">
                             <Image
                                 src={props.profileImg}
                                 width={50}
                                 height={50}
-                                className="rounded-full h-[2.83rem] border-2 border-default w-[2.83rem] object-cover"
+                                className="rounded-full h-11 w-11 min-h-8 min-w-8 max-h-11 max-w-11 border-2 border-default object-cover"
                                 loading="eager"
                                 alt={props.profileName}
                             />
                         </div>
                         <div className="name">
-                            <h3 className="text-xl font-bold tracking-wide uppercase">{props.profileName}</h3>
+                            <h3 className="text-xl font-bold tracking-wide uppercase max-sm:text-sm">{props.profileName}</h3>
                         </div>
                     </div>
                     <div className="right flex gap-3 items-center justify-between">
                         <div className="comment flex gap-2 border-r pr-3">
-                            <i class="icofont-duotone icofont-messaging text-2xl text-default"></i>
-                            <h3 className="uppercase text-default-gray cursor-pointer hover:text-dark transition-colors duration-300">comments</h3>
+                            <i class="icofont-duotone icofont-messaging text-2xl max-sm:text-xl text-default"></i>
+                            <h3 className="uppercase text-default-gray max-sm:text-sm cursor-pointer hover:text-dark transition-colors duration-300">comments</h3>
                         </div>
                         <div className="time flex gap-2 w-32 items-center">
-                            <i className="icofont-duotone icofont-calendar text-2xl text-default"></i>
-                            <h3 className="uppercase text-md min-w-fit text-default-gray">{props.Time}</h3>
+                            <i className="icofont-duotone icofont-calendar text-2xl max-sm:text-xl text-default"></i>
+                            <h3 className="uppercase min-w-fit text-default-gray max-sm:text-sm">{props.Time}</h3>
                         </div>
                     </div>
                 </div>
