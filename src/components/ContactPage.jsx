@@ -1,5 +1,13 @@
 'use client'
+import { toast } from "react-toastify";
 export default function ContactPage(){
+  const notify = () => {
+    toast.success('Email Sent Successfully',{
+      position:"bottom-right",
+      pauseOnHover: true,
+      theme:"dark"
+    });
+  }
     async function handleSubmit(event) {
         event.preventDefault();
         const formData = new FormData(event.target);
@@ -113,11 +121,13 @@ export default function ContactPage(){
                     ></textarea>
                   </div>
                   <button
+                  onClick={notify}
                     type="submit"
                     class="w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                   >
                     Send Message
                   </button>
+
                 </form>
               </div>
             </div>

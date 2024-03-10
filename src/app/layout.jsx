@@ -4,6 +4,7 @@ import "@/styles/icofont.css"
 import Navbar from "@/components/Navbar";
 import NextTopLoader from 'nextjs-toploader';
 import Footer from "@/components/Footer";
+import ToastProvider from "@/components/ToastProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,10 +28,12 @@ export default function RootLayout({ children }) {
         <link rel="shortcut icon" href="/assets/logo/logo.webp" type="image/x-icon" />
       </head>
       <body className="max-w-full overflow-x-hidden">
+        <ToastProvider>
         <NextTopLoader showSpinner={false} color="orange"/>
         <Navbar />
         {children}
         <Footer />
+        </ToastProvider>
       </body>
     </html>
   );
