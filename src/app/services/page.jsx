@@ -1,8 +1,6 @@
 "use client"
-// import Link from "next/link";
 import Upperbanner from "@/components/Upperbanner";
 import Content from "@/components/Servicecard";
-// import about from "../about/page";
 export default function services() {
     return (
         <>
