@@ -21,11 +21,12 @@ remarkable growth. `,
 export default function RootLayout({ children }) {
   
   return (
-    <html lang="en">
+    <html lang="en" className="max-w-full overflow-x-hidden">
       <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="shortcut icon" href="/assets/logo/logo.webp" type="image/x-icon" />
       </head>
-      <body className={inter.className}>
+      <body className="max-w-full overflow-x-hidden">
         <NextTopLoader showSpinner={false} color="orange"/>
         <Navbar />
         {children}
