@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 import { useEffect, useState } from "react";
 import { Anton } from 'next/font/google';
 
-const logo = "/assets/logo/vizack.webp"
+const logo = "/assets/logo/logo.png"
 const anton = Anton({ subsets: ['latin'],weight: "400" });
 
 export default function Navbar() {
@@ -73,8 +73,8 @@ export default function Navbar() {
             <div className="logo relative overflow-hidden -top-2 max-lg:mx-6">
                 <Link href={"/"}><Image
                     src={logo}
-                    width={120}
-                    height={130}
+                    width={100}
+                    height={110}
                     alt="ViZack"
                     quality={100 || 75}
                     priority={true}
