@@ -1,38 +1,62 @@
 import React from 'react'
+import Image from 'next/image';
 
 function Aboutussection() {
   return (
-    <div class="bg-white py-6 sm:py-8 lg:py-12">
-        <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-          <div class="grid gap-8 md:grid-cols-2 lg:gap-12 items-center">
-            <div>
-              <div class="h-96 w-96 max-min-end:hidden overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto justify-center">
-                <img src="https://plus.unsplash.com/premium_photo-1661775434014-9c0e8d71de03?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8b2ZmaWNlfGVufDB8fDB8fHww" loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-center object-contain" />
+    <>
+      <div className='relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12'>
+        <div className='w-full items-center mx-auto max-w-screen-lg'>
+          <div className='group grid w-full grid-cols-2'>
+            <div className='pl-16 relative flex items-end flex-col before:block before:absolute before:h-1/6 before:w-4 before:bg-default before:bottom-0 before:left-0 before:rounded-lg  before:transition-all group-hover:before:bg-orange-600 overflow-hidden'>
+              <div className='absolute top-0 left-0 bg-default w-4/6 px-12 py-14 flex flex-col justify-center rounded-xl group-hover:bg-orange-600 transition-all '>
+                <span className='block mb-10 font-bold group-hover:text-orange-300'>HERE WE ARE</span>
+                <h2 className='text-white font-bold text-3xl'>
+                At ViZack Enterprises Pvt Ltd, growth isn't just a goal – it's a promise.
+                </h2>
+              </div>
+              <a className='font-bold text-sm flex mt-2 mb-8 items-center gap-2' href=''>
+                <span>MORE ABOUT US</span>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  strokeWidth='1.5'
+                  stroke='currentColor'
+                  className='w-6 h-6'>
+                  <path strokeLinecap='round' strokeLinejoin='round' d='M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3' />
+                </svg>
+              </a>
+              <div className='rounded-xl overflow-hidden'>
+                <Image src='/assets/images/politics redefined.png' alt='Air Conditioner' width={800} height={800} />
               </div>
             </div>
+            <div>
+              <div className='pl-12'>
+                <p className='peer mb-6 text-black'>
+                  Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion,
+                  where commitment meets excellence. At ViZack Enterprises, we pride
 
-            <div class="md:pt-8">
-              <p class="text-center font-bold text-default md:text-left">Our Story</p>
+                  ourselves on being more than just a startup organization – we're a
+                  dedicated team of professionals driven by a singular mission: to provide
+                  unparalleled customer service and empower small businesses to achieve
+                  remarkable growth.              </p>
+                <p className='mb-6 text-black'>
+                  From the moment you connect with us, you become our top priority.
+                  Whether you're a budding entrepreneur or an established business looking
+                  to expand, we're here to support you every step of the way. Our
+                  unwavering dedication to your success means that when you choose ViZack
+                  Enterprises, you're choosing a partner who will stop at nothing to help you
+                  realize your business goals.              </p>
 
-              <h1 class="mb-4 text-center text-2xl font-bold text-gray-800 sm:text-3xl md:mb-6 md:text-left">About Us</h1>
-
-              <p class="mb-6 text-gray-500 sm:text-lg max-min-end:text-sm max-min-end:max-w-80 max-min-end:h-fit max-min-end:text-wrap md:mb-8">
-                Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion,
-                where commitment meets excellence. At ViZack Enterprises, we pride
-
-                ourselves on being more than just a startup organization – we're a
-                dedicated team of professionals driven by a singular mission: to provide
-                unparalleled customer service and empower small businesses to achieve
-                remarkable growth.<br /><br />
-              </p>
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">Learn More</button>
-
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </>
+  );
+};
 
-  )
-}
+
 
 export default Aboutussection
