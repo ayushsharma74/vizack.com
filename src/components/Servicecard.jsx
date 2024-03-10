@@ -17,7 +17,7 @@ export default function Servicecard({image_src,service,content}) {
           <img src={image_src} alt="" />
         </div>
         <div className="lg:w-3/4 flex flex-col justify-center">
-            <h1 className="text-4xl mb-3">{service}</h1>
+            <h1 className="text-4xl mb-3 font-bold">{service}</h1>
           <p className="mb-4 text-base text-gray-700">
             {content}
           </p>
@@ -27,7 +27,7 @@ export default function Servicecard({image_src,service,content}) {
             className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
           >
             <div class="relative inline-block overflow-hidden bg-hsl-222-100-95 text-hsl-243-80-62">
-            <button type="submit" class="inline-flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded text-white bg-default hover:bg-orange-500 transition-colors">Learn more</button>
+            <button type="submit" className="font-bold inline-flex justify-center py-3 px-4 border border-transparent text-sm rounded text-white bg-default hover:bg-orange-500 transition-colors">Learn more</button>
             </div>
 
           </a>
