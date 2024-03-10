@@ -8,12 +8,12 @@ function Aboutussection() {
         <div className='w-full max-w-screen-lg mx-auto'>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             <div className='relative'>
-              <div className='rounded-lg overflow-hidden px-4  sm:px-0'>
+              <div className='rounded-lg overflow-hidden px-4 sm:px-0'>
                 <Image src='/assets/images/politics redefined.png' alt='Air Conditioner' width={800} height={800} />
               </div>
             </div>
             <div className='flex flex-col justify-center'>
-              <div className='pl-12'>
+              <div className='px-4 sm:px-0'>
                 <h2 className='mb-4 text-2xl font-bold text-gray-800'>At ViZack Enterprises Pvt Ltd</h2>
                 <p className='mb-6 text-gray-800'>
                   Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion, where commitment meets excellence. At ViZack Enterprises, we pride ourselves on being more than just a startup organization – we're a dedicated team of professionals driven by a singular mission: to provide unparalleled customer service and empower small businesses to achieve remarkable growth.
