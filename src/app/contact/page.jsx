@@ -1,6 +1,7 @@
 import React from 'react'
 import '@/styles/globals.css'
 import ContactPage from '@/components/ContactPage'
+import Upperbanner from '@/components/Upperbanner'
 
 const contact = () => {
   return (
@@ -47,6 +48,7 @@ const contact = () => {
           </div>
         </div>
       </section> */}
+       <Upperbanner routeName={"Contact"} route={"contact"}/>
       <ContactPage />
     </>
   )
