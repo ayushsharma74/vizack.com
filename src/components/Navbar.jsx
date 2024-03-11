@@ -69,7 +69,10 @@ export default function Navbar() {
 
     }
     const linkClicked = () => {
-        document.querySelector("nav .hamburger-menu i").click()
+        if(window.innerWidth < 1024){
+            document.querySelector("nav .hamburger-menu i").click()
+
+        }
     }
     return (
         <nav className="w-full h-24 bg-white flex z-50 justify-between max-lg:justify-between">
