@@ -1,6 +1,10 @@
 export default function Footer(){
     const logo = "/assets/logo/logo.ico"
     return(
+      <>
+      <svg className="w-full h-24" viewBox="10 0 750 30">
+        <path d="M0 50 Q 100 30 400 70 T 800 50 " stroke="#111827" fill="none" stroke-width="100" />
+      </svg>
         <section class="relative overflow-hidden py-10 bg-gray-900">
   <div class="relative z-10 mx-auto max-w-7xl px-4">
     <div class="-m-6 flex flex-wrap">
@@ -146,5 +150,6 @@ export default function Footer(){
     </div>
   </div>
 </section>
+</>
     );
 }
