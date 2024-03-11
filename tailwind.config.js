@@ -16,6 +16,9 @@ module.exports = {
         "default": "#F2932F",
         "default-gray": "#737373",
         "dark": "#030637",
+        "blog": "#5a5a5a",
+        "note": "#041442",
+        "note-bg": "#FDF5FA"
       },
       dropShadow: {
         "default": "2px 0 3px #737373",
@@ -27,7 +30,11 @@ module.exports = {
         "md-lg": "912px",
         "min-sm": "600px",
         "min-end": "500px"
+      },
+      boxShadow: {
+        "default-shadow": "0 0 20px 10px #F8F8F8"
       }
+      
       
     },
   },
