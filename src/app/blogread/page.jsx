@@ -19,7 +19,7 @@ export default function Breader() {
             <main className="flex w-full h-fit max-lg:flex-col py-16 px-4 gap-2">
                 <div className="left w-[60%] max-lg:w-full ">
                     {/* Blogs Container */}
-                    <div className="card-holder flex flex-col gap-6 pl-32 max-lg:pl-6">
+                    <div className="card-holder flex flex-col gap-6 pl-32 max-lg:px-6">
                         <div className="card h-fit w-full pb-2">
                             <div className="top min-h-fit">
                                 <div className="image w-full">
