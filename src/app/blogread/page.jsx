@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 // import Blog from "@/components/blogCard";
 import Upperbanner from "@/components/Upperbanner";
-
+import { Banner, PublisherImage, PublisherName, PublisherPublished, Title, Par, Note, Images, SubTitle, Tag, AboutPublisher} from "@/components/blogPage";
+import { useEffect } from "react";
 const img = {
     img1: ["/assets/background/blogs/stock.png", "How can I grow my stocks?", "/assets/background/profile/p4.jpeg", " Gajender", "Feb 12, 2023"],
     img2: ["/assets/background/blogs/apps.jpg", "Applications that must be in every android mobile", "/assets/background/profile/p1.jpeg", "Jatin Jain", "Jun 2, 2023"],
@@ -13,6 +14,106 @@ const img = {
     img6: ["/assets/background/blogs/strong foundation.jpg", "Startup needs strong foundation", "/assets/background/profile/p1.jpeg", "Jatin Jain", "Feb 21, 2024"],
 }
 export default function Breader() {
+    // useEffect(() => {
+    //     async function fetchFileContent() {
+    //         try {
+    //             const response = await fetch('/resources/blogs/blog1.sit');
+    //             if (!response.ok) {
+    //                 throw new Error('Error fetching file');
+    //             }
+    //             const data = await response.text();
+    //             let d = data.split("\n");
+    //             let a;
+    //             d.forEach(dt => {
+    //                 if (dt.includes("banner(")) {
+    //                     a = dt.split("banner(")
+    //                     a = a[1].slice(0, -2)
+    //                     console.log(a)
+    //                 }
+    //                 else if (dt.includes("publisher.profile.image(")) {
+    //                     a = dt.split("publisher.profile.image(")
+    //                     a = a[1].slice(0, -2)
+    //                     console.log(a)
+    //                 }
+    //                 else if (dt.includes("publisher.profile.name(")) {
+    //                     a = dt.split("publisher.profile.name(")
+    //                     a = a[1].slice(0, -2)
+    //                     console.log(a)
+    //                 }
+    //                 else if (dt.includes("publisher.published(")) {
+    //                     a = dt.split("publisher.published(")
+    //                     a = a[1].slice(0, -2)
+    //                     console.log(a)
+    //                 }
+    //                 else if (dt.includes("publisher.about(")) {
+    //                     a = dt.split("publisher.about(")
+    //                     a = a[1].slice(0, -2)
+    //                     console.log(a)
+    //                 }
+    //                 else if (dt.includes("publisher.facebook(")) {
+    //                     a = dt.split("publisher.facebook(")
+    //                     a = a[1].slice(0, -2)
+    //                     console.log(a)
+    //                 }
+    //                 else if (dt.includes("publisher.linkedin(")) {
+    //                     a = dt.split("publisher.linkedin(")
+    //                     a = a[1].slice(0, -2)
+    //                     console.log(a)
+    //                 }
+    //                 else if (dt.includes("publisher.twitter(")) {
+    //                     a = dt.split("publisher.twitter(")
+    //                     a = a[1].slice(0, -2)
+    //                     console.log(a)
+    //                 } else if (dt.includes("publisher.instagram(")) {
+    //                     a = dt.split("publisher.instagram(")
+    //                     a = a[1].slice(0, -2)
+    //                     console.log(a)
+    //                 }
+    //                 else if (dt.includes("title(")) {
+    //                     a = dt.split("title(")
+    //                     a = a[1].slice(0, -2)
+    //                     console.log(a)
+    //                 }
+    //                 else if (dt.includes("par(")) {
+    //                     a = dt.split("par(")
+    //                     a = a[1].slice(0, -2)
+    //                     console.log(a)
+    //                 }
+    //                 else if (dt.includes("note.par(")) {
+    //                     a = dt.split("note.par(")
+    //                     a = a[1].slice(0, -2)
+    //                     console.log(a)
+    //                 }
+    //                 else if (dt.includes("note.title(")) {
+    //                     a = dt.split("note.title(")
+    //                     a = a[1].slice(0, -2)
+    //                     console.log(a)
+    //                 }
+    //                 else if (dt.includes("image(")) {
+    //                     a = dt.split("image(")
+    //                     a = a[1].slice(0, -2)
+    //                     console.log(a)
+    //                 }
+    //                 else if (dt.includes("subtitle(")) {
+    //                     a = dt.split("subtitle(")
+    //                     a = a[1].slice(0, -2)
+    //                     console.log(a)
+    //                 }
+    //                 else if (dt.includes("tags(")) {
+    //                     a = dt.split("tags(")
+    //                     a = a[1].slice(0, -2)
+    //                     console.log(a)
+    //                 }
+    //                 // console.log(dt)
+    //             })
+    //             // console.log(d)
+    //         } catch (error) {
+    //             console.error('Error:', error);
+    //         }
+    //     }
+
+    //     fetchFileContent();
+    // }, []);
     return (
         <>
             <Upperbanner route={"blogread"} routeName={"Blog Reader"}/>
@@ -22,107 +123,45 @@ export default function Breader() {
                     <div className="card-holder flex flex-col gap-6 pl-32 max-lg:px-6">
                         <div className="card h-fit w-full pb-2">
                             <div className="top min-h-fit">
-                                <div className="image w-full">
-                                    <Image
-                                        src={img.img1[0]}
-                                        width={500}
-                                        height={500}
-                                        className="h-auto w-full rounded-2xl object-cover"
-                                        priority
-                                        alt={img.img1[1]}
-                                    />
-                                </div>
+                                
+                                <Banner img={img.img1[0]} alt={img.img1[1]} />
                                 <div className="publisher flex max-min-end:flex-col justify-between px-4">
                                     <div className="left flex h-16 gap-2 w-full items-center ">
-                                        <div className="image">
-                                            <Image
-                                                src={img.img1[2]}
-                                                width={50}
-                                                height={50}
-                                                className="rounded-full h-11 w-11 min-h-8 min-w-8 max-h-11 max-w-11 border-2 border-default object-cover"
-                                                loading="eager"
-                                                alt={img.img1[4]}
-                                            />
-                                        </div>
-                                        <div className="name">
-                                            <h3 className="text-xl font-bold tracking-wide uppercase max-sm:text-sm">{img.img1[3]}</h3>
-                                        </div>
+                                        <PublisherImage img={img.img1[2]} alt={img.img1[3]} />
+                                        <PublisherName name={img.img1[3]} />
                                     </div>
                                     <div className="right flex gap-3 items-center justify-between">
                                         <div className="comment flex gap-2 border-r pr-3">
                                             <i class="icofont-duotone icofont-messaging text-2xl max-sm:text-xl text-default"></i>
                                             <h3 className="uppercase text-default-gray max-sm:text-sm cursor-pointer hover:text-dark transition-colors duration-300">comments</h3>
                                         </div>
-                                        <div className="time flex gap-2 w-32 items-center">
-                                            <i className="icofont-duotone icofont-calendar text-2xl max-sm:text-xl text-default"></i>
-                                            <h3 className="uppercase min-w-fit text-default-gray max-sm:text-sm">{img.img1[4]}</h3>
-                                        </div>
+                                        <PublisherPublished date={img.img1[4]} />
                                     </div>
                                 </div>
                             </div>
                             <div className="bottom px-4 py-6">
-                                <div className="title mb-4">
-                                    <h1 className="text-4xl text-dark font-bold">{img.img1[1]}</h1>
-                                </div>
+                                
+                                <Title Title={img.img1[1] } />
+
                                 <div className="parg mb-4">
-                                    <p className="text-blog mb-4 text-lg tracking-wide">
-                                        Lorem ipsum dolor sit amet consectetur. Lacinia ut volutpat amet netus morbi metus pellentes que in. Vulputate gravida felis gravida gravida nunc accumsan suspendisse. Ac erat ac blandit at cursus ultricies. Adipiscing morbi aliquet in urna porttitor dignissim suspendisse sagittis. Nunc orci cras in sit. Erat maecenas in faucibus nullam cras. Integer fermentum ipsum habitasse sit nunc sed ultrices velit. Nunc massa nec egestas eget tempor etiam. Blandit bibendum ut elit dis pellentesque. Amet et semper auctor dolor aliquet eu. Vestibulum aliquam faucibus senectus condimentum et. Nulla in dolor nec eleifend adipiscing gravida.
-                                    </p>
-                                    <p className="text-blog mb-4 text-lg tracking-wide">
-                                        Consectetur feugiat lectus a malesuada nibh rhoncus. Nisl ac ac elementum hac suspendisse. Eu dui cursus posuere volutpat. Nunc in morbi id at commodo massa aenean. Eu in egestas elementum neque vitae ipsum erat facilisis et. Viverra faucibus odio scelerisque mi pharetra. Pharetra diam et donec vel vel tellus in morbi. Enim ultrices morbi dictum sagittis ac. Vel urna viverra amet tristique pharetra. Interdum eget et ut sed tortor. Proin nisl etiam ac at lectus eget tincidunt pellentesque. Nisi amet adipiscing quam sit mattis ornare lectus malesuada.
-                                    </p>
-                                    <div className="w-full h-fit my-8 overflow-hidden bg-default rounded-lg">
-                                        <div className="w-full ml-2 h-fit bg-note-bg rounded-md py-6">
-                                            <p className="w-full pr-4 px-2 pl-6 text-lg font-semibold  text-note leading-8">
-                                                <span className="text-[#525AFE] text-2xl">&rdquo;</span>
-                                                Vivamus ac dolor dapibus, pharetra lorem ac, tristique metus. Quisque leo ante, tempo in quam in, vestibulum vulputate enim. Nullam porta nulla ut ex aliquet molestie. Praese enim dui, lobort is id placerat bibendum, placerat et justo.
-                                                <span className="text-[#E35FB8] text-2xl">&ldquo;</span>
-                                            </p>
-                                            <h3 className="w-full pr-4 px-2 pl-6 text-default text-2xl font-semibold  my-6 uppercase">&mdash;&mdash; kathryn murphy</h3>
-                                        </div>
-                                    </div>
-                                    <p className="text-blog mb-4 text-lg tracking-wide">
-                                        Iaculis porttitor non amet eros phasellus consectetur scelerisque turpis cursus. Elementum pellentesque id risus sagittis at auctor aliquet. Amet a sodales habitasse egestas diam tortor elementum.
-                                    </p>
+                                    <Par p={"Lorem ipsum dolor sit amet consectetur. Lacinia ut volutpat amet netus morbi metus pellentes que in. Vulputate gravida felis gravida gravida nunc accumsan suspendisse. Ac erat ac blandit at cursus ultricies. Adipiscing morbi aliquet in urna porttitor dignissim suspendisse sagittis. Nunc orci cras in sit. Erat maecenas in faucibus nullam cras. Integer fermentum ipsum habitasse sit nunc sed ultrices velit. Nunc massa nec egestas eget tempor etiam. Blandit bibendum ut elit dis pellentesque. Amet et semper auctor dolor aliquet eu. Vestibulum aliquam faucibus senectus condimentum et. Nulla in dolor nec eleifend adipiscing gravida."} />
+                                    <Par p={"Consectetur feugiat lectus a malesuada nibh rhoncus. Nisl ac ac elementum hac suspendisse. Eu dui cursus posuere volutpat. Nunc in morbi id at commodo massa aenean. Eu in egestas elementum neque vitae ipsum erat facilisis et. Viverra faucibus odio scelerisque mi pharetra. Pharetra diam et donec vel vel tellus in morbi. Enim ultrices morbi dictum sagittis ac. Vel urna viverra amet tristique pharetra. Interdum eget et ut sed tortor. Proin nisl etiam ac at lectus eget tincidunt pellentesque. Nisi amet adipiscing quam sit mattis ornare lectus malesuada." } />
+                                    <Note p={"Vivamus ac dolor dapibus, pharetra lorem ac, tristique metus. Quisque leo ante, tempo in quam in, vestibulum vulputate enim. Nullam porta nulla ut ex aliquet molestie. Praese enim dui, lobort is id placerat bibendum, placerat et justo."} Title="kathryn murphy" />
+                                    <Par p={"Iaculis porttitor non amet eros phasellus consectetur scelerisque turpis cursus. Elementum pellentesque id risus sagittis at auctor aliquet. Amet a sodales habitasse egestas diam tortor elementum."} />
                                     {/* Syntax Images */}
-                                    <div className="syntaxImage w-full flex flex-col justify-center max-lg:flex-wrap gap-8 my-8">
-                                        <Image
-                                            src={img.img2[0]}
-                                            width={350}
-                                            height={300}
-                                            className="w-full rounded-2xl object-cover"
-                                            priority
-                                            alt={img.img2[1]}
-                                        />
-                                        <Image
-                                            src={img.img3[0]}
-                                            width={350}
-                                            height={300}
-                                            className="w-full rounded-2xl object-cover"
-                                            priority
-                                            alt={img.img3[1]}
-                                        />
-                                    </div>
+                                    <Images img={img.img2[0]} alt={img.img2[1]} />
+                                    <Images img={img.img3[0]} alt={img.img3[1]} />
 
                                     {/* Sub Title */}
-                                    <div className="title mb-4">
-                                        <h1 className="text-[1.7rem]  text-dark font-bold">Creative approach to every project</h1>
-                                    </div>
-
-                                    <p className="text-blog mb-4 text-lg tracking-wide">
-                                        Gravida venenatis cursus egestas quam enim suspendisse nunc ut suscipit. Amet lectus massa etiam sit sit tellus eget. Proin purus a id placerat ultrices. Bibendum vitae venenatis dolor lorem dignissim habitasse adipiscing viverra luctus. Vestibulum imperdiet ac id eleifend id. Quis neque at dictumst vestibulum. Varius sed condimentum tortor facilisi vestibulum pharetra sit in adipis. Leo eget risus quis at urna placerat eget interdum.
-                                    </p>
+                                    <SubTitle Title={"Creative approach to every project"} />
+                                    <Par p={"Gravida venenatis cursus egestas quam enim suspendisse nunc ut suscipit. Amet lectus massa etiam sit sit tellus eget. Proin purus a id placerat ultrices. Bibendum vitae venenatis dolor lorem dignissim habitasse adipiscing viverra luctus. Vestibulum imperdiet ac id eleifend id. Quis neque at dictumst vestibulum. Varius sed condimentum tortor facilisi vestibulum pharetra sit in adipis. Leo eget risus quis at urna placerat eget interdum."} />
 
                                     <div className="tags flex flex-wrap justify-between my-8 border-t-[1px] border-b-[1px] border-[#E2E2E2]">
                                         <div className="tags flex gap-2 items-center">
                                             <h1 className="text-dark text-xl font-semibold">Tags: </h1>
                                             <div className="flex flex-wrap gap-6 px-4 flex-auto py-6">
-                                                <h2 className=" bg-gray-200 capitalize font-semibold text-default-gray rounded-lg transition-colors duration-300 text-sm tracking-wide px-3 hover:text-white cursor-pointer py-1 hover:bg-default">
-                                                    Innovation
-                                                </h2>
-                                                <h2 className=" bg-gray-200 capitalize font-semibold text-default-gray rounded-lg transition-colors duration-300 text-sm tracking-wide px-3 hover:text-white cursor-pointer py-1 hover:bg-default">
-                                                    on sale
-                                                </h2>
+                                                <Tag name="Innovation" />
+                                                <Tag name="On Sale" />
                                             </div>
 
                                         </div>
@@ -145,31 +184,9 @@ export default function Breader() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="about-publisher flex max-lg:flex-wrap items-center gap-4 px-6 py-8 rounded-2xl bg-[#F2F7FF]">
-                                        <div className="profile">
-                                            <Image
-                                                src={img.img1[2]}
-                                                width={100}
-                                                height={100}
-                                                className="rounded-full h-32 w-32 min-h-32 min-w-32 max-h-32 max-w-32 object-cover"
-                                                loading="eager"
-                                                alt={img.img1[4]}
-                                            />
-                                        </div>
-                                        <div className="about flex flex-col gap-2">
-                                            <h1 className="font-bold text-2xl text-dark uppercase">{img.img1[3]}</h1>
-                                            <p className="text-blog mb-4 text-lg tracking-wide">
-                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam no eirmod tempor invidunt ut labore et magna aliquyam erat.
-                                            </p>
-                                            <div className="social flex gap-4">
-                                                <Link href={"https://facebook.com"}><i className="text-[#005EF9] hover:text-default text-xl transition-colors duration-300 icofont-facebook"></i></Link>
-                                                <Link href={"https://twitter.com"}><i className="text-[#005EF9] hover:text-default text-xl transition-colors duration-300 icofont-twitter"></i></Link>
-                                                <Link href={"https://linkedin.com"}><i className="text-[#005EF9] hover:text-default text-xl transition-colors duration-300 icofont-linkedin"></i></Link>
-                                                <Link href={"https://instagram.com"}><i className="text-[#005EF9] hover:text-default text-xl transition-colors duration-300 icofont-instagram"></i></Link>
-                                            </div>
-                                        </div>
-                                    </div>
 
+                                    <AboutPublisher img={img.img1[2]} name={img.img1[3]} about="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam no eirmod tempor invidunt ut labore et magna aliquyam erat."  facebook="face" twitter="tweet" instagram="insta" linkedin="linkedin" />
+                                    
                                     <hr className="w-full h-1 my-8" />
                                     
                                     <div className="comment flex shadow-default-shadow rounded-md flex-col gap-8 px-6 py-10 ">
