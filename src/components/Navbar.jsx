@@ -68,6 +68,9 @@ export default function Navbar() {
         }
 
     }
+    const linkClicked = () => {
+        document.querySelector("nav .hamburger-menu i").click()
+    }
     return (
         <nav className="w-full h-24 bg-white flex z-50 justify-between max-lg:justify-between">
             <div className="logo relative overflow-hidden -top-2 max-lg:mx-6">
@@ -87,11 +90,11 @@ export default function Navbar() {
 
             <font className={anton.className}>
             <ul className="max-lg:hidden h-full z-50 flex my-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">
-                <Link href={"/"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="300" className="transition-colors mx-4 text-xl cursor-pointer text-default hover:text-default tracking-wider capitalise font-normal">Home</li></Link>
-                <Link href={"/about"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="600" className="transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal">About</li></Link>
-                <Link href={"/services"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="900" className="transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal">Services</li></Link>
-                <Link href={"/contact"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1200" className="transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal">Contact</li></Link>
-                <Link href={"/blogs"}><li data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1500" className="transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal">Blogs</li></Link>
+                <Link href={"/"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="300" className="transition-colors mx-4 text-xl cursor-pointer text-default hover:text-default tracking-wider capitalise font-normal">Home</li></Link>
+                <Link href={"/about"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="600" className="transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal">About</li></Link>
+                <Link href={"/services"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="900" className="transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal">Services</li></Link>
+                <Link href={"/contact"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1200" className="transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal">Contact</li></Link>
+                <Link href={"/blogs"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1500" className="transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal">Blogs</li></Link>
             </ul>
             </font>
             <div className="hamburger-menu my-6 lg:hidden max-lg:mx-6" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">
