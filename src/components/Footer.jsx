@@ -2,7 +2,7 @@ export default function Footer(){
     const logo = "/assets/logo/logo.ico"
     return(
       <>
-      <svg className="w-full h-24" viewBox="10 0 750 30">
+      <svg className="w-full lg:h-24 h-16 " viewBox="10 0 750 30">
         <path d="M0 50 Q 100 30 400 70 T 800 50 " stroke="#111827" fill="none" stroke-width="100" />
       </svg>
         <section class="relative overflow-hidden py-10 bg-gray-900">
