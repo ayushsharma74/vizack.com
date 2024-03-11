@@ -130,10 +130,16 @@ export default function Breader() {
                                             <div className="tags flex gap-2 items-center">
                                                 <h1 className="text-dark text-xl font-semibold">Share: </h1>
                                                 <div className="flex flex-wrap gap-2 px-4 flex-auto py-6">
-                                                    <Link rel="noopener noreferrer" href={"https://www.facebook.com/sharer/sharer.php?u=https://vizackcom.vercel.app/blogread"} target="_blank" className="hover:text-[#ff6900] transition-colors duration-300" >Facebook</Link>
+                                                    {/* <Link rel="noopener noreferrer" href={"https://www.facebook.com/sharer/sharer.php?u=https://vizackcom.vercel.app/blogread"} target="_blank" className="hover:text-[#ff6900] transition-colors duration-300" >Facebook</Link>
                                                     <Link rel="noopener noreferrer" href={"https://twitter.com/intent/tweet?url=https://vizackcom.vercel.app/blogread&text=Check%20out%20my%20blog%20post"} target="_blank" className="hover:text-[#ff6900] transition-colors duration-300" >X</Link>
                                                     <Link rel="noopener noreferrer" href={"https://www.linkedin.com/shareArticle?url=https://vizackcom.vercel.app/blogread&title="} target="_blank" className="hover:text-[#ff6900] transition-colors duration-300" >Linkedin</Link>
                                                     <Link rel="noopener noreferrer" href={"whatsapp://send?text=https://vizackcom.vercel.app/blogread"} data-action="share/whatsapp/share" target="_blank" className="hover:text-[#ff6900] transition-colors duration-300" >Whatsapp</Link>
+                                                 */}
+                                                 <Link rel="noopener noreferrer" href={"/"} target="_blank" className="hover:text-[#ff6900] transition-colors duration-300" >Facebook</Link>
+                                                    <Link rel="noopener noreferrer" href={"/"} target="_blank" className="hover:text-[#ff6900] transition-colors duration-300" >X</Link>
+                                                    <Link rel="noopener noreferrer" href={"/"} target="_blank" className="hover:text-[#ff6900] transition-colors duration-300" >Linkedin</Link>
+                                                    <Link rel="noopener noreferrer" href={"/"} data-action="share/whatsapp/share" target="_blank" className="hover:text-[#ff6900] transition-colors duration-300" >Whatsapp</Link>
+                                                
                                                 </div>
 
                                             </div>
