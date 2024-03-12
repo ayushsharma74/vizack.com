@@ -1,6 +1,6 @@
 // import React from "react";
 import Image from "next/image";
-// import Link from "next/link";
+import Link from "next/link";
 
 export default function Blog(props,blogImg, profileImg, profileName, Time, blogTitle) {
     return (
@@ -46,7 +46,7 @@ export default function Blog(props,blogImg, profileImg, profileName, Time, blogT
             </div>
             <div className="bottom px-4 py-6">
                 <div className="title mb-4">
-                    <h1 className="text-4xl text-dark font-bold cursor-pointer hover:text-default transition-colors duration-300">{props.blogTitle}</h1>
+                    <Link href={`${props.route}`}><h1 className="text-4xl text-dark font-bold cursor-pointer hover:text-default transition-colors duration-300">{props.blogTitle}</h1></Link>
                 </div>
                 <div className="parg mb-4">
                     <p className="text-default-gray text-lg tracking-wide">
@@ -54,7 +54,7 @@ export default function Blog(props,blogImg, profileImg, profileName, Time, blogT
                     </p>
                 </div>
                 <div className="read-btn">
-                    <button className="text-xl tracking-wider hover:text-default transition-colors duration-300"><span className="mr-2 transition-all duration-300 hover:mr-4">Read More</span><span className="font-bold transition-all duration-300 hover:ml-2">&#10230;</span></button>
+                    <Link href={`${props.route}`}><button className="text-xl tracking-wider hover:text-default transition-colors duration-300"><span className="mr-2 transition-all duration-300 hover:mr-4">Read More</span><span className="font-bold transition-all duration-300 hover:ml-2">&#10230;</span></button></Link>
                 </div>
             </div>
         </div>

@@ -63,6 +63,7 @@ export default function blogs() {
                             profileName={img.img1[3]}
                             Time={img.img1[4]}
                             blogTitle={img.img1[1]}
+                            route={'/blogs/blog1'}
                         />
                         <Blog
                             blogImg={img.img2[0]}
@@ -70,6 +71,7 @@ export default function blogs() {
                             profileName={img.img2[3]}
                             Time={img.img2[4]}
                             blogTitle={img.img2[1]}
+                            route={'/blogs/blog2'}
                         />
                         <Blog
                             blogImg={img.img3[0]}
@@ -77,6 +79,7 @@ export default function blogs() {
                             profileName={img.img3[3]}
                             Time={img.img3[4]}
                             blogTitle={img.img3[1]}
+                            route={'/blogs/blog3'}
                         />
                         <Blog
                             blogImg={img.img4[0]}
@@ -84,6 +87,7 @@ export default function blogs() {
                             profileName={img.img4[3]}
                             Time={img.img4[4]}
                             blogTitle={img.img4[1]}
+                            route={'/blogs/blog4'}
                         />
                         <Blog
                             blogImg={img.img5[0]}
@@ -91,6 +95,7 @@ export default function blogs() {
                             profileName={img.img5[3]}
                             Time={img.img5[4]}
                             blogTitle={img.img5[1]}
+                            route={'/blogs/blog5'}
                         />
                         <Blog
                             blogImg={img.img6[0]}
@@ -98,6 +103,7 @@ export default function blogs() {
                             profileName={img.img6[3]}
                             Time={img.img6[4]}
                             blogTitle={img.img6[1]}
+                            route={'/blogs/blog6'}
                         />
                     </div>
                 </div>

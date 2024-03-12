@@ -26,7 +26,6 @@ export default function home() {
       <Heading text='Testimonials'/>
       <Testimonialssection />
       <Suggestions/>
-      
     </>
   )
 }
