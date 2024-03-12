@@ -39,7 +39,8 @@ export default function Footer(){
             <li class="mb-4">
               <a
                       class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
-                href="#"
+                href="https://www.linkedin.com/in/vizackenterprises"
+                target="blank"
               >
                 Linkedin
               </a>
@@ -55,7 +56,8 @@ export default function Footer(){
             <li class="mb-4">
               <a
                       class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
-                href="#"
+                href="https://www.instagram.com/vizack.enterprises/"
+                target="blank"
               >
                 Instagram
               </a>
@@ -71,7 +73,8 @@ export default function Footer(){
             <li className=''>
               <a
                       class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
-                href="#"
+                href="https://twitter.com/ViZackEnterpise"
+                target="blank"
               >
                 X
               </a>
