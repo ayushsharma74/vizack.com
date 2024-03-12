@@ -1,5 +1,6 @@
 import React from 'react'
 import Upperbanner from '@/components/Upperbanner'
+
 const about = () => {
   return (
     <>
@@ -27,16 +28,16 @@ const about = () => {
               realize your business goals.</p>
 
             <ul className="mb-6 list-inside list-disc text-gray-500 sm:text-lg md:mb-8">
-              <li data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">sbdjak;da  adandlka</li>
-              <li data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">sdbhadjskadnas,dn,a</li>
-              <li data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">dbaskdnasdkaldnal</li>
+              <li data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">Quality Services</li>
+              <li data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Experienced Professionals</li>
+              <li data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">Customer Priority</li>
             </ul>
 
             <blockquote data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" className="mb-6 border-l-4 pl-4 italic text-gray-500 sm:text-lg md:mb-8 md:pl-6">Join us on this exciting journey, and let&apos;s make great things happen &lsquo;
               together.</blockquote>
 
             <div data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" className="relative mb-6 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:mb-8">
-              <img  src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWFya2V0aW5nfGVufDB8fDB8fHww" loading="lazy" alt="Photo by Minh Pham" className="h-full w-full object-cover object-center" />
+              <img  src="https://images.unsplash.com/photo-1552664688-cf412ec27db2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTl8fGFib3V0fGVufDB8fDB8fHww" loading="lazy" alt="Photo by Minh Pham" className="h-full w-full object-cover object-center" />
             </div>
 
             <h2 data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" className="mb-2 text-xl font-semibold text-default sm:text-2xl md:mb-4">Our Approach</h2>
