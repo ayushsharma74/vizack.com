@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Aboutussection() {
   return (
@@ -21,7 +22,7 @@ function Aboutussection() {
                 <p className='mb-6 text-gray-800'>
                   From the moment you connect with us, you become our top priority. Whether you're a budding entrepreneur or an established business looking to expand, we're here to support you every step of the way. Our unwavering dedication to your success means that when you choose ViZack Enterprises, you're choosing a partner who will stop at nothing to help you realize your business goals.
                 </p>
-                <a href='#' className='inline-block rounded-lg bg-emerald-500 px-8 py-3 text-center text-sm font-semibold text-white transition duration-300 hover:bg-emerald-600 focus-visible:ring ring-emerald-500 focus:outline-none focus:ring-offset-2 focus:ring-offset-gray-50'>MORE ABOUT US</a>
+                <Link href='/about' className='inline-block rounded-lg bg-emerald-500 px-8 py-3 text-center text-sm font-semibold text-white transition duration-300 hover:bg-emerald-600 focus-visible:ring ring-emerald-500 focus:outline-none focus:ring-offset-2 focus:ring-offset-gray-50'>MORE ABOUT US</Link>
               </div>
             </div>
           </div>

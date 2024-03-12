@@ -2,6 +2,7 @@
 import { Anton } from 'next/font/google';
 import { Typewriter } from "react-simple-typewriter";
 import Image from 'next/image';
+import Link from 'next/link';
 const anton = Anton({ subsets: ['latin'], weight: "400" });
 
 
@@ -29,12 +30,15 @@ export default function Mainpage() {
                   </span>
                 </h1>
                 <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
-                  <button className="inline-flex items-center text-white bg-orange-500 justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full sm:w-auto">
+                  <Link href={"/services"}><button className="inline-flex items-center text-white bg-orange-500 justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full sm:w-auto">
                     Our Services
                   </button>
+                  </Link>
+                  <Link href={"/contact"}>
                   <button className="inline-flex hover:ring-gray-400 hover:bg-gray-100 items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 mt-3 w-full sm:mt-0 sm:ml-3 sm:w-auto">
                     Contact Us
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>

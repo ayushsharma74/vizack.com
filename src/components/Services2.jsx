@@ -1,6 +1,7 @@
 // WorkingProcess.js
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Services2 = () => {
     return (
@@ -13,10 +14,10 @@ const Services2 = () => {
                         <p className="text-sm md:text-base text-gray-50 mb-4">
                             At ViZack Enterprises, We are commited to providing you our best in a huge variety of services.
                         </p>
-                        <a href="#"
+                        <Link href="/services"
                             className="bg-transparent mr-auto hover:bg-default text-default hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-default hover:border-transparent">
                             Learn More
-                        </a>
+                        </Link>
                     </div>
                     <div className="ml-0 md:ml-12 lg:w-2/3 sticky">
                         <div className="container mx-auto w-full h-full">

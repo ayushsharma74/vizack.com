@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Suggestions = () => {
@@ -21,12 +22,12 @@ const Suggestions = () => {
               <p className="mb-8 max-w-md text-white">Do you have any suggestions for us? Reach out to us in just one click!</p>
 
               <div className="mt-auto">
-                <a
-                  href="#"
+                <Link
+                  href="/contact"
                   className="inline-block rounded-lg bg-default px-8 py-3 text-center text-sm font-semibold text-gray-800 outline-none ring-indigo-300 transition duration-100 hover:bg-orange-600 focus-visible:ring active:bg-gray-200 md:text-base"
                 >
                   Contact Us
-                </a>
+                </Link>
               </div>
             </div>
           </div>
