@@ -5,7 +5,6 @@ import Link from "next/link";
 import Upperbanner from "@/components/Upperbanner";
 import { Banner, PublisherImage, PublisherName, PublisherPublished, Title, Par, Note, Images, SubTitle, Tag, AboutPublisher} from "@/components/blogPage";
 import { useEffect } from "react";
-import Comments from "@/components/comments";
 const img = {
     img1: ["/assets/background/blogs/stock.png", "How can I grow my stocks?", "/assets/background/profile/p4.jpeg", " Gajender", "Feb 12, 2023"],
     img2: ["/assets/background/blogs/apps.jpg", "Applications that must be in every android mobile", "/assets/background/profile/p1.jpeg", "Jatin Jain", "Jun 2, 2023"],
@@ -383,7 +382,6 @@ export default function Breader() {
                     </div>
                 </div>
             </main>
-            <Comments />
         </>
     );
 }
