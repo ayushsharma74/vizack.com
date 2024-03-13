@@ -5,14 +5,15 @@ import Navbar from "@/components/Navbar";
 import NextTopLoader from 'nextjs-toploader';
 import Footer from "@/components/Footer";
 import ToastProvider from "@/components/ToastProvider";
-
+import { url } from "inspector";
+const logo = "/assets/logo/logo.png";
 export const metadata = {
   title: "Vizack Enterprises",
   description: "Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion, where commitment meets excellence. At ViZack Enterprises, we pride ourselves on being more than just a startup organization - we're a dedicated team of professionals driven by a singular mission: to provide unparalleled customer service and empower small businesses to achieve remarkable growth.",
   openGraph:{
     title: "ViZack Enterprises Pvt Ltd",
     author: "ViZack Enterprises Pvt Ltd",
-    images: [{url: "/assets/logo/logo.png"}],
+    images: [{url: logo}],
     url: "https://www.vizackenterprises.com",
     description: "Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion, where commitment meets excellence. At ViZack Enterprises, we pride ourselves on being more than just a startup organization - we're a dedicated team of professionals driven by a singular mission: to provide unparalleled customer service and empower small businesses to achieve remarkable growth.",
     type: "website",
@@ -23,13 +24,13 @@ export const metadata = {
     title: "ViZack Enterprises Pvt Ltd",
     description: "Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion, where commitment meets excellence. At ViZack Enterprises, we pride ourselves on being more than just a startup organization - we're a dedicated team of professionals driven by a singular mission: to provide unparalleled customer service and empower small businesses to achieve remarkable growth.",
     url: "https://twitter.com/ViZackEnterpise",
-    images: [{url: "/assets/logo/logo.png"}],
+    images: [{url: logo}],
   },
   robots:{
     url: "/robots.txt"
   },
   icons: {
-    icon: "/assets/logo/logo.png"
+    icon: logo
   },
   keywords: "ViZack, vizack, enterprises, vizack enterprises, pvt, Pvt, ltd, Ltd, vizack enterprises pvt,vizack enterprises pvt ltd, the ViZack, Digital, marketing, digital marketing, website, web, development, web development, website development, hosting, create website, make website, want digital, want digital marketing"
 };
