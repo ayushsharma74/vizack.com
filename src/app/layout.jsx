@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
         <meta name="descrption" content="Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion, where commitment meets excellence. At ViZack Enterprises, we pride ourselves on being more than just a startup organization - we're a dedicated team of professionals driven by a singular mission: to provide unparalleled customer service and empower small businesses to achieve remarkable growth."/>
-        <title>Vizack Enterprises</title>
+        <title>Vizack Enterprises Pvt Ltd</title>
         <meta name="robots" content="index, imageindex, follow, max-snippet:50, max-video-preview:10, max-image-preview:large, nocache" />
         <meta name="keywords" content="ViZack, vizack, enterprises, vizack enterprises, pvt, Pvt, ltd, Ltd, vizack enterprises pvt,vizack enterprises pvt ltd, the ViZack, Digital, marketing, digital marketing, website, web, development, web development, website development, hosting, create website, make website, want digital, want digital marketing" />
         <link rel="canonical" href="https://www.vizackenterprises.com" />
