@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
 {/*         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=7" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" /> */}
-        <meta name="author" content="ViZack Enterprises Pvt Ltd" />
+{/*         <meta name="author" content="ViZack Enterprises" /> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="ViZack Enterprises Pvt Ltd" />
         <meta name="twitter:description" content=`Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion, 
