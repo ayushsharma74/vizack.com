@@ -46,18 +46,18 @@ ourselves on being more than just a startup organization - we're a
 dedicated team of professionals driven by a singular mission: to provide 
 unparalleled customer service and empower small businesses to achieve 
 remarkable growth.` />
-        <meta property="og:image" content="/assets/logo/logo.png">
-        <meta property="og:url" content="https://www.vizackenterprises.com">
-        <meta property="og:type" content="website">
-        <meta property="og:locale" content="en_US">
+        <meta property="og:image" content="/assets/logo/logo.png" />
+        <meta property="og:url" content="https://www.vizackenterprises.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
         <meta name="keywords" 
         content="
           ViZack, vizack, enterprises, vizack enterprises, pvt, Pvt, ltd, Ltd, vizack enterprises pvt,vizack enterprises pvt ltd, the ViZack, Digital, marketing, digital marketing,
           website, web, development, web development, website development, hosting, create website, make website, want digital, want digital marketing
-        ">
-        <link rel="canonical" href="https://www.vizackenterprises.com">
-        <link rel="alternate" href="https://www.vizackenterprises.com" hreflang="x-default">
-        <link rel="alternate" href="https://www.vizackenterprises.com" hreflang="en-us">
+        " />
+        <link rel="canonical" href="https://www.vizackenterprises.com" />
+        <link rel="alternate" href="https://www.vizackenterprises.com" hreflang="x-default" />
+        <link rel="alternate" href="https://www.vizackenterprises.com" hreflang="en-us" />
         <link rel="shortcut icon" href="/assets/logo/logo.webp" type="image/x-icon" />
       </head>
       <body className="max-w-full overflow-x-hidden">
