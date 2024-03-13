@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import NextTopLoader from 'nextjs-toploader';
 import Footer from "@/components/Footer";
 import ToastProvider from "@/components/ToastProvider";
+import "/assets/logo/logo.png";
 
 export const metadata = {
   title: "Vizack Enterprises",
