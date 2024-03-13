@@ -55,11 +55,9 @@ remarkable growth.` />
           ViZack, vizack, enterprises, vizack enterprises, pvt, Pvt, ltd, Ltd, vizack enterprises pvt,vizack enterprises pvt ltd, the ViZack, Digital, marketing, digital marketing,
           website, web, development, web development, website development, hosting, create website, make website, want digital, want digital marketing
         ">
-        <!-- Links -->
         <link rel="canonical" href="https://www.vizackenterprises.com">
         <link rel="alternate" href="https://www.vizackenterprises.com" hreflang="x-default">
         <link rel="alternate" href="https://www.vizackenterprises.com" hreflang="en-us">
-{/* Website Icon */}
         <link rel="shortcut icon" href="/assets/logo/logo.webp" type="image/x-icon" />
       </head>
       <body className="max-w-full overflow-x-hidden">
