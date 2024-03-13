@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
         <link rel="canonical" href="https://www.vizackenterprises.com" />
         <link rel="alternate" href="https://www.vizackenterprises.com" hreflang="x-default" />
         <link rel="alternate" href="https://www.vizackenterprises.com" hreflang="en-us" />
-        <link rel="shortcut icon" href="/assets/logo/logo.webp" type="image/x-icon" />
+        <link rel="shortcut icon" href="/assets/logo/logo.png" type="image/x-icon" />
       </Head>
       <body className="max-w-full overflow-x-hidden">
         <ToastProvider>
