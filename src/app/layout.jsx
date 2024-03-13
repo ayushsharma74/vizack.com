@@ -5,7 +5,6 @@ import Navbar from "@/components/Navbar";
 import NextTopLoader from 'nextjs-toploader';
 import Footer from "@/components/Footer";
 import ToastProvider from "@/components/ToastProvider";
-import "/assets/logo/logo.png";
 
 export const metadata = {
   title: "Vizack Enterprises",
@@ -24,9 +23,14 @@ export const metadata = {
     title: "ViZack Enterprises Pvt Ltd",
     description: "Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion, where commitment meets excellence. At ViZack Enterprises, we pride ourselves on being more than just a startup organization - we're a dedicated team of professionals driven by a singular mission: to provide unparalleled customer service and empower small businesses to achieve remarkable growth.",
     url: "https://twitter.com/ViZackEnterpise",
-    image: "/assets/logo/logo.png",
+    images: [{url: "/assets/logo/logo.png"}],
   },
-  robotsUrl: "/robots.txt",
+  robots:{
+    url: "/robots.txt"
+  },
+  icons: {
+    icon: "/assets/logo/logo.png"
+  },
   keywords: "ViZack, vizack, enterprises, vizack enterprises, pvt, Pvt, ltd, Ltd, vizack enterprises pvt,vizack enterprises pvt ltd, the ViZack, Digital, marketing, digital marketing, website, web, development, web development, website development, hosting, create website, make website, want digital, want digital marketing"
 };
 
@@ -39,7 +43,6 @@ export default function RootLayout({ children }) {
         <link rel="canonical" href="https://www.vizackenterprises.com" />
         <link rel="alternate" href="https://www.vizackenterprises.com" hreflang="x-default" />
         <link rel="alternate" href="https://www.vizackenterprises.com" hreflang="en-us" />
-        <link rel="icon" href="/assets/logo/logo.png" />
       </Head>
       <body className="max-w-full overflow-x-hidden">
         <ToastProvider>
