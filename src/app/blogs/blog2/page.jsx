@@ -14,106 +14,6 @@ const img = {
     img6: ["/assets/background/blogs/strong foundation.jpg", "Startup needs strong foundation", "/assets/background/profile/p1.jpeg", "Jatin Jain", "Feb 21, 2024"],
 }
 export default function Breader() {
-    // useEffect(() => {
-    //     async function fetchFileContent() {
-    //         try {
-    //             const response = await fetch('/resources/blogs/blog1.sit');
-    //             if (!response.ok) {
-    //                 throw new Error('Error fetching file');
-    //             }
-    //             const data = await response.text();
-    //             let d = data.split("\n");
-    //             let a;
-    //             d.forEach(dt => {
-    //                 if (dt.includes("banner(")) {
-    //                     a = dt.split("banner(")
-    //                     a = a[1].slice(0, -2)
-    //                     console.log(a)
-    //                 }
-    //                 else if (dt.includes("publisher.profile.image(")) {
-    //                     a = dt.split("publisher.profile.image(")
-    //                     a = a[1].slice(0, -2)
-    //                     console.log(a)
-    //                 }
-    //                 else if (dt.includes("publisher.profile.name(")) {
-    //                     a = dt.split("publisher.profile.name(")
-    //                     a = a[1].slice(0, -2)
-    //                     console.log(a)
-    //                 }
-    //                 else if (dt.includes("publisher.published(")) {
-    //                     a = dt.split("publisher.published(")
-    //                     a = a[1].slice(0, -2)
-    //                     console.log(a)
-    //                 }
-    //                 else if (dt.includes("publisher.about(")) {
-    //                     a = dt.split("publisher.about(")
-    //                     a = a[1].slice(0, -2)
-    //                     console.log(a)
-    //                 }
-    //                 else if (dt.includes("publisher.facebook(")) {
-    //                     a = dt.split("publisher.facebook(")
-    //                     a = a[1].slice(0, -2)
-    //                     console.log(a)
-    //                 }
-    //                 else if (dt.includes("publisher.linkedin(")) {
-    //                     a = dt.split("publisher.linkedin(")
-    //                     a = a[1].slice(0, -2)
-    //                     console.log(a)
-    //                 }
-    //                 else if (dt.includes("publisher.twitter(")) {
-    //                     a = dt.split("publisher.twitter(")
-    //                     a = a[1].slice(0, -2)
-    //                     console.log(a)
-    //                 } else if (dt.includes("publisher.instagram(")) {
-    //                     a = dt.split("publisher.instagram(")
-    //                     a = a[1].slice(0, -2)
-    //                     console.log(a)
-    //                 }
-    //                 else if (dt.includes("title(")) {
-    //                     a = dt.split("title(")
-    //                     a = a[1].slice(0, -2)
-    //                     console.log(a)
-    //                 }
-    //                 else if (dt.includes("par(")) {
-    //                     a = dt.split("par(")
-    //                     a = a[1].slice(0, -2)
-    //                     console.log(a)
-    //                 }
-    //                 else if (dt.includes("note.par(")) {
-    //                     a = dt.split("note.par(")
-    //                     a = a[1].slice(0, -2)
-    //                     console.log(a)
-    //                 }
-    //                 else if (dt.includes("note.title(")) {
-    //                     a = dt.split("note.title(")
-    //                     a = a[1].slice(0, -2)
-    //                     console.log(a)
-    //                 }
-    //                 else if (dt.includes("image(")) {
-    //                     a = dt.split("image(")
-    //                     a = a[1].slice(0, -2)
-    //                     console.log(a)
-    //                 }
-    //                 else if (dt.includes("subtitle(")) {
-    //                     a = dt.split("subtitle(")
-    //                     a = a[1].slice(0, -2)
-    //                     console.log(a)
-    //                 }
-    //                 else if (dt.includes("tags(")) {
-    //                     a = dt.split("tags(")
-    //                     a = a[1].slice(0, -2)
-    //                     console.log(a)
-    //                 }
-    //                 // console.log(dt)
-    //             })
-    //             // console.log(d)
-    //         } catch (error) {
-    //             console.error('Error:', error);
-    //         }
-    //     }
-
-    //     fetchFileContent();
-    // }, []);
     return (
         <>
             <Upperbanner route={"blogread"} routeName={"Blog Reader"}/>
@@ -340,7 +240,7 @@ export default function Breader() {
 
                         {/* Tags */}
                         <div className="category flex flex-col">
-                            <h1 className="text-2xl text-default tracking-wide font-semibold">Category</h1>
+                            <h1 className="text-2xl text-default tracking-wide font-semibold">Tags</h1>
                             <div className="flex border flex-wrap gap-6 px-4 my-4 flex-auto bg-dark py-6 rounded-3xl">
                                 <h2 className=" bg-gray-200 capitalize font-semibold text-default-gray rounded-lg transition-colors duration-300 text-md tracking-wide px-3 hover:text-white cursor-pointer py-1 hover:bg-default">
                                     Best
