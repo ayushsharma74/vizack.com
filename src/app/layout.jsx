@@ -25,7 +25,7 @@ export const metadata = {
     url: "https://twitter.com/ViZackEnterpise",
     image: "/assets/logo/logo.png",
   },
-  robots: "/robots.txt",
+  robotsUrl: "/robots.txt",
   keywords: "ViZack, vizack, enterprises, vizack enterprises, pvt, Pvt, ltd, Ltd, vizack enterprises pvt,vizack enterprises pvt ltd, the ViZack, Digital, marketing, digital marketing, website, web, development, web development, website development, hosting, create website, make website, want digital, want digital marketing"
 };
 
