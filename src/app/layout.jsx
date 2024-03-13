@@ -13,7 +13,7 @@ export const metadata = {
   title: "Vizack Enterprises",
   description: `Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion, 
 where commitment meets excellence. At ViZack Enterprises, we pride 
-ourselves on being more than just a startup organization - we're a 
+ourselves on being more than just a startup organization - we&apos;re a 
 dedicated team of professionals driven by a singular mission: to provide 
 unparalleled customer service and empower small businesses to achieve 
 remarkable growth. `,
@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
         <meta name="twitter:title" content="ViZack Enterprises Pvt Ltd" />
         <meta name="twitter:description" content=`Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion, 
 where commitment meets excellence. At ViZack Enterprises, we pride 
-ourselves on being more than just a startup organization - we're a 
+ourselves on being more than just a startup organization - we&apos;re a 
 dedicated team of professionals driven by a singular mission: to provide 
 unparalleled customer service and empower small businesses to achieve 
 remarkable growth.` />
@@ -42,7 +42,7 @@ remarkable growth.` />
         <meta property="og:title" content="ViZack Enterprises Pvt Ltd" />
         <meta property="og:description" content=`Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion, 
 where commitment meets excellence. At ViZack Enterprises, we pride 
-ourselves on being more than just a startup organization - we're a 
+ourselves on being more than just a startup organization - we&apos;re a 
 dedicated team of professionals driven by a singular mission: to provide 
 unparalleled customer service and empower small businesses to achieve 
 remarkable growth.` />
