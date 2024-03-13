@@ -242,41 +242,17 @@ export default function Breader() {
                         <div className="category flex flex-col">
                             <h1 className="text-2xl text-default tracking-wide font-semibold">Tags</h1>
                             <div className="flex border flex-wrap gap-6 px-4 my-4 flex-auto bg-dark py-6 rounded-3xl">
-                                <h2 className=" bg-gray-200 capitalize font-semibold text-default-gray rounded-lg transition-colors duration-300 text-md tracking-wide px-3 hover:text-white cursor-pointer py-1 hover:bg-default">
-                                    Best
-                                </h2>
-                                <h2 className=" bg-gray-200 capitalize font-semibold text-default-gray rounded-lg transition-colors duration-300 text-md tracking-wide px-3 hover:text-white cursor-pointer py-1 hover:bg-default">
-                                    digital
-                                </h2>
-                                <h2 className=" bg-gray-200 capitalize font-semibold text-default-gray rounded-lg transition-colors duration-300 text-md tracking-wide px-3 hover:text-white cursor-pointer py-1 hover:bg-default">
-                                    digital agency
-                                </h2>
-                                <h2 className=" bg-gray-200 capitalize font-semibold text-default-gray rounded-lg transition-colors duration-300 text-md tracking-wide px-3 hover:text-white cursor-pointer py-1 hover:bg-default">
-                                    featured
-                                </h2>
-                                <h2 className=" bg-gray-200 capitalize font-semibold text-default-gray rounded-lg transition-colors duration-300 text-md tracking-wide px-3 hover:text-white cursor-pointer py-1 hover:bg-default">
-                                    innovation
-                                </h2>
-                                <h2 className=" bg-gray-200 capitalize font-semibold text-default-gray rounded-lg transition-colors duration-300 text-md tracking-wide px-3 hover:text-white cursor-pointer py-1 hover:bg-default">
-                                    marketing
-                                </h2>
-                                <h2 className=" bg-gray-200 capitalize font-semibold text-default-gray rounded-lg transition-colors duration-300 text-md tracking-wide px-3 hover:text-white cursor-pointer py-1 hover:bg-default">
-                                    on sale
-                                </h2>
-                                <h2 className=" bg-gray-200 capitalize font-semibold text-default-gray rounded-lg transition-colors duration-300 text-md tracking-wide px-3 hover:text-white cursor-pointer py-1 hover:bg-default">
-                                    product
-                                </h2>
-                                <h2 className=" bg-gray-200 capitalize font-semibold text-default-gray rounded-lg transition-colors duration-300 text-md tracking-wide px-3 hover:text-white cursor-pointer py-1 hover:bg-default">
-                                    startup
-                                </h2>
-                                <h2 className=" bg-gray-200 capitalize font-semibold text-default-gray rounded-lg transition-colors duration-300 text-md tracking-wide px-3 hover:text-white cursor-pointer py-1 hover:bg-default">
-                                    technology
-                                </h2>
-                                <h2 className=" bg-gray-200 capitalize font-semibold text-default-gray rounded-lg transition-colors duration-300 text-md tracking-wide px-3 hover:text-white cursor-pointer py-1 hover:bg-default">
-                                    trendy
-                                </h2>
-
-
+                                <Tag name="Best"/>
+                                <Tag name="digital"/>
+                                <Tag name="digital agency"/>
+                                <Tag name="featured"/>
+                                <Tag name="innovation"/>
+                                <Tag name="marketing"/>
+                                <Tag name="on sale"/>
+                                <Tag name="product"/>
+                                <Tag name="startup"/>
+                                <Tag name="technology"/>
+                                <Tag name="trendy"/>
                             </div>
                         </div>
                     </div>
