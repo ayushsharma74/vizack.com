@@ -2,6 +2,7 @@ import { Anton } from 'next/font/google';
 import { Typewriter } from "react-simple-typewriter";
 import Image from 'next/image';
 const anton = Anton({ subsets: ['latin'], weight: "400" });
+import Link from 'next/link';
 
 export default function Mainpage() {
   return (
@@ -27,21 +28,20 @@ export default function Mainpage() {
                   </span>
                 </h1>
                 <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
-                  <button className="inline-flex items-center text-white bg-orange-500 justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full sm:w-auto mb-3 sm:mb-0 sm:mr-3">
+                  <Link href="/services"className="inline-flex items-center text-white bg-orange-500 justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full sm:w-auto mb-3 sm:mb-0 sm:mr-3">
                     Our Services
-                  </button>
-                  <button className="inline-flex hover:ring-gray-400 hover:bg-gray-100 items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-full sm:w-auto">
+                  </Link>
+                  <Link href ="/contact" className="inline-flex hover:ring-gray-400 hover:bg-gray-100 items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-full sm:w-auto">
                     Contact Us
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
             <div className="mt-8 sm:mt-0 lg:mt-0 lg:col-span-5 flex items-center justify-center">
               <div className="mr-6">
-                <Image src="/assets/images/asset6.jpg" alt="Image" width={1000} height={1000} />
+                <Image src="/assets/images/asset6.jpg" alt="Image" width={2000} height={2000} />
               </div>
               <p className="text-base text-gray-600 sm:text-xl lg:text-lg xl:text-xl">
-                {/* Placeholder text */}
               </p>
             </div>
           </div>
