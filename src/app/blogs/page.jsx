@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Blog from "@/components/blogCard";
-
+import { Tag } from "@/components/blogPage";
 const src = "/assets/background/marketing globe.png";
 const img = {
     img1: ["/assets/background/blogs/stock.png", "How can I grow my stocks?","/assets/background/profile/p4.jpeg"," Gajender", "Feb 12, 2023"],
