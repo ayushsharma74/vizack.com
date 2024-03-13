@@ -25,10 +25,10 @@ export default function RootLayout({ children }) {
     <html lang="en" className="max-w-full overflow-x-hidden">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta charset="utf-8" />
+{/*         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=7" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <meta name="author" content="ViZack Enterprises Pvt Ltd"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" /> */}
+        <meta name="author" content="ViZack Enterprises Pvt Ltd" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="ViZack Enterprises Pvt Ltd" />
         <meta name="twitter:description" content=`Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion, 
