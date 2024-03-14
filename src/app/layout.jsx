@@ -5,10 +5,10 @@ import Navbar from "@/components/Navbar";
 import NextTopLoader from 'nextjs-toploader';
 import Footer from "@/components/Footer";
 import ToastProvider from "@/components/ToastProvider";
-import { url } from "inspector";
+// import { url } from "inspector";
 const logo = "/assets/logo/logo.png";
 export const metadata = {
-  title: "Vizack Enterprises",
+  title: "ViZack Enterprises",
   description: "Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion, where commitment meets excellence. At ViZack Enterprises, we pride ourselves on being more than just a startup organization - we're a dedicated team of professionals driven by a singular mission: to provide unparalleled customer service and empower small businesses to achieve remarkable growth.",
   openGraph:{
     title: "ViZack Enterprises Pvt Ltd",
