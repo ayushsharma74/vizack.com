@@ -1,3 +1,4 @@
+import 'Link' from 'next/link'
 export default function Footer(){
     const logo = "/assets/logo/logo.ico"
     return(
@@ -99,12 +100,12 @@ export default function Footer(){
               </a>
             </li>
             <li class="mb-4">
-              <a
+              <Link
                       class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
-                href="#"
+                href="/contact"
               >
                 Contact Us
-              </a>
+              </Link>
             </li>
             <li>
               <a
