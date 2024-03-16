@@ -67,7 +67,7 @@ export default function Footer(){
             <li className='mb-4'>
               <a
                       class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
-                href="#"
+                href="https://www.youtube.com/@ViZackEnterprises"
               >
                 YouTube
               </a>
