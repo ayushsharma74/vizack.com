@@ -13,7 +13,7 @@ const about = () => {
             <p data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" className="mb-6 font-semibold text-black sm:text-lg md:mb-8">Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion,
               where commitment meets excellence. At ViZack Enterprises, we pride
 
-              ourselves on being more than just a startup organization &lsquo; we&apos;re a
+              ourselves on being more than just a startup organization we&apos;re a
               dedicated team of professionals driven by a singular mission: to provide
               unparalleled customer service and empower small businesses to achieve
               remarkable growth.</p>
