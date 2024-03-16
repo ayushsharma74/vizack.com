@@ -51,7 +51,7 @@ export default function blogs() {
 
                 </div>
 
-                <div data-aos="fade-left" data-aos-delay="100" data-aos-duration="1500" className="text-default-gray mx-24 my-10 w-[50%] text-3xl max-lg:w-full max-lg:mx-0 max-lg:px-2 max-sm:my-16">A great headline mixed with a weak opening is like iniviting someone into tyour house, only to slam the door in their face as they approach.</div>
+                <div data-aos="fade-left" data-aos-delay="100" data-aos-duration="1500" className="text-default-gray mx-24 my-10 w-[50%] text-3xl max-lg:w-full max-lg:mx-0 max-lg:px-2 max-sm:my-16">A great headline mixed with a weak opening is like iniviting someone into your house, only to slam the door in their face as they approach.</div>
             </div>
             <main className="flex w-full h-fit max-lg:flex-col py-16 px-4 gap-2">
                 <div className="left w-[60%] max-lg:w-full ">
