@@ -42,14 +42,14 @@ const about = () => {
 
             <h2 data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" className="mb-2 text-xl font-semibold text-default sm:text-2xl md:mb-4">Our Approach</h2>
 
-            <p data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" className="mb-6 text-black font-semibold text-gray-500 sm:text-lg">Our approach is simple yet powerful: we listen, we understand, and we
+            <p data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" className="mb-6 text-black font-semibold text-black sm:text-lg">Our approach is simple yet powerful: we listen, we understand, and we
               deliver. No request is too big or too small &lsquo; we&apos;re committed to going
               above and beyond to ensure that every client receives the personalized
               attention and tailored solutions they deserve. When you entrust us with
               your business, you can rest assured that we&apos;ll give it everything we&apos;ve got to
               help you thrive and prosper.</p>
 
-            <p data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" className="mb-2 text-black font-semibold text-gray-500 sm:text-lg md:mb-8">
+            <p data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" className="mb-2 text-black font-semibold text-black sm:text-lg md:mb-8">
               At ViZack Enterprises Pvt Ltd, growth isn&apos;t just a goal &lsquo; it&apos;s a promise. So
               whether you&apos;re dreaming of taking your small business to new heights or
               embarking on a journey of expansion and innovation, let ViZack Enterprises
