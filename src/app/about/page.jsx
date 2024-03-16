@@ -8,7 +8,7 @@ const about = () => {
       <div>
         <div className="bg-white py-6 sm:py-8 lg:py-12">
           <div className="mx-auto max-w-screen-md px-4 md:px-8">
-            <h1 data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" className="mb-4 text-center text-2xl font-boldest text-default sm:text-3xl md:mb-6 max-sm:mt-16 ">About Us</h1>
+            <h1 data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" className="mb-4 text-center text-2xl font-extrabold text-default sm:text-3xl md:mb-6 max-sm:mt-16 ">About Us</h1>
 
             <p data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" className="mb-6 font-semibold text-black sm:text-lg md:mb-8">Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion,
               where commitment meets excellence. At ViZack Enterprises, we pride
