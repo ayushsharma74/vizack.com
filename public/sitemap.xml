@@ -8,22 +8,22 @@
   <url>
     <loc>https://vizackenterprises.com/about</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://vizackenterprises.com/services</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://vizackenterprises.com/contact</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://vizackenterprises.com/blogs</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://vizackenterprises.com/blogs/blog1</loc>
