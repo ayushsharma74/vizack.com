@@ -6,12 +6,12 @@ import Upperbanner from "@/components/Upperbanner";
 import { Banner, PublisherImage, PublisherName, PublisherPublished, Title, Par, Note, Images, SubTitle, Tag, AboutPublisher} from "@/components/blogPage";
 import { useEffect } from "react";
 const img = {
-    img1: ["/assets/background/blogs/stock.png", "How can I grow my stocks?", "/assets/background/profile/p4.jpeg", " Gajender", "Feb 12, 2023"],
-    img2: ["/assets/background/blogs/apps.jpg", "Applications that must be in every android mobile", "/assets/background/profile/p1.jpeg", "Jatin Jain", "Jun 2, 2023"],
-    img3: ["/assets/background/blogs/hacking.jpg", "Hacking tips and tricks", "/assets/background/profile/p3.jpeg", "Farhan", "Jul 26, 2023"],
-    img4: ["/assets/background/blogs/ml.jpeg", "Best sites to learn Machine Learning", "/assets/background/profile/p2.jpeg", "Ayush Sharma", "Sep 19, 2023"],
-    img5: ["/assets/background/blogs/ai.jpg", "What is an Artificial Intelligence?", "/assets/background/profile/p4.jpeg", "Gajender", "Dec 29, 2023"],
-    img6: ["/assets/background/blogs/strong foundation.jpg", "Startup needs strong foundation", "/assets/background/profile/p1.jpeg", "Jatin Jain", "Feb 21, 2024"],
+    img1: ["/assets/background/blogs/stock.png", "How can I grow my stocks?","/assets/background/profile/p6.png"," Gajender", "Feb 12, 2023"],
+    img2: ["/assets/background/blogs/apps.jpg", "Applications that must be in every android mobile", "/assets/background/profile/p5.png", "Jatin Jain", "Jun 2, 2023"],
+    img3: ["/assets/background/blogs/hacking.jpg", "Hacking tips and tricks", "/assets/background/profile/p3.png", "Farhan", "Jul 26, 2023"],
+    img4: ["/assets/background/blogs/ml.jpeg", "Best sites to learn Machine Learning", "/assets/background/profile/p4.png", "Ayush Sharma", "Sep 19, 2023"],
+    img5: ["/assets/background/blogs/ai.jpg", "What is an Artificial Intelligence?", "/assets/background/profile/p1.png", "Ankita Suman", "Dec 29, 2023"],
+    img6: ["/assets/background/blogs/strong foundation.jpg", "Startup needs strong foundation", "/assets/background/profile/p2.png", "Amrita Jain", "Feb 21, 2024"],
 }
 export default function Breader() {
     return (
