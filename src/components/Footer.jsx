@@ -50,7 +50,7 @@ export default function Footer(){
             <li class="mb-4">
               <a
                       class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
-                href="#"
+                href="https://www.vizackenterprises.com/facebook"
               >
                 Facebook
               </a>
@@ -92,14 +92,6 @@ export default function Footer(){
           </h3>
           <ul>
             
-            <li class="mb-4">
-              <a
-                      class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
-                href="#"
-              >
-                Help
-              </a>
-            </li>
             <li class="mb-4">
               <Link
                       class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
