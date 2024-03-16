@@ -12,7 +12,7 @@ function Aboutussection() {
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             <div className='relative'>
               <div className='rounded-lg overflow-hidden px-4 sm:px-0'>
-                <Image src='/assets/images/pic1.jpg' alt='Air Conditioner' width={800} height={800} />
+                <Image src='/assets/images/politics redefined.png' alt='Air Conditioner' width={800} height={800} />
               </div>
             </div>
             <div className='flex flex-col justify-center'>
