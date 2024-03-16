@@ -68,6 +68,7 @@ export default function Footer(){
               <a
                       class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
                 href="https://www.youtube.com/@ViZackEnterprises"
+                target="blank"
               >
                 YouTube
               </a>
