@@ -44,7 +44,7 @@ export default function Footer(){
                 href="https://www.linkedin.com/in/vizackenterprises"
                 target="blank"
               >
-                Linkedin
+                LinkedIn
               </a>
             </li>
             <li class="mb-4">
@@ -69,7 +69,7 @@ export default function Footer(){
                       class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
                 href="#"
               >
-                Youtube
+                YouTube
               </a>
             </li>
             <li className=''>
