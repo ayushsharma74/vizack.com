@@ -103,7 +103,8 @@ export default function Footer(){
             <li>
               <a
                       class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
-                href="#"
+                href="http://wa.me/+919826258659"
+                target="blank"
               >
                 Customer Support
               </a>

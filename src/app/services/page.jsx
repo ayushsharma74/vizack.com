@@ -33,7 +33,7 @@ export default function services() {
           extraContent={' Unlock new markets and accelerate your sales pipeline with our innovative sales strategies.'} 
         />
         <Content 
-          image_src={"/assets/testing/7634517.jpg"} 
+          image_src={"/assets/images/pic2.jpg"} 
           service={"Innovative Brand Building"} 
           content={`Build a brand that stands out in a crowded marketplace with our innovative brand building services. From brand strategy to creative execution, we craft compelling narratives and memorable experiences that resonate with your target audience. Transform your brand into a beacon of inspiration, driving loyalty, engagement, and long-term success. Unleash the full potential of your brand with our innovative approach to branding.`} 
           extraContent={' Elevate your brand and drive long-term success with our innovative branding strategies.'} 

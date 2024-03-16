@@ -15,25 +15,25 @@ function Funfactssection() {
           <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:gap-8">
 
             <div class="flex flex-col items-center justify-center rounded-lg bg-gray-100 p-4 lg:p-8">
-              <div class="text-xl font-bold text-default sm:text-2xl md:text-3xl"><CountUp end={10} enableScrollSpy/>+</div>
+              <div class="text-xl font-bold text-default sm:text-2xl md:text-3xl"><CountUp end={2} enableScrollSpy/>+</div>
               <div class="text-sm font-semibold sm:text-base">Branches</div>
             </div>
 
             <div class="flex flex-col items-center justify-center rounded-lg bg-gray-100 p-4 md:p-8">
-              <div class="text-xl font-bold text-default sm:text-2xl md:text-3xl"><CountUp end={500} enableScrollSpy/>+</div>
+              <div class="text-xl font-bold text-default sm:text-2xl md:text-3xl"><CountUp end={50} enableScrollSpy/>+</div>
               <div class="text-sm font-semibold sm:text-base">Employees</div>
             </div>
 
 
             <div class="flex flex-col items-center justify-center rounded-lg bg-gray-100 p-4 md:p-8">
-              <div class="text-xl font-bold text-default sm:text-2xl md:text-3xl"><CountUp end={1000} enableScrollSpy/>+</div>
+              <div class="text-xl font-bold text-default sm:text-2xl md:text-3xl"><CountUp end={500} enableScrollSpy/>+</div>
               <div class="text-sm font-semibold sm:text-base">Happy clients</div>
             </div>
 
 
 
             <div class="flex flex-col items-center justify-center rounded-lg bg-gray-100 p-4 md:p-8">
-              <div class="text-xl font-bold text-default sm:text-2xl md:text-3xl"><CountUp end={47} enableScrollSpy/>+</div>
+              <div class="text-xl font-bold text-default sm:text-2xl md:text-3xl"><CountUp end={45} enableScrollSpy/>+</div>
               <div class="text-sm font-semibold sm:text-base">Projects</div>
             </div>
 
