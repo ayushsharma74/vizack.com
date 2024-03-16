@@ -14,7 +14,7 @@ function Testimonialssection() {
 
               <div className="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
                 <div className="h-12 w-12 overflow-hidden rounded-full bg-gray-100 shadow-lg md:h-14 md:w-14">
-                  <Image src={"/assets/background/profile/gajender.jpg"} width={150} height={150} loading={"lazy"} alt={"Photo by Gajender"} className={"h-full w-full object-cover object-center"} />
+                  <Image src={"/assets/background/profile/p6.png"} width={150} height={150} loading={"lazy"} alt={"Photo by Gajender"} className={"h-full w-full object-cover object-center"} />
                 </div>
 
                 <div>
@@ -31,7 +31,7 @@ function Testimonialssection() {
 
               <div className="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
                 <div className="h-12 w-12 overflow-hidden rounded-full bg-gray-100 shadow-lg md:h-14 md:w-14">
-                  <Image src={"/assets/background/profile/p1.jpeg"} width={150} height={150} loading={"lazy"} alt={"Photo by Farhan Ahmad Khan"} className={"h-full w-full object-cover object-center"} />
+                  <Image src={"/assets/background/profile/p5.png"} width={150} height={150} loading={"lazy"} alt={"Photo by Farhan Ahmad Khan"} className={"h-full w-full object-cover object-center"} />
                 </div>
 
                 <div>
@@ -48,7 +48,7 @@ function Testimonialssection() {
 
               <div className="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
                 <div className="h-12 w-12 overflow-hidden rounded-full bg-gray-100 shadow-lg md:h-14 md:w-14">
-                  <Image src={"/assets/background/profile/p4.jpeg"} width={150} height={150} loading={"lazy"} alt={"Photo by Ayush Sharma"} className={"h-full w-full object-cover object-center"} />
+                  <Image src={"/assets/background/profile/p4.png"} width={150} height={150} loading={"lazy"} alt={"Photo by Ayush Sharma"} className={"h-full w-full object-cover object-center"} />
                 </div>
 
                 <div>
