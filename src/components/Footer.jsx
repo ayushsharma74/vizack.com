@@ -42,7 +42,7 @@ export default function Footer(){
               <a
                       class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
                 href="https://www.linkedin.com/in/vizackenterprises"
-                target="blank"
+                target="blank_"
               >
                 LinkedIn
               </a>
@@ -50,7 +50,8 @@ export default function Footer(){
             <li class="mb-4">
               <a
                       class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
-                href="https://www.vizackenterprises.com/facebook"
+                href="https://www.facebook.com/vizackenterprise"
+                target="blank_"
               >
                 Facebook
               </a>
@@ -59,7 +60,7 @@ export default function Footer(){
               <a
                       class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
                 href="https://www.instagram.com/vizack.enterprises/"
-                target="blank"
+                target="blank_"
               >
                 Instagram
               </a>
@@ -68,7 +69,7 @@ export default function Footer(){
               <a
                       class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
                 href="https://www.youtube.com/@ViZackEnterprises"
-                target="blank"
+                target="blank_"
               >
                 YouTube
               </a>
@@ -77,7 +78,7 @@ export default function Footer(){
               <a
                       class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
                 href="https://twitter.com/ViZackEnterpise"
-                target="blank"
+                target="blank_"
               >
                 X
               </a>
@@ -105,7 +106,7 @@ export default function Footer(){
               <a
                       class="transition-colors duration-300 text-base font-medium text-default-gray hover:text-white"
                 href="http://wa.me/+919826258659"
-                target="blank"
+                target="blank_"
               >
                 Customer Support
               </a>
