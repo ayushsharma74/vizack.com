@@ -32,7 +32,7 @@ const Servicecard = ({ image_src, service, content, extraContent}) => {
                 className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
                 onClick={toggleExpand}
               >
-                <div className="relative inline-block overflow-hidden bg-hsl-222-100-95 text-hsl-243-80-62 shadow-xl">
+                <div className="mr-4 mb-4 relative inline-block overflow-hidden bg-hsl-222-100-95 text-hsl-243-80-62 shadow-xl">
                   <button type="button" className="h-12 w-48 font-bold inline justify-center py-3 px-4 border border-transparent text-sm rounded text-white bg-default hover:bg-orange-500 transition-colors">
                     {isExpanded ? 'Show less' : 'Learn more'}
                   </button>
