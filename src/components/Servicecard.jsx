@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import HoverButton from '@/components/HoverButton';
 
 const Servicecard = ({ image_src, service, content, extraContent}) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = (e) => {
     e.preventDefault(); 
+    e.stopPropagation();
     setIsExpanded(!isExpanded);
   };
 
@@ -20,7 +22,7 @@ const Servicecard = ({ image_src, service, content, extraContent}) => {
             <p className="mb-4 text-base text-gray-700">{content}</p>
             {isExpanded && (
               <div>
-                <p>{extraContent}</p>
+                <p className='mb-4'>{extraContent}</p>
               </div>
             )}
             <div>
@@ -30,12 +32,13 @@ const Servicecard = ({ image_src, service, content, extraContent}) => {
                 className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
                 onClick={toggleExpand}
               >
-                <div className="relative inline-block overflow-hidden bg-hsl-222-100-95 text-hsl-243-80-62">
-                  <button type="button" className="font-bold inline-flex justify-center py-3 px-4 border border-transparent text-sm rounded text-white bg-default hover:bg-orange-500 transition-colors">
+                <div className="relative inline-block overflow-hidden bg-hsl-222-100-95 text-hsl-243-80-62 shadow-xl">
+                  <button type="button" className="h-12 w-48 font-bold inline justify-center py-3 px-4 border border-transparent text-sm rounded text-white bg-default hover:bg-orange-500 transition-colors">
                     {isExpanded ? 'Show less' : 'Learn more'}
                   </button>
                 </div>
               </a>
+                  <HoverButton/>
             </div>
           </div>
         </div>
