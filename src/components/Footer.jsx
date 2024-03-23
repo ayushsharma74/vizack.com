@@ -7,7 +7,7 @@ export default function Footer(){
       <svg className="w-full lg:h-24 h-12 " viewBox="10 0 750 30">
         <path d="M0 50 Q 100 30 400 70 T 800 50 " stroke="#111827" fill="none" stroke-width="100" />
       </svg>
-        <footer className="w-full h-fit px-4 flex justify-center flex-wrap gap-8 py-6 pb-16 bg-[#111827] max-xl:grid max-xl:grid-cols-2 max-sm:grid-cols-1 max-sm:gap-16 max-xl:justify-items-center">
+        <footer className="w-full h-fit px-4 flex justify-center flex-wrap gap-8 py-6 pb-16 bg-[#111827] max-xl:grid max-xl:grid-cols-2 max-sm:grid-cols-1 max-sm:gap-16 max-sm:justify-items-start max-xl:justify-items-center">
           <div className="vi flex flex-col gap-20">
             <div className="logo flex gap-4 items-center">
               <Image 
