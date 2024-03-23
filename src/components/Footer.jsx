@@ -42,8 +42,8 @@ export default function Footer(){
           <div className="flex flex-col gap-4">
             <h1 className="text-default font-semibold text-lg uppercase px-2">Legals</h1>
             <ul className="flex flex-col px-4 leading-9">
-              <li><Link className="text-default-gray hover:text-white text-md" href={"/"}>Terms &amp; Conditions</Link></li>
-              <li><Link className="text-default-gray hover:text-white text-md" href={"/"}>Privacy Policy</Link></li>
+              <li><Link className="text-default-gray hover:text-white text-md" href={"https://docs.google.com/document/d/e/2PACX-1vSM1HbylMnlDx_xcDRx7qC5yui2Dw3zC2hPMnkl8on7sVDCV17SXHCFMpCrenccAiUT6mQCKcdv9hka/pub"}>Terms &amp; Conditions</Link></li>
+              <li><Link className="text-default-gray hover:text-white text-md" href={"https://docs.google.com/document/d/e/2PACX-1vR9iaLnYhKATOLnNyREKE_TER60o2-TMu14efif_6QEIgpclwqcL0Wi64OEele0fkH-2-Gbng94BFD4/pub"}>Privacy Policy</Link></li>
               <li><Link className="text-default-gray hover:text-white text-md" href={"/"}>Licencing</Link></li>
             </ul>
           </div>
