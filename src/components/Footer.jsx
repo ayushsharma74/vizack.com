@@ -27,7 +27,7 @@ export default function Footer(){
           
 
           <div className="flex flex-col gap-4">
-            <h1 className="text-default uppercase font-semibold text-lg px-6">Company</h1>
+            <h1 className="text-default uppercase font-semibold text-lg px-6 max-sm:-pl-2">Company</h1>
             <div className="div">
               <ul className="flex flex-col px-4 leading-9">
                 <li><Link className="text-default-gray hover:text-white text-md" href={"/about"}>About Us</Link></li>
