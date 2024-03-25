@@ -307,6 +307,7 @@ tags(Tag1, Tag2, Tag3,...,TagN)
     }
     function submit() {
         const build = PageBuilder()
+        downloadFile()
         async function saveData() {
 
             const urls = 'https://vizackenterprises.com/api/saveData';
