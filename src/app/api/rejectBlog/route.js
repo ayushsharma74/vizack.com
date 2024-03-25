@@ -1,7 +1,7 @@
 import path from "path";
 import fs from "fs"
 
-export default async function rejectBlog(req, res) {
+export default async function RejectBlog(req, res) {
     // console.log("REQ: ",req)
     let { name  } = req.searchParams
     name = path.join(process.cwd(), "src", "app", "blogs", "src", "app", "employee", "blogs", "blog", name)

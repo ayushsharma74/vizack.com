@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-export default async function handler(req, res) {
+export default async function Handler(req, res) {
     let { filename, content, reqType } = req.searchParams;
     filename = filename.replaceAll("&apos;", "'").toLowerCase();
     filename = filename.replaceAll(" ", "")

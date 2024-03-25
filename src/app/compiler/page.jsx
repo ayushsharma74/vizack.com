@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 // import { AxiosRequestConfig } from "axios";
 
 
-export default function compiler() {
+export default function Compiler() {
 
 
     // preloaded Content
