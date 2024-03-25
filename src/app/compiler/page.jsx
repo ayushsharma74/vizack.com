@@ -277,7 +277,7 @@ tags(Tag1, Tag2, Tag3,...,TagN)
     function preview() {
         const build = PageBuilder()
         async function saveData() {
-            const urls = '/api/saveData';
+            const urls = 'https://www.vizackenterprises.com/api/saveData';
             await axios({
                 method: 'post',
                 url: urls,
@@ -310,7 +310,7 @@ tags(Tag1, Tag2, Tag3,...,TagN)
         downloadFile()
         async function saveData() {
 
-            const urls = '/api/saveData';
+            const urls = 'https://www.vizackenterprises.com/api/saveData';
             await axios({
                 method: 'post',
                 url: urls,
@@ -325,7 +325,7 @@ tags(Tag1, Tag2, Tag3,...,TagN)
                     theme: "dark"
                 });
                 async function handleSubmit() {
-                    let url = `/blogs/src/app/employee/blogs/blog/${build.name.replaceAll(" ", "").toLowerCase()}`
+                    let url = `https://www.vizackenterprises.com/blogs/src/app/employee/blogs/blog/${build.name.replaceAll(" ", "").toLowerCase()}`
                     const response = await fetch("https://api.web3forms.com/submit", {
                         method: "POST",
                         headers: {
