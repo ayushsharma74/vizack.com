@@ -1,11 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+const imageLoader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 75}`;
+};
 
-export default function Banner(props, img, alt) {
+function Banner(props, img, alt) {
     return (
         <div className="image w-full">
             <Image
+                loader={imageLoader}
                 src={props.img}
                 width={500}
                 height={500}
@@ -21,6 +24,7 @@ function PublisherImage(props, img, alt) {
     return (
         <div className="image">
             <Image
+                loader={imageLoader}
                 src={props.img}
                 width={50}
                 height={50}
@@ -95,6 +99,7 @@ function Images(props, img, alt) {
     return (
         <div className="syntaxImage w-full flex flex-col justify-center max-lg:flex-wrap gap-8 my-8">
             <Image
+                loader={imageLoader}
                 src={props.img}
                 width={350}
                 height={300}
@@ -171,5 +176,28 @@ function AboutPublisher(props, img, name, about, facebook, twitter, linkedin, in
     );
 }
 
+export default function TopHeader(props, banner, bannerAlt, publisher, publisherName, date) {
+    return (
+        <div className="top min-h-fit">
 
-export { Banner, PublisherImage, PublisherName, PublisherPublished, Title, Par, Note, Images, SubTitle, Tag, AboutPublisher }
+            <Banner img={props.banner} alt={props.bannerAlt} />
+            <div className="publisher flex max-min-end:flex-col justify-between px-4">
+                <div className="left flex h-16 gap-2 w-full items-center ">
+                    <PublisherImage img={props.publisher} alt={props.publisherName} />
+                    <PublisherName name={props.publisherName} />
+                </div>
+                <div className="right flex gap-3 items-center justify-between">
+                    <div className="comment flex gap-2 border-r pr-3">
+                        <i class="icofont-duotone icofont-messaging text-2xl max-sm:text-xl text-default"></i>
+                        <h3 className="uppercase text-default-gray max-sm:text-sm cursor-pointer hover:text-dark transition-colors duration-300">comments</h3>
+                    </div>
+                    <PublisherPublished date={props.date} />
+                </div>
+            </div>
+        </div>
+    )
+    
+}
+
+
+export { Banner, PublisherImage, PublisherName, PublisherPublished, Title, Par, Note, Images, SubTitle, Tag, AboutPublisher, TopHeader }
