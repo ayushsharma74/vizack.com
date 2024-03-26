@@ -277,14 +277,14 @@ tags(Tag1, Tag2, Tag3,...,TagN)
     function preview() {
         const build = PageBuilder()
         async function saveData() {
-            const urls = 'api/saveData';
+            const urls = '/api/saveData';
             await axios({
                 method: 'post',
                 url: urls,
                 headers: {
                     'Content-Type': 'application/json', // Set the Content-Type header
                 },
-                params: { filename: build.name, content: build.data, reqType: "Preview" }, 
+                data: { filename: build.name, content: build.data, reqType: "Preview" }, 
             }).then((res) => {
                 toast.success('Page Build Successfully', {
                     position: "bottom-right",
