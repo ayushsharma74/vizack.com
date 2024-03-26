@@ -277,7 +277,7 @@ tags(Tag1, Tag2, Tag3,...,TagN)
     function preview() {
         const build = PageBuilder()
         async function saveData() {
-            const urls = '/api/saveData';
+            const urls = 'http://vizack-9054kdzv5-ayushs-projects-56e7d467.vercel.app/api/saveData';
             await axios({
                 method: 'post',
                 url: urls,
