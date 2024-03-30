@@ -27,7 +27,7 @@ export default function Footer(){
           
 
           <div className="flex flex-col gap-4">
-            <h1 className="text-default uppercase font-semibold text-lg px-6 max-sm:-pl-4">Company</h1>
+            <h1 className="text-default uppercase font-semibold text-lg px-6 max-sm:pl-0">Company</h1>
             <div className="div">
               <ul className="flex flex-col px-4 leading-9">
                 <li><Link className="text-default-gray hover:text-white text-md" href={"/about"}>About Us</Link></li>
@@ -40,7 +40,7 @@ export default function Footer(){
           </div>
 
           <div className="flex flex-col gap-4">
-            <h1 className="text-default font-semibold text-lg uppercase px-2">Legals</h1>
+            <h1 className="text-default font-semibold text-lg uppercase px-2 max-sm:px-0">Legals</h1>
             <ul className="flex flex-col px-4 leading-9">
               <li><Link target="_blank" rel="noopener noreferrer" className="text-default-gray hover:text-white text-md" href={"https://docs.google.com/document/d/e/2PACX-1vSM1HbylMnlDx_xcDRx7qC5yui2Dw3zC2hPMnkl8on7sVDCV17SXHCFMpCrenccAiUT6mQCKcdv9hka/pub"}>Terms &amp; Conditions</Link></li>
               <li><Link target="_blank" rel="noopener noreferrer" className="text-default-gray hover:text-white text-md" href={"https://docs.google.com/document/d/e/2PACX-1vR9iaLnYhKATOLnNyREKE_TER60o2-TMu14efif_6QEIgpclwqcL0Wi64OEele0fkH-2-Gbng94BFD4/pub"}>Privacy Policy</Link></li>
@@ -49,7 +49,7 @@ export default function Footer(){
           </div>
 
           <div className="flex flex-col gap-4">
-            <h1 className="text-default uppercase font-semibold text-lg px-8 max-sm:-pl-2">Connect With Us</h1>
+            <h1 className="text-default uppercase font-semibold text-lg px-8 max-sm:pl-0">Connect With Us</h1>
             <div className="div">
             <ul className="flex flex-col px-4 py-1 leading-9 border-l-2 max-xl:border-none border-default-gray">
               <li><Link target="_blank" rel="noopener noreferrer" className="text-default-gray hover:text-white text-md px-2" href={"tel:%20+919826258659"}><i className="icofont-phone-circle hover:text-default text-2xl"> <span className="text-lg relative hover:text-white -top-1">+91 9826258659</span></i></Link></li>
