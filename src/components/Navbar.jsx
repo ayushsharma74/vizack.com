@@ -11,7 +11,6 @@ const logo = "/assets/logo/vizack.webp"
 const anton = Anton({ subsets: ['latin'],weight: "400" });
 
 export default function Navbar() {
-    const pathname = usePathname()
     useEffect(() => {
         AOS.init({})
     }, []);
@@ -69,13 +68,19 @@ export default function Navbar() {
         }
 
     }
-    const linkClicked = () => {
+    const linkClicked = (e) => {
+        let links = e.target.parentNode.parentNode.children
+        links = Array.from(links)
+        links.forEach(lnk => {
+            lnk.children[0].classList.replace("text-default", "text-default-black")
+        })
+        e.target.classList.replace("text-default-black", "text-default")
         if(window.innerWidth < 1024){
             document.querySelector("nav .hamburger-menu i").click()
         }
     }
     return (
-        <nav className="w-full h-24 bg-white flex z-50 justify-between max-lg:justify-between">
+        <nav className="w-full h-28 bg-white flex z-50 justify-between max-lg:justify-between">
             <div className="logo relative overflow-hidden -top-2 max-lg:mx-6">
                 <Link href={"/"}><Image
                     src={logo}
@@ -93,11 +98,11 @@ export default function Navbar() {
 
             <font className={anton.className}>
             <ul className="max-lg:hidden h-full z-50 flex my-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">
-                <Link href={"/"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="300" className={pathname === "/" ? "transition-colors mx-4 text-xl cursor-pointer text-default hover:text-default tracking-wider capitalise font-normal aos-animate" : "transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>Home</li></Link>
-                <Link href={"/about"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="600" className={pathname === "/about" ? "transition-colors mx-4 text-xl cursor-pointer text-default hover:text-default tracking-wider capitalise font-normal aos-animate" : "transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>About Us</li></Link>
-                <Link href={"/services"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="900" className={pathname === "/services" ? "transition-colors mx-4 text-xl cursor-pointer text-default hover:text-default tracking-wider capitalise font-normal aos-animate" : "transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>Services</li></Link>
-                <Link href={"/contact"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1200" className={pathname === "/contact" ? "transition-colors mx-4 text-xl cursor-pointer text-default hover:text-default tracking-wider capitalise font-normal aos-animate" : "transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>Contact</li></Link>
-                <Link href={"/blogs"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1500" className={pathname === "/blogs" ? "transition-colors mx-4 text-xl cursor-pointer text-default hover:text-default tracking-wider capitalise font-normal aos-animate" : "transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>Blogs</li></Link>
+                <Link href={"/"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="300" className={"transition-colors mx-4 text-xl cursor-pointer text-default hover:text-default tracking-wider capitalise font-normal"}>Home</li></Link>
+                <Link href={"/about"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="600" className={"transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>About Us</li></Link>
+                <Link href={"/services"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="900" className={"transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>Services</li></Link>
+                <Link href={"/contact"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1200" className={"transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>Contact</li></Link>
+                <Link href={"/blogs"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1500" className={"transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>Blogs</li></Link>
             </ul>
             </font>
             <div className="hamburger-menu my-6 lg:hidden max-lg:mx-6" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">

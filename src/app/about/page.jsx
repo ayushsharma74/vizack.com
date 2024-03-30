@@ -38,7 +38,7 @@ const about = () => {
               together.</blockquote>
 
             <div data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" className="relative mb-6 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:mb-8">
-              <Image  src={"/assets/images/pic1.jpg"} loading={"lazy"} alt={"Photo by Minh Pham"} className={"h-full w-full object-cover object-center"} />
+              <Image  src={"/assets/images/pic1.jpg"} loading={"lazy"} width={250} height={250} alt={"Photo by Minh Pham"} className={"h-full w-full object-cover object-center"} />
             </div>
 
             <h2 data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" className="mb-2 text-xl font-semibold text-default sm:text-2xl md:mb-4">Our Approach</h2>
