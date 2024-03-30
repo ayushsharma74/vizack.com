@@ -32,8 +32,8 @@ export default function Footer(){
               <ul className="flex flex-col px-4 leading-9">
                 <li><Link className="text-default-gray hover:text-white text-md" href={"/about"}>About Us</Link></li>
                 <li><Link className="text-default-gray hover:text-white text-md" href={"/blogs"}>Blogs</Link></li>
-                <li><Link className="text-default-gray hover:text-white text-md" href={"/"}>Intern With Us</Link></li>
-                <li><Link className="text-default-gray hover:text-white text-md" href={"/"}>Career Options</Link></li>
+                <li><Link className="text-default-gray hover:text-white text-md" href={"https://forms.gle/au6P4oBjpR6Zswq17"}>Intern With Us</Link></li>
+                <li><Link className="text-default-gray hover:text-white text-md" href={"https://forms.gle/rvW3tUsGgnY56HTY8"}>Career Options</Link></li>
                 <li><Link className="text-default-gray hover:text-white text-md" target="_blank" rel="noopener noreferrer" href={"http://wa.me/+919826258659"}>Customer Support</Link></li>
               </ul> 
             </div>
