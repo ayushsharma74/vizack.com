@@ -18,7 +18,8 @@ module.exports = {
         "dark": "#030637",
         "blog": "#5a5a5a",
         "note": "#041442",
-        "note-bg": "#FDF5FA"
+        "note-bg": "#FDF5FA",
+        "yellow-555": "#FFC100"
       },
       dropShadow: {
         "default": "2px 0 3px #737373",
