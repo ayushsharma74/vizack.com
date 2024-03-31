@@ -10,7 +10,7 @@ import "./blogs.css"
 export default function Blogs() {
     return (
         <>
-            <div className="cont mt-5">
+            <div className="cont my-10">
                 <UpperPost />
                 {/* blogs */}
                 <h1 className="text-3xl font-serif underline decoration-2">Recent Posts</h1>
