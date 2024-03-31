@@ -11,7 +11,7 @@ const Newsletter = () => {
   return (
     <div className="visme_d" data-title="ViZack Subscription form" data-url="8r6dmqvq-vizack-subscription-form" data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="52195"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>  
 
-      <div className="slide-container">
+{/*       <div className="slide-container">
         <Slide>
          {slideImages.map((slideImage, index)=> (
             <div key={index}>
@@ -21,8 +21,8 @@ const Newsletter = () => {
             </div>
           ))} 
         </Slide>
-      </div>
-    // <div className="relative flex min-h-10 flex-col items-center justify-center overflow-hidden bg-white p-8 sm:p-12">
+      </div> */}
+{/*     // <div className="relative flex min-h-10 flex-col items-center justify-center overflow-hidden bg-white p-8 sm:p-12">
     //   <div className="w-full max-w-4xl rounded-md border-2 border-gray-100 bg-white p-14 shadow-2xl">
     //     <div className="flex flex-col items-center">
     //       <span className="-rotate-1 rounded-lg bg-yellow-100 py-px px-2 text-sm text-yellow-800">117+ people joined this week</span>
@@ -36,7 +36,7 @@ const Newsletter = () => {
     //       </form>
     //     </div>
     //   </div>
-    // </div>
+    // </div> */}
   );
 };
 
