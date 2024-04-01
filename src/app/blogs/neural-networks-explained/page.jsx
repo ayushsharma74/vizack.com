@@ -2,8 +2,13 @@
 import './blogpage.css'
 import BlogTitle from '@/components/blogComponents/BlogTitle'
 import Link from 'next/link'
+import Image from 'next/image'
+const imgloader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 95}`;
+};
 
 export default function BlogPage() {
+    
     return (
         <>
             <div className="bg-default w-full min-h-10 h-fit py-2 flex flex-wrap items-center px-5" >
@@ -16,7 +21,7 @@ export default function BlogPage() {
                 </h1>
                 <h1 className="text-white font-bold"> &gt;</h1>
                 <h1 className="text-white hover:text-default-gray font-bold truncate">
-                    <Link href={`/blogs/graphic-design`} >&nbsp; Demystifying Neural Networks: How Do They Really Work?</Link>
+                    <Link href={`/blogs/neural-networks-explained`} >&nbsp; Demystifying Neural Networks: How Do They Really Work?</Link>
                 </h1>
             </div>
             <div className='cont my-10'>
@@ -25,7 +30,15 @@ export default function BlogPage() {
         <p className='font-serif text-lg mb-4'>
             In the vast landscape of artificial intelligence, neural networks stand out as one of the most intriguing and powerful tools. From recognizing faces in photos to driving cars autonomously, neural networks have revolutionized numerous industries. But how exactly do these complex systems work? Let's delve into the inner workings of neural networks and demystify their functionality.
         </p>
-
+        <Image 
+            loader={imgloader}
+            src={"https://www.microsoft.com/en-us/research/uploads/prod/2019/12/MSR_NeuralMemory_V5_1400x788.gif"}
+            width={500}
+            height={500}
+            loading='lazy'
+            quality={100}
+            className='min-w-full'
+        />
         <h1 className='font-bold text-2xl'>Understanding the Basics</h1>
 
         <p className='font-serif text-lg mb-4'>
@@ -37,7 +50,7 @@ export default function BlogPage() {
         <p className='font-serif text-lg mb-4'>
             This layer receives data, such as images, text, or numerical values, and passes it on to the next layer. Each neuron in the input layer represents a feature of the input data.
         </p>
-
+        
         <h1 className='font-bold text-2xl'>Hidden Layers:</h1>
 
         <p className='font-serif text-lg mb-4'>
@@ -45,10 +58,20 @@ export default function BlogPage() {
         </p>
 
         <h1 className='font-bold text-2xl'>Output Layer:</h1>
-
+        
         <p className='font-serif text-lg mb-4'>
             The final layer produces the network's output, which could be a classification label, a numerical value, or some other form of prediction.
         </p>
+        <Image 
+            loader={imgloader}
+            src={"https://cdn.analyticsvidhya.com/wp-content/uploads/2021/05/94709Convolutional_Neural_Network_to_identify_the_image_of_a_bird.png"}
+            width={500}
+            height={500}
+            loading='lazy'
+            quality={100}
+            className='min-w-full mx-auto'
+        />
+        <br />
 
         <h1 className='font-bold text-2xl'>Learning Through Training</h1>
 
