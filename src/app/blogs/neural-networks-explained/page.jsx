@@ -1,11 +1,12 @@
 'use client'
 import './blogpage.css'
 import BlogTitle from '@/components/blogComponents/BlogTitle'
+import Link from 'next/link'
 
 export default function BlogPage() {
     return (
         <>
-            <div className="bg-default w-full h-10 flex items-center px-5" >
+            <div className="bg-default w-full min-h-10 h-fit py-2 flex flex-wrap items-center px-5" >
                 <h1 className="text-white hover:text-default-gray font-bold">
                     <Link href={"/"}>Home &nbsp;</Link>
                 </h1>
