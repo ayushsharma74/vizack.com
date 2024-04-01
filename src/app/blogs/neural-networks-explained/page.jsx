@@ -4,7 +4,7 @@ import BlogTitle from '@/components/blogComponents/BlogTitle'
 
 export default function BlogPage() {
     return (
-        <div className='cont'>
+        <div className='cont my-10'>
             <BlogTitle title={"Demystifying Neural Networks: How Do They Really Work?"} writer={"Ayush"} date={"23.3.2024"} category={"DATA SCIENCE"}/>
 
     <p className='font-serif text-lg mb-4'>

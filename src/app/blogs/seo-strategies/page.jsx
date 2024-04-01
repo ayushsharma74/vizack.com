@@ -4,7 +4,7 @@ import BlogTitle from '@/components/blogComponents/BlogTitle'
 
 export default function BlogPage() {
     return (
-        <div className='cont'>
+        <div className='cont my-10'>
             <BlogTitle title={" 6 Advanced SEO Strategies That Help you Take your Online Presence to a New Level"} writer={"Farhan Khan"} date={"23.3.2024"} category={"SEO"}/>
             <p className='font-serif text-lg mb-4'>In the vast and ever-evolving realm of digital marketing, search engine optimization (SEO) remains a cornerstone for achieving online visibility and driving organic traffic to your website. With search engines continuously refining their algorithms and user behaviors evolving, staying ahead in the SEO game requires a strategic approach coupled with adaptability. As businesses strive to outshine competitors and secure top positions in search engine results pages (SERPs), employing advanced SEO strategies becomes imperative.</p>
             <img src="/assets/blogs/seo.jpg" alt="" className='w-1/1 '/>

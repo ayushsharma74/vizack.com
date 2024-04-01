@@ -4,7 +4,7 @@ import BlogTitle from '@/components/blogComponents/BlogTitle'
 
 export default function BlogPage() {
     return (
-        <div className='cont'>
+        <div className='cont my-10'>
             <BlogTitle title={"Exploring Graphic Design and Digital Art"} writer={"Gajender"} date={"23.3.2024"} category={"DESIGNING"}/>
             <p className='font-serif text-lg mb-4'></p>
             <h1 className='font-bold text-2xl'></h1>

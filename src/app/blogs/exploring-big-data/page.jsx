@@ -4,7 +4,7 @@ import BlogTitle from '@/components/blogComponents/BlogTitle'
 
 export default function BlogPage() {
     return (
-        <div className='cont'>
+        <div className='cont my-10'>
             
             <BlogTitle title={"Exploring Big Data: A Beginner's Guide to Understanding Analytics"} writer={"Gajender"} date={"23.3.2024"} category={"BIG DATA"}/>
             <p className='font-serif text-lg'>In today's digital age, data is everywhere. From the websites we visit to the products we buy, every interaction generates a trail of information waiting to be explored. But what exactly is big data, and how can we make sense of it all? Join us as we embark on a journey to navigate the world of big data and analytics, unraveling the mysteries and unlocking the potential of this vast landscape.</p>
