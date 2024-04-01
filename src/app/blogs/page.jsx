@@ -4,12 +4,23 @@ import UpperPost from "@/components/blogComponents/UpperPost"
 import RecentPost from "@/components/blogComponents/RecentPost"
 import Sidebar from "@/components/blogComponents/Sidebar"
 import "./blogs.css"
+import Link from "next/link"
+import Image from "next/image"
 
 // import asset1 from "/assets/images/asset1.jpg"
 
 export default function Blogs() {
     return (
         <>
+        <div className="bg-default w-full min-h-10 h-fit py-2 flex flex-wrap items-center px-5" >
+                <h1 className="text-white hover:text-default-gray font-bold">
+                    <Link href={"/"}>Home &nbsp;</Link>
+                </h1>
+                <h1 className="text-white font-bold"> &gt;</h1>
+                <h1 className="text-white hover:text-default-gray font-bold">
+                    <Link href={`/blogs`} >&nbsp; Blogs</Link>
+                </h1>
+            </div>
             <div className="cont my-10">
                 <UpperPost />
                 {/* blogs */}
