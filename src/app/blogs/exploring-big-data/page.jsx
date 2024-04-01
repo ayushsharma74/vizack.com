@@ -47,18 +47,18 @@ export default function BlogPage() {
                 <h1 className='font-bold text-2xl'>The Importance of Big Data and Analytics</h1>
                 <p  className='font-serif text-lg'>In today's competitive landscape, organizations that harness the power of big data and analytics gain a significant competitive advantage. By leveraging data-driven insights, businesses can better understand their customers' needs and preferences, anticipate market trends, and make informed strategic decisions. From personalized marketing campaigns to predictive maintenance in manufacturing, the applications of big data and analytics are endless.</p>
                 
-                {/* <Image 
-                    loader={imgloader}
-                    src={"https://media1.tenor.com/m/VIOJtZBFkYwAAAAC/etl.gif"}
-                    width={150}
-                    height={150}
-                    loading='lazy'
-                    quality={100}
-                    className='object-contain w-full'
-                /> */}
                 <h1 className='font-bold text-2xl'>Tools and Technologies</h1>
                 <p  className='font-serif text-lg'>A variety of tools and technologies are available to help organizations manage, analyze, and visualize big data. From database management systems like Apache Hadoop and MongoDB to data visualization platforms like Tableau and Power BI, these tools empower analysts to explore data efficiently and derive actionable insights. Additionally, machine learning and artificial intelligence algorithms can automate and enhance the analytics process, uncovering hidden patterns and anomalies in vast datasets.</p>
-                <video src="https://media.tenor.com/VIOJtZBFkYwAAAPo/etl.mp4" autoPlay={true} loop={true} className='mx-auto'></video>
+                <Image 
+                    loader={imgloader}
+                    src={"https://media1.tenor.com/m/VIOJtZBFkYwAAAAd/etl.gif"}
+                    width={750}
+                    height={450}
+                    loading='lazy'
+                    quality={100}
+                    className='mx-auto'
+                />
+                {/* <video src="https://media.tenor.com/VIOJtZBFkYwAAAPo/etl.mp4" autoPlay={true} loop={true} className='mx-auto'></video> */}
                 <h1 className='font-bold text-2xl'>Challenges and Considerations</h1>
                 <p  className='font-serif text-lg'>While big data and analytics offer immense potential, they also present challenges, including data privacy and security concerns, data integration issues, and the need for skilled data professionals. Organizations must invest in robust data governance frameworks and prioritize ethical considerations to ensure that data is used responsibly and ethically. Additionally, fostering a data-driven culture and providing ongoing training and development opportunities for employees are essential for maximizing the value of big data and analytics initiatives.</p>
                 <h1 className='font-bold text-2xl'>Conclusion: Navigating the Data Landscape</h1>
