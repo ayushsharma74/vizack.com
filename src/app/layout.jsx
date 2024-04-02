@@ -4,6 +4,7 @@ import "@/styles/icofont.css";
 import Navbar from "@/components/Navbar";
 import NextTopLoader from 'nextjs-toploader';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 import Footer from "@/components/Footer";
 import ToastProvider from "@/components/ToastProvider";
 // import { url } from "inspector";
@@ -54,6 +55,7 @@ export default function RootLayout({ children }) {
           <Footer />
         </ToastProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </>
   );
