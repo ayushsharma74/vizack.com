@@ -14,15 +14,6 @@
     transition: color, background 0.25s, 0.25s ease-in;
 }
 
-@keyframes turn{
-    0%{
-        transform: skewY(0deg);
-    }
-    100%{
-        transform: skewY(20deg);
-    }
-}
-
 .book{
     perspective: 2555rem;
     perspective-origin: 0rem 50rem;
