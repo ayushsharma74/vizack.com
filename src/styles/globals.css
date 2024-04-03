@@ -28,7 +28,8 @@
     transform-origin: left center;
     transform-style: preserve-3d;
     cursor: pointer;
-    perspective: 150rem;
+    perspective: 550rem;
+    perspective-origin: left left;
 }
 .page-turn{
     transform: rotateY(180deg);
