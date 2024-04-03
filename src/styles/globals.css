@@ -28,13 +28,24 @@
     perspective-origin: 0rem 50rem;
 }
 
+.page div::-webkit-scrollbar{
+    display: none;
+}
+
 .page{
-    transition: all 3s ease-in;
+    transition: all 1s ease-in;
     transform-origin: left center;
     transform-style: preserve-3d;
+    cursor: pointer;
 }
 .page-turn{
     transform: rotateY(180deg);
+    z-index: 50;
+    /* animation: turn 3s linear ; */
+}
+.page-turn-back{
+    transform: rotateY(0deg);
+    z-index: 50;
     /* animation: turn 3s linear ; */
 }
 
