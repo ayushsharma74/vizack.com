@@ -14,6 +14,33 @@
     transition: color, background 0.25s, 0.25s ease-in;
 }
 
-/* .card .image:nth-child(even){
+@keyframes turn{
+    0%{
+        transform: skewY(0deg);
+    }
+    100%{
+        transform: skewY(20deg);
+    }
+}
 
-} */
+.book{
+    perspective: 2555rem;
+    perspective-origin: 0rem 50rem;
+}
+
+.page{
+    transition: all 3s ease-in;
+    transform-origin: left center;
+    transform-style: preserve-3d;
+}
+.page-turn{
+    transform: rotateY(180deg);
+    /* animation: turn 3s linear ; */
+}
+
+.front{
+    backface-visibility: hidden;
+}
+.back{
+    transform: rotateY(180deg);
+}
