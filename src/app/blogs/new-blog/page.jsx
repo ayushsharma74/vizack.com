@@ -11,10 +11,12 @@ export default function Blog(){
     const turn = (e)=>{
     const pages = document.querySelectorAll("main .page")
     pages[e].classList.toggle("page-turn")
-    pages[e].classList.toggle("page-turn-back")
-    setTimeout(()=>{
+    if(pages[e].classList.contains("page-turn") == false){
         pages[e].classList.toggle("page-turn-back")
-    }, 1000)
+        setTimeout(()=>{
+            pages[e].classList.toggle("page-turn-back")
+        }, 1000)
+    }
    }
     return (
         <>

@@ -33,7 +33,7 @@
 }
 
 .page{
-    transition: all 1s ease-in;
+    transition: transform 1s ease-in;
     transform-origin: left center;
     transform-style: preserve-3d;
     cursor: pointer;
@@ -41,12 +41,10 @@
 .page-turn{
     transform: rotateY(180deg);
     z-index: 50;
-    /* animation: turn 3s linear ; */
 }
 .page-turn-back{
     transform: rotateY(0deg);
     z-index: 50;
-    /* animation: turn 3s linear ; */
 }
 
 .front{
