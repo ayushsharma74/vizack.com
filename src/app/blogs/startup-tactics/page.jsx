@@ -39,16 +39,16 @@ export default function BlogPage() {
                 />
                 <br />
                 <h1 className='font-bold text-2xl'>Laying the Foundation</h1>
-                <p className='font-serif text-lg mb-4'>In the foundational phase of a startup's journey, critical decisions are made, and the groundwork for success is laid.</p>
+                <p className='font-serif text-lg mb-4'>In the foundational phase of a startup&apos;s journey, critical decisions are made, and the groundwork for success is laid.</p>
                 <br />
                 <h2 className='font-bold text-xl pl-2'>&#8212; Identifying a Niche Market</h2>
                 <p className='font-serif text-lg mb-4 pl-4 mt-2'>At the heart of every successful startup is a deep understanding of its target audience. By identifying a niche market, startups can tailor their offerings to meet the specific needs and preferences of a distinct customer segment. This targeted approach enables startups to stand out in a crowded marketplace and establish a strong foothold for growth.</p>
                
                 <h2 className='font-bold text-xl pl-2'>&#8212; Crafting a Compelling Value Proposition</h2>
-                <p className='font-serif text-lg mb-4 pl-4 mt-2'>A compelling value proposition is essential for attracting and retaining customers. Startups must clearly articulate the unique benefits their products or services offer to address customers' pain points and fulfill their desires. A strong value proposition serves as the cornerstone of the startup's branding and marketing efforts, setting the stage for success.</p>
+                <p className='font-serif text-lg mb-4 pl-4 mt-2'>A compelling value proposition is essential for attracting and retaining customers. Startups must clearly articulate the unique benefits their products or services offer to address customer&apos;s pain points and fulfill their desires. A strong value proposition serves as the cornerstone of the startup&apos;s branding and marketing efforts, setting the stage for success.</p>
                 <br />
                 <h2 className='font-bold text-xl pl-2'>&#8212; Building a Strong Brand Identity</h2>
-                <p className='font-serif text-lg mb-10 pl-4 mt-2 '>Building a strong brand identity is crucial for startups to differentiate themselves and foster customer loyalty. A well-defined brand identity encompasses the startup's values, personality, and voice, resonating with its target audience on an emotional level. Through consistent branding across all touchpoints, startups can build trust, credibility, and recognition in the marketplace.</p>
+                <p className='font-serif text-lg mb-10 pl-4 mt-2 '>Building a strong brand identity is crucial for startups to differentiate themselves and foster customer loyalty. A well-defined brand identity encompasses the startup&apos;s values, personality, and voice, resonating with its target audience on an emotional level. Through consistent branding across all touchpoints, startups can build trust, credibility, and recognition in the marketplace.</p>
                 
                 <Image 
                 loader={imgloader}
