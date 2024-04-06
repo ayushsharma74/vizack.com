@@ -68,8 +68,8 @@ export default function BlogPage() {
                 <h2 className='font-bold text-xl pl-2'>&#8212; Leveraging Social Media Marketing</h2>
                 <p className='font-serif text-lg mb-10 pl-4 mt-2 '>Social media marketing offers startups a powerful platform for building brand awareness, engaging with customers, and driving traffic to their website. By identifying the most relevant social media channels for their target audience and creating compelling content, startups can effectively leverage social media to amplify their reach and foster meaningful connections with customers.</p>
                 
-                <h2 className='font-bold text-xl pl-2'>&#8212; Implementing Search Engine Optimization (SEO) Strategies</h2>
-                <p className='font-serif text-lg mb-10 pl-4 mt-2 '>Search engine optimization (SEO) plays a crucial role in improving a startup's visibility and ranking in search engine results pages (SERPs). By optimizing their website for relevant keywords, creating high-quality content, and building backlinks from reputable sources, startups can increase organic traffic to their website and enhance their online presence.</p>
+                <h2 className='font-bold text-xl pl-2'>&#8212; Implementing Search Engine Optimization &lpar;SEO&rpar; Strategies</h2>
+                <p className='font-serif text-lg mb-10 pl-4 mt-2 '>Search engine optimization &lpar;SEO&rpar; plays a crucial role in improving a startup's visibility and ranking in search engine results pages &lpar;SERPs&rpar;. By optimizing their website for relevant keywords, creating high-quality content, and building backlinks from reputable sources, startups can increase organic traffic to their website and enhance their online presence.</p>
                 <Image 
                 loader={imgloader}
                 src={"https://www.searchfit.com/wp-content/uploads/2017/10/10-effective-ways-online-presence.png"}
@@ -86,8 +86,8 @@ export default function BlogPage() {
                 <h2 className='font-bold text-xl pl-2'>&#8212; Prioritizing Customer Experience</h2>
                 <p className='font-serif text-lg mb-10 pl-4 mt-2 '>Delivering exceptional customer experiences is key to building brand loyalty and advocacy. Startups must focus on every aspect of the customer journey, from the initial interaction to post-purchase support, ensuring that each touchpoint is seamless and memorable. By actively listening to customer feedback and continuously improving their products or services, startups can create positive experiences that keep customers coming back.</p>
                 
-                <h2 className='font-bold text-xl pl-2'>&#8212; Implementing Customer Relationship Management (CRM) Systems</h2>
-                <p className='font-serif text-lg mb-10 pl-4 mt-2 '>Customer relationship management (CRM) systems enable startups to effectively manage and nurture relationships with their customers. By centralizing customer data, tracking interactions, and segmenting customers based on their preferences and behavior, startups can personalize their marketing efforts, improve customer engagement, and drive sales.</p>
+                <h2 className='font-bold text-xl pl-2'>&#8212; Implementing Customer Relationship Management &lpar;CRM&rpar; Systems</h2>
+                <p className='font-serif text-lg mb-10 pl-4 mt-2 '>Customer relationship management &lpar;CRM&rpar; systems enable startups to effectively manage and nurture relationships with their customers. By centralizing customer data, tracking interactions, and segmenting customers based on their preferences and behavior, startups can personalize their marketing efforts, improve customer engagement, and drive sales.</p>
                 
                 <h2 className='font-bold text-xl pl-2'>&#8212; Leveraging Email Marketing Campaigns</h2>
                 <p className='font-serif text-lg mb-10 pl-4 mt-2 '>Email marketing remains one of the most effective channels for engaging with customers and driving conversions. Startups can leverage email marketing campaigns to deliver targeted content, promotions, and updates directly to their subscribers' inboxes. By crafting compelling and relevant email content, optimizing send times, and monitoring performance metrics, startups can maximize the impact of their email marketing efforts.</p>
