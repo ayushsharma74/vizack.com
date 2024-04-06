@@ -49,6 +49,13 @@ export default function Blogs() {
                         imgSrc={'/assets/blogs/neural-network.jpg'}
                         category={'DATA SCIENCE'}
                         date={"18.03.2024"}/>
+                        <RecentPost 
+                        title={"A Comprehensive Guide to Startup Tactics"} 
+                        disc={"The entrepreneurial journey is a thrilling adventure filled with promise, passion, and purpose. Yet, beneath the surface lies a complex landscape fraught with challenges..."}
+                        route={'/blogs/startup-tactics'}
+                        imgSrc={'https://media.licdn.com/dms/image/D4D12AQHGfRQm2A2ubw/article-cover_image-shrink_720_1280/0/1694836377930?e=2147483647&v=beta&t=A3q6f93v-UMHJQBDgiKUxY4DgeRG8dPTdJo3X57-Zw0'}
+                        category={'DATA SCIENCE'}
+                        date={"18.03.2024"}/>
                     </div>
                     <div className="flex-2 hidden flex-col gap-5 w-[55.5rem] lg:flex md:flex">
                         <Sidebar />

@@ -7,11 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+
       colors: {
         "default": "#F2932F",
         "default-gray": "#737373",
@@ -34,6 +36,9 @@ module.exports = {
       },
       boxShadow: {
         "default-shadow": "0 0 20px 10px #F8F8F8"
+      },
+      animation:{
+        "arrow": "arrow 0.25s ease-in"
       }
       
       

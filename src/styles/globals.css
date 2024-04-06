@@ -46,3 +46,18 @@
 .back{
     transform: rotateY(180deg);
 }
+
+
+@keyframes arrow{
+    from{
+        color: currentColor;
+        margin-left: -2rem;
+        opacity: 0.5;
+    }
+    to{
+        margin-left: 0;
+        color: #F2932F;
+        opacity: 1;
+    }
+}
+
