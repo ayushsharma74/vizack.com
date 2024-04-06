@@ -1,5 +1,5 @@
 'use client'
-import './blogpage.css'
+import './blogs.css'
 import BlogTitle from '@/components/blogComponents/BlogTitle'
 import Image from 'next/image'
 import Link from 'next/link'
