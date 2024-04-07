@@ -27,6 +27,7 @@ export default function Navbar() {
                 e.target.classList.add("icofont-close")
                 e.target.parentElement.classList.add("aos-animate")
                 e.target.parentNode.previousElementSibling.children[0].classList.remove("max-lg:hidden", "aos-animate")
+                e.target.parentNode.previousElementSibling.children[0].classList.toggle("h-screen")
                 setTimeout(() => {
                     e.target.parentNode.previousElementSibling.children[0].classList
                         .add(
@@ -97,7 +98,7 @@ export default function Navbar() {
             </div>
 
             <font className={anton.className}>
-            <ul className=" w-full bg-white max-lg:hidden h-screen z-50 flex my-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">
+            <ul className=" w-full bg-white max-lg:hidden z-50 flex my-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">
                 <Link className="h-fit" href={"/"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="300" className={"transition-colors mx-4 h-fit text-xl cursor-pointer text-default hover:text-default tracking-wider capitalise font-normal"}>Home</li></Link>
                 <Link className="h-fit" href={"/about"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="600" className={"transition-colors mx-4 h-fit text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>About Us</li></Link>
                 <Link className="h-fit" href={"/services"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="900" className={"transition-colors mx-4 h-fit text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>Services</li></Link>
