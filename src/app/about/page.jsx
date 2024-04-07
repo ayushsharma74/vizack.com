@@ -3,6 +3,10 @@ import Upperbanner from '@/components/Upperbanner'
 import Image from 'next/image'
 
 const about = () => {
+  const imgloader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 95}`;
+};
+
   return (
     <>
       <Upperbanner content={'ABOUT'} route={'about'} routeName={'About'} />
@@ -38,7 +42,7 @@ const about = () => {
               together.</blockquote>
 
             <div data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" className="relative mb-6 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:mb-8">
-              <Image  src={"/assets/images/pic1.jpg"} loading={"lazy"} width={250} height={250} alt={"Photo by Minh Pham"} className={"h-full w-full object-cover object-center"} />
+              <Image  src={"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRxKOB_AA454A4lEJuDMnWYKpBJRX-YDeGBZHPyZvUMxAz6L2KA"} loader={imgloader} loading={"lazy"} width={250} height={250} alt={"Photo by Minh Pham"} className={"h-full w-full object-cover object-center"} />
             </div>
 
             <h2 data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" className="mb-2 text-xl font-semibold text-default sm:text-2xl md:mb-4">Our Approach</h2>
