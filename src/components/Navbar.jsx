@@ -80,7 +80,7 @@ export default function Navbar() {
         }
     }
     return (
-        <nav className="w-full fixed h-28 bg-white flex z-50 justify-between max-lg:justify-between">
+        <nav className="w-full fixed h-28 bg-white flex z-50 top-0 left-0 justify-between max-lg:justify-between">
             <div className="logo relative overflow-hidden -top-2 max-lg:mx-6">
                 <Link href={"/"}><Image
                     src={logo}
