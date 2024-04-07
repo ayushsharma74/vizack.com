@@ -80,7 +80,7 @@ export default function Navbar() {
         }
     }
     return (
-        <nav className="w-full h-28 bg-white flex z-50 justify-between max-lg:justify-between">
+        <nav className="w-full fixed h-28 bg-white flex z-50 justify-between max-lg:justify-between">
             <div className="logo relative overflow-hidden -top-2 max-lg:mx-6">
                 <Link href={"/"}><Image
                     src={logo}
@@ -97,12 +97,12 @@ export default function Navbar() {
             </div>
 
             <font className={anton.className}>
-            <ul className="max-lg:hidden h-full z-50 flex my-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">
-                <Link href={"/"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="300" className={"transition-colors mx-4 text-xl cursor-pointer text-default hover:text-default tracking-wider capitalise font-normal"}>Home</li></Link>
-                <Link href={"/about"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="600" className={"transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>About Us</li></Link>
-                <Link href={"/services"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="900" className={"transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>Services</li></Link>
-                <Link href={"/contact"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1200" className={"transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>Contact</li></Link>
-                <Link href={"/blogs"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1500" className={"transition-colors mx-4 text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>Blogs</li></Link>
+            <ul className=" w-full bg-white max-lg:hidden h-screen z-50 flex my-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">
+                <Link className="h-fit" href={"/"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="300" className={"transition-colors mx-4 h-fit text-xl cursor-pointer text-default hover:text-default tracking-wider capitalise font-normal"}>Home</li></Link>
+                <Link className="h-fit" href={"/about"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="600" className={"transition-colors mx-4 h-fit text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>About Us</li></Link>
+                <Link className="h-fit" href={"/services"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="900" className={"transition-colors mx-4 h-fit text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>Services</li></Link>
+                <Link className="h-fit" href={"/contact"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1200" className={"transition-colors mx-4 h-fit text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>Contact</li></Link>
+                <Link className="h-fit" href={"/blogs"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1500" className={"transition-colors mx-4 h-fit text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>Blogs</li></Link>
             </ul>
             </font>
             <div className="hamburger-menu my-6 lg:hidden max-lg:mx-6" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">
