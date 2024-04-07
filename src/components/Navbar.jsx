@@ -52,6 +52,7 @@ export default function Navbar() {
                 e.target.classList.add("icofont-navigation-menu")
                 e.target.parentElement.classList.add("aos-animate")
                 e.target.parentNode.previousElementSibling.children[0].classList.add("max-lg:hidden", "aos-animate")
+                e.target.parentNode.previousElementSibling.children[0].classList.toggle("h-screen")
                 e.target.parentNode.previousElementSibling.children[0].classList.remove("max-lg:h-full",
                     "max-lg:w-full", "max-lg:flex", "max-lg:flex-col",
                     "max-lg:align-middle", "max-lg:justify-start", "max-lg:gap-20",
