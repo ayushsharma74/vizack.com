@@ -51,8 +51,8 @@ export default function RootLayout({ children }) {
       <body className="max-w-full overflow-x-hidden">
         <ToastProvider>
           <NextTopLoader showSpinner={false} color="orange"/>
-          <Navbar />
           <Padding />
+          <Navbar />
           {children}
           <Footer />
         </ToastProvider>
