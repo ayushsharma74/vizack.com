@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Upperbanner from '@/components/Upperbanner'
 import Image from 'next/image'
