@@ -6,6 +6,7 @@ import NextTopLoader from 'nextjs-toploader';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import Footer from "@/components/Footer";
+import Padding from "@/components/topPadding";
 import ToastProvider from "@/components/ToastProvider";
 // import { url } from "inspector";
 const logo = "/assets/logo/logo.png";
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
         <ToastProvider>
           <NextTopLoader showSpinner={false} color="orange"/>
           <Navbar />
+          <Padding />
           {children}
           <Footer />
         </ToastProvider>
