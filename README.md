@@ -6,7 +6,7 @@ A Website For ViZack Enterprises Bootstrapped From NextJS and Styled With Tailwi
 
 ## Screenshots
 
-![App Screenshot](https://res.cloudinary.com/dn8rxgclg/image/upload/v1712129520/Screenshot_16_goudxx.png)
+![App Screenshot](https://res.cloudinary.com/ayushsharma/image/upload/f_auto,q_auto/Screenshot_16_goudxx)
 
 
 ## Contributors
