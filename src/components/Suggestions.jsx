@@ -1,6 +1,12 @@
+"use client"
 import Link from 'next/link';
 import React from 'react';
 import Button from './button';
+import Image from "next/image";
+
+const imgloader = ({ src, width, quality }) => {
+  return `${src}?w=${width}&q=${quality || 95}`;
+};
 
 const Suggestions = () => {
   return (
@@ -9,9 +15,11 @@ const Suggestions = () => {
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           <div className="flex flex-col overflow-hidden rounded-lg bg-gray-900 sm:flex-row md:h-80">
             <div className="order-first h-32 sm:h-auto sm:w-1/2 lg:w-2/5">
-              <img
-                src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29udGFjdHxlbnwwfHwwfHx8MA%3D%3D"
-                loading="lazy"
+              <Image
+                src={"https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29udGFjdHxlbnwwfHwwfHx8MA%3D%3D"}
+                loader={imgloader}
+                width={250}
+                height={250}
                 alt="Photo by Andras Vas"
                 className="h-full w-full object-cover object-center"
               />
