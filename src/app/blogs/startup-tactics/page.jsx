@@ -36,6 +36,7 @@ export default function BlogPage() {
                 loading='lazy'
                 quality={100}
                 className='min-w-full my-10'
+                alt='marketing startegy'
                 />
                 <br />
                 <h1 className='font-bold text-2xl'>Laying the Foundation</h1>
@@ -58,6 +59,7 @@ export default function BlogPage() {
                 loading='lazy'
                 quality={100}
                 className='min-w-[70%] mx-auto'
+                alt='bricks'
                 />
                 <h1 className='font-bold mt-10 text-2xl'>Establishing an Online Presence</h1>
                 <p className='font-serif text-lg mb-4'>In today's digital age, establishing a robust online presence is paramount for startups to reach and engage with their target audience effectively.</p>
@@ -78,6 +80,7 @@ export default function BlogPage() {
                 loading='lazy'
                 quality={100}
                 className='min-w-[70%] mx-auto'
+                alt='laptop vector art'
                 />
 
                 <h1 className='font-bold mt-10 text-2xl'>Cultivating Customer Relationships</h1>
@@ -100,6 +103,7 @@ export default function BlogPage() {
                 loading='lazy'
                 quality={100}
                 className='min-w-[70%] mx-auto'
+                alt='html gif'
                 />
 
                 <h1 className='font-bold mt-10 text-2xl'>Driving Growth and Innovation</h1>
@@ -122,6 +126,7 @@ export default function BlogPage() {
                 loading='lazy'
                 quality={100}
                 className='min-w-[70%] mx-auto'
+                alt='growth'
                 />
 
                 <h1 className='font-bold mt-10 text-2xl'>Sustaining Success</h1>

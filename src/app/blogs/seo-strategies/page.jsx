@@ -1,13 +1,21 @@
 'use client'
 import './blogpage.css'
 import BlogTitle from '@/components/blogComponents/BlogTitle'
+import Image from 'next/image'
 
 export default function BlogPage() {
     return (
         <div className='cont my-10'>
             <BlogTitle title={" 6 Advanced SEO Strategies That Help you Take your Online Presence to a New Level"} writer={"Farhan Khan"} date={"23.3.2024"} category={"SEO"}/>
             <p className='font-serif text-lg mb-4'>In the vast and ever-evolving realm of digital marketing, search engine optimization (SEO) remains a cornerstone for achieving online visibility and driving organic traffic to your website. With search engines continuously refining their algorithms and user behaviors evolving, staying ahead in the SEO game requires a strategic approach coupled with adaptability. As businesses strive to outshine competitors and secure top positions in search engine results pages (SERPs), employing advanced SEO strategies becomes imperative.</p>
-            <img src="/assets/blogs/seo.jpg" alt="" className='w-1/1 '/>
+            {/* <img src="/assets/blogs/seo.jpg" alt="" className='w-1/1 '/> */}
+            <Image
+                src={"/assets/blogs/seo.jpg"}
+                alt='seo'
+                width={500}
+                height={500}
+                className='w-full'
+            />
             <br />
             <p className='font-serif text-lg'>At ViZack Enterprises, we understand the significance of harnessing the power of SEO to propel your brand to new heights. With a blend of creativity, technical expertise, and data-driven insights, we navigate the complexities of the digital landscape to deliver unparalleled results. Here are some cutting-edge SEO strategies that can elevate your online presence and pave the way for sustained success:</p>
             <h1 className='font-bold text-2xl'>1. Comprehensive Keyword Research:</h1>

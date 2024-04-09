@@ -38,6 +38,7 @@ export default function BlogPage() {
                     loading='lazy'
                     quality={100}
                     className='min-w-full'
+                    alt='big-data'
                 />
                 <br />
                 <h1 className='font-bold text-2xl'>What is Big Data?</h1>
@@ -60,6 +61,7 @@ export default function BlogPage() {
                     loading='lazy'
                     quality={100}
                     className='mx-auto'
+                    alt='data-visualization'
                 />
                 {/* <video src="https://media.tenor.com/VIOJtZBFkYwAAAPo/etl.mp4" autoPlay={true} loop={true} className='mx-auto'></video> */}
                 <h1 className='font-bold text-2xl'>Challenges and Considerations</h1>

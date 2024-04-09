@@ -1,5 +1,6 @@
 'use client'
 import { toast } from "react-toastify";
+import Image from 'next/image'
 export default function ContactPage(){
   const notify = () => {
     toast.success('Email Sent Successfully',{
@@ -131,10 +132,12 @@ export default function ContactPage(){
                 </form>
               </div>
             </div>
-            <img
-              alt="Contact us"
-              class="hidden max-h-full w-full rounded-lg object-cover lg:block"
-              src="https://images.unsplash.com/photo-1543269664-56d93c1b41a6?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGhhcHB5JTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60"
+            <Image
+             src={"/assets/blogs/contactus.jpg"}
+             height={1000}
+             width={1000}
+             className="hidden max-h-full w-full rounded-lg object-cover lg:block"
+             alt="contact us"
             />
           </div>
         </div>

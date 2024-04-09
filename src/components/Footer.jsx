@@ -14,6 +14,7 @@ export default function Footer(){
               src={"/assets/logo/footer.png"}
               width={50}
               height={50}
+              alt="logo"
               />
               <h1 className="text-default font-bold tracking-wide text-xl">ViZack Enterprises</h1>
             </div>

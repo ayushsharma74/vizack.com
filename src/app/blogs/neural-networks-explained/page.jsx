@@ -38,6 +38,7 @@ export default function BlogPage() {
             loading='lazy'
             quality={100}
             className='min-w-full'
+            alt='memmory-controller-gif'
         />
         <h1 className='font-bold text-2xl'>Understanding the Basics</h1>
 
@@ -70,6 +71,7 @@ export default function BlogPage() {
             loading='lazy'
             quality={100}
             className='min-w-full mx-auto'
+            alt='output-layer'
         />
         <br />
 

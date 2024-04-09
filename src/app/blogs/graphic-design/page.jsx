@@ -37,6 +37,7 @@ export default function BlogPage() {
                 loading='lazy'
                 quality={100}
                 className='min-w-full'
+                alt='vector art'
                 />
                 <br />
                 <h1 className='font-bold text-2xl'>What is Graphic Design?</h1>
@@ -53,6 +54,7 @@ export default function BlogPage() {
                 loading='lazy'
                 quality={100}
                 className='min-w-[70%] mx-auto'
+                alt='graphic-design'
                 />
                 <br />
                 <h1 className='font-bold text-2xl'>The Intersection of Graphic Design and Digital Art</h1>
@@ -72,6 +74,7 @@ export default function BlogPage() {
                 loading='lazy'
                 quality={100}
                 className='min-w-[70%] mx-auto'
+                alt='phone-gif'
                 />
                 <br />
                 <h1 className='font-bold text-2xl'>Conclusion: Embracing Creativity in the Digital Age</h1>
