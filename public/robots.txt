@@ -4,12 +4,11 @@ Allow: /about
 Allow: /services
 Allow: /contact
 Allow: /blogs
-Allow: /blogs/blog1
-Allow: /blogs/blog2
-Allow: /blogs/blog3
-Allow: /blogs/blog4
-Allow: /blogs/blog5
-Allow: /blogs/blog6
+Allow: /blogs/exploring-big-data
+Allow: /blogs/graphic-design
+Allow: /blogs/neural-networks-explained
+Allow: /blogs/seo-strategies
+Allow: /blogs/startup-tactics
 Disallow: /_next/
 Disallow: /api/
 Disallow: /public/
