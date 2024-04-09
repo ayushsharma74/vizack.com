@@ -4,11 +4,11 @@ import Image from "next/image";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect, useState } from "react";
-import { Anton } from 'next/font/google';
+import { Cabin_Condensed } from 'next/font/google';
 import { usePathname } from "next/navigation";
 
 const logo = "/assets/logo/vizack.webp"
-const anton = Anton({ subsets: ['latin'],weight: "400" });
+const cabin = Cabin_Condensed({subsets: ['latin'] , weight: '700'})
 
 export default function Navbar() {
     useEffect(() => {
@@ -98,7 +98,7 @@ export default function Navbar() {
                 </Link>
             </div>
 
-            <font className={anton.className}>
+            <font className={cabin.className}>
             <ul className=" w-full bg-white max-lg:hidden z-50 flex my-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">
                 <Link className="h-fit" href={"/"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="300" className={"transition-colors mx-4 h-fit text-xl cursor-pointer text-default hover:text-default tracking-wider capitalise font-normal"}>Home</li></Link>
                 <Link className="h-fit" href={"/about"}><li onClick={linkClicked} data-aos="fade-down" data-aos-delay="1000" data-aos-duration="600" className={"transition-colors mx-4 h-fit text-xl cursor-pointer text-default-black hover:text-default tracking-wider capitalise font-normal"}>About Us</li></Link>
