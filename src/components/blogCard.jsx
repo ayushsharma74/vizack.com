@@ -34,7 +34,7 @@ export default function Blog(props,blogImg, profileImg, profileName, Time, blogT
                     </div>
                     <div className="right flex gap-3 items-center justify-between">
                         <div className="comment flex gap-2 border-r pr-3">
-                            <i class="icofont-duotone icofont-messaging text-2xl max-sm:text-xl text-default"></i>
+                            <i  className="icofont-duotone icofont-messaging text-2xl max-sm:text-xl text-default"></i>
                             <h3 className="uppercase text-default-gray max-sm:text-sm cursor-pointer hover:text-dark transition-colors duration-300">comments</h3>
                         </div>
                         <div className="time flex gap-2 w-32 items-center">
