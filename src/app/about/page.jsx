@@ -54,7 +54,7 @@ const about = () => {
               help you thrive and prosper.</p>
 
             <p data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" className="mb-2 text-black font-semibold text-black sm:text-lg md:mb-8">
-              At ViZack Enterprises Pvt Ltd, growth isn&apos;t just a goal &lsquo; it&apos;s a promise. So
+              At ViZack Enterprises Pvt Ltd, growth isn&apos;t just a goal it&apos;s a promise. So
               whether you&apos;re dreaming of taking your small business to new heights or
               embarking on a journey of expansion and innovation, let ViZack Enterprises
               be your guide. Together, let&apos;s turn your vision into reality and build a
