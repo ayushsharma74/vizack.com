@@ -1,5 +1,11 @@
+"use client"
 import React, { useState } from 'react';
 import HoverButton from '@/components/HoverButton';
+import Image from "next/image";
+
+const imgloader = ({ src, width, quality }) => {
+  return `${src}?w=${width}&q=${quality || 95}`;
+};
 
 const Servicecard = ({ image_src, service, content, extraContent}) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -15,7 +21,7 @@ const Servicecard = ({ image_src, service, content, extraContent}) => {
       <div className="p-8 rounded shadow-xl sm:p-16">
         <div className="flex flex-col lg:flex-row">
           <div className="mb-6 lg:mb-0 lg:w-1/4 lg:pr-5">
-            <img src={image_src} alt="" />
+            <Image src={image_src} alt={service} loader={imgloader} width={250} height={250} className='w-auto h-auto' />
           </div>
           <div className="lg:w-3/4 flex flex-col justify-center">
             <h1 className="text-4xl mb-3 font-bold">{service}</h1>
