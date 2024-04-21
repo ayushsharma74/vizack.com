@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import Padding from "@/components/topPadding";
 import ToastProvider from "@/components/ToastProvider";
 // import { url } from "inspector";
-const logo = "/assets/logo/logo.png";
+const logo = "/assets/logo/footer.png";
 export const metadata = {
   title: "ViZack Enterprises",
   description: "Welcome to ViZack Enterprises Pvt Ltd - where your success is our passion, where commitment meets excellence. At ViZack Enterprises, we pride ourselves on being more than just a startup organization - we're a dedicated team of professionals driven by a singular mission: to provide unparalleled customer service and empower small businesses to achieve remarkable growth.",
