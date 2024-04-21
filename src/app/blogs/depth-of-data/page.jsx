@@ -25,7 +25,7 @@ export default function BlogPage() {
             </h1>
         </div>
             <div className='cont my-10'>
-                <BlogTitle title={"Navigating the Depths of Data: An Exploration into Exploratory Data Analysis"} writer={"Gajender"} date={"23.3.2024"} category={"DESIGNING"}/>
+                <BlogTitle title={"Navigating the Depths of Data: An Exploration into Exploratory Data Analysis"} writer={"Farhan Ahmad Khan"} date={"23.3.2024"} category={"DATA SCIENCE"}/>
                 <p className='font-serif text-lg mb-4'></p>
                 <h1 className='font-bold text-2xl'></h1>
                 <p className='font-serif text-lg mb-4'>In the vast sea of data that inundates our digital world, lies a treasure trove of insights waiting to be discovered. Yet, navigating this sea can be daunting without the right tools and techniques. This is where Exploratory Data Analysis (EDA) comes in, serving as the compass and sextant for data scientists and analysts alike, guiding them through the murky waters of raw data to uncover hidden patterns, trends, and anomalies. In this blog, we embark on a journey into the depths of EDA, uncovering its significance, methods, and best practices.</p>
