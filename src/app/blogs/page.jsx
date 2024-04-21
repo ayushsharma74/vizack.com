@@ -61,7 +61,14 @@ export default function Blogs() {
                         disc={"In recent years, the IT industry has witnessed a surge in demand for skilled professionals, yet paradoxically, a growing number of qualified engineers find themselves grappling with joblessness and stress..."}
                         route={'/blogs/navigating-inflation'}
                         imgSrc={'https://i2-prod.business-live.co.uk/incoming/article26605573.ece/ALTERNATES/s810/0_AUR_NJL_040814ARCH_03.jpg'}
-                        category={'Discussion'}
+                        category={'DISCUSSION'}
+                        date={"21.04.2024"}/>
+                        <RecentPost 
+                        title={"Navigating the Depths of Data: An Exploration into Exploratory Data Analysis"} 
+                        disc={"In the vast sea of data that inundates our digital world, lies a treasure trove of insights waiting to be discovered. Yet, navigating this sea can be daunting without the right tools and techniques..."}
+                        route={'/blogs/depth-of-data'}
+                        imgSrc={'https://miro.medium.com/v2/resize:fit:1024/1*U3ycm5tC-5Q6hMODYr5K9A.png'}
+                        category={'DATA SCIENCE'}
                         date={"21.04.2024"}/>
                     </div>
                     <div className="flex-2 hidden flex-col gap-5 w-[55.5rem] lg:flex md:flex">
