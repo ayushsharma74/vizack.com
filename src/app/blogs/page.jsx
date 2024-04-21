@@ -53,9 +53,16 @@ export default function Blogs() {
                         title={"A Comprehensive Guide to Startup Tactics"} 
                         disc={"The entrepreneurial journey is a thrilling adventure filled with promise, passion, and purpose. Yet, beneath the surface lies a complex landscape fraught with challenges..."}
                         route={'/blogs/startup-tactics'}
-                        imgSrc={'https://media.licdn.com/dms/image/D4D12AQHGfRQm2A2ubw/article-cover_image-shrink_720_1280/0/1694836377930?e=2147483647&v=beta&t=A3q6f93v-UMHJQBDgiKUxY4DgeRG8dPTdJo3X57-Zw0'}
+                        imgSrc={'/assets/blogs/startup tactics.jpg'}
                         category={'DATA SCIENCE'}
                         date={"18.03.2024"}/>
+                        <RecentPost 
+                        title={"Navigating the Inflation of Skills in the IT Sector"} 
+                        disc={"In recent years, the IT industry has witnessed a surge in demand for skilled professionals, yet paradoxically, a growing number of qualified engineers find themselves grappling with joblessness and stress..."}
+                        route={'/blogs/navigating-inflation'}
+                        imgSrc={'https://i2-prod.business-live.co.uk/incoming/article26605573.ece/ALTERNATES/s810/0_AUR_NJL_040814ARCH_03.jpg'}
+                        category={'Discussion'}
+                        date={"21.04.2024"}/>
                     </div>
                     <div className="flex-2 hidden flex-col gap-5 w-[55.5rem] lg:flex md:flex">
                         <Sidebar />
