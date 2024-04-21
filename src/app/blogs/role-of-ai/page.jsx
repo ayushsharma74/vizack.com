@@ -1,16 +1,34 @@
-'use client'
+"use client"
 import './blogpage.css'
 import BlogTitle from '@/components/blogComponents/BlogTitle'
 import Image from 'next/image'
 import Link from 'next/link'
+import Head from 'next/head'
 
 const imgloader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 95}`;
 };
 
+
+const url ="https://www.vizackenterprises.com/blogs/role-of-ai"
+
+const logo = "/assets/blogs/role of ai/img1.png"
+const title = "Unveiling the Marvels: The Role of AI in Digital Marketing"
+const description = "In the vast and dynamic realm of digital marketing, there&apos;s a quiet revolution brewing, one powered by intelligence that's not human. Yes, you guessed it right! Artificial Intelligence, the marvel of modern technology, is reshaping the landscape of digital marketing in ways unimaginable. So, let’s embark on a journey to unravel the mysteries and unveil the wonders of AI in digital marketing."
+
 export default function BlogPage() {
     return (
         <>
+        <Head>
+            <title>{title}</title>
+            <meta name='og:image' content={logo}/>
+            <meta name='og:title' content={title}/>
+            <meta name='og:description' content={description}/>
+            <meta name='og:url' content={url}/>
+            <meta name='og:title' content={title}/>
+            <meta name='og:type' content={"artical"}/>
+
+        </Head>
         <div className="bg-default w-full min-h-10 h-fit flex flex-wrap items-center px-5 py-2" >
             <h1 className="text-white hover:text-default-gray font-bold">
                 <Link href={"/"}>Home &nbsp;</Link>
