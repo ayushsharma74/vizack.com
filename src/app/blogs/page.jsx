@@ -70,6 +70,14 @@ export default function Blogs() {
                         imgSrc={'https://miro.medium.com/v2/resize:fit:1024/1*U3ycm5tC-5Q6hMODYr5K9A.png'}
                         category={'DATA SCIENCE'}
                         date={"21.04.2024"}/>
+
+<RecentPost 
+                        title={"Unveiling the Marvels: The Role of AI in Digital Marketing"} 
+                        disc={"In the vast and dynamic realm of digital marketing, there’s a quiet revolution brewing, one powered by intelligence that's not human. Yes, you guessed it right! Artificial Intelligence..."}
+                        route={'/blogs/role-of-ai'}
+                        imgSrc={'/assets/blogs/role of ai/img1.png'}
+                        category={'AI'}
+                        date={"21.04.2024"}/>
                     </div>
                     <div className="flex-2 hidden flex-col gap-5 w-[55.5rem] lg:flex md:flex">
                         <Sidebar />
