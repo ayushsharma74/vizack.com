@@ -12,10 +12,10 @@ import { Octokit } from "@octokit/rest"
 
 export default function Blogs() {
 const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKKEN, // Your GitHub token
+  auth: process.env.GITHUB_TOKEN, // Your GitHub token
 });
 
-const [data, setData] = useState("404 Page Not Found");
+const [datas, setDatas] = useState("404 Page Not Found");
 const ReadFileFromRepo = () => {
   useEffect(() => {
     const owner = "ayushsharma74";
@@ -31,14 +31,14 @@ const ReadFileFromRepo = () => {
           // Decode base64 content
           let content = Buffer.from(response.data.content, "base64").toString();
           content = JSON.parse(content);
-          setData(content);
+          setDatas(content);
           console.log("File content:", content);
         } else {
           throw new Error("Specified path is not a file");
         }
       } catch (error) {
         console.error("Error reading file:", error.message);
-        setData("Error: " + error.message);
+        setDatas("Error: " + error.message);
       }
     }
 
