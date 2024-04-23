@@ -5,6 +5,7 @@ import RecentPost from "@/components/blogComponents/RecentPost"
 import Sidebar from "@/components/blogComponents/Sidebar"
 import "./blogs.css"
 import Link from "next/link"
+import { useState } from "react"
 
 // import asset1 from "/assets/images/asset1.jpg"
 
