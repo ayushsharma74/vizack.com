@@ -15,7 +15,7 @@ const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN, // Your GitHub token
 });
 
-const [datas, setDatas] = useState("404 Page Not Found");
+const [datas, setDatas] = useState({});
 const ReadFileFromRepo = () => {
   useEffect(() => {
     const owner = "ayushsharma74";
@@ -66,7 +66,7 @@ ReadFileFromRepo()
                 <h1 className="text-3xl font-serif underline decoration-2">Recent Posts</h1>
                 <div className="flex">
                     <div className="flex-5 mt-3">
-                        {/* {datas} */}
+                        {datas[0].name}
                         
                         <RecentPost 
                         title={"Exploring Graphic Design and Digital Art"} 
