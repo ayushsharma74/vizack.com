@@ -265,7 +265,7 @@ image(Image Address, Image Alt)
     const [rands, setRands] = useState("Nothing is Triggered");
 
     function preview() {
-        const git_token = "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";
+        const git_token = process.env.GITHUB_TOKKEN;
         const { Octokit } = require("@octokit/rest");
         const octokit = new Octokit({
         auth: git_token,

@@ -11,7 +11,7 @@ import { useState } from "react"
 
 export default function Blogs() {
 const octokit = new Octokit({
-  auth: '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', // Your GitHub token
+  auth: process.env.GITHUB_TOKKEN, // Your GitHub token
 });
 
 const ReadFileFromRepo = () => {
@@ -45,6 +45,7 @@ const ReadFileFromRepo = () => {
     fetchData();
 
   }, []);
+}
 
     return (
         <>
