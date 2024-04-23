@@ -72,16 +72,7 @@ export default function Blogs() {
                 <h1 className="text-3xl font-serif underline decoration-2">Recent Posts</h1>
                 <div className="flex">
                     <div className="flex-5 mt-3">
-                        {(
-                            <RecentPost 
-                            title={data[0].data.blog.name} 
-                            disc={data[0].data.blog.description}
-                            route={data[0].data.blog.route}
-                            imgSrc={data[0].data.blog.image}
-                            category={data[0].data.blog.category}
-                            date={data[0].data.blog.time}
-                            />
-                        )}
+                        {data}
                         
                         <RecentPost 
                         title={"Exploring Graphic Design and Digital Art"} 
