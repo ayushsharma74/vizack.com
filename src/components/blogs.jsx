@@ -47,5 +47,3 @@ export function MainImg(props){
         />
     );
 }
-
-export {heading, par, img, MainImg}
