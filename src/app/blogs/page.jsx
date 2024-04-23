@@ -17,9 +17,8 @@ const octokit = new Octokit({
 
 const [data, setData] = useState("404 Page Not Found");
 const ReadFileFromRepo = () => {
-
   useEffect(() => {
-    const owner = "Gajendrasuman";
+    const owner = "ayushsharma74";
     const repo = "vizack-blogs";
     const path = "blogs.json";
 
@@ -47,6 +46,7 @@ const ReadFileFromRepo = () => {
 
   }, []);
 }
+
 
     return (
         <>
