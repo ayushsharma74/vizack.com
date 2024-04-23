@@ -15,8 +15,8 @@ const octokit = new Octokit({
   auth: process.env.GITHUB_TOKKEN, // Your GitHub token
 });
 
+const [data, setData] = useState("404 Page Not Found");
 const ReadFileFromRepo = () => {
-  const [data, setData] = useState("404 Page Not Found");
 
   useEffect(() => {
     const owner = "Gajendrasuman";
