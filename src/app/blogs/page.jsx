@@ -66,7 +66,7 @@ ReadFileFromRepo()
                 <h1 className="text-3xl font-serif underline decoration-2">Recent Posts</h1>
                 <div className="flex">
                     <div className="flex-5 mt-3">
-                        {datas}
+                        {/* {datas} */}
                         
                         <RecentPost 
                         title={"Exploring Graphic Design and Digital Art"} 
