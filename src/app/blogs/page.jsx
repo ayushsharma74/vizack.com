@@ -5,11 +5,55 @@ import RecentPost from "@/components/blogComponents/RecentPost"
 import Sidebar from "@/components/blogComponents/Sidebar"
 import "./blogs.css"
 import Link from "next/link"
-import Image from "next/image"
 
 // import asset1 from "/assets/images/asset1.jpg"
 
 export default function Blogs() {
+    const [data, setData] = useState("404 Page Not Found")
+    // Octokit Authorization
+    const git_token = "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";
+    const { Octokit } = require("@octokit/rest");
+    const octokit = new Octokit({
+    auth: git_token,
+    });
+
+    // Read File Content
+    async function readFileFromRepo(owner, repo, path) {
+        try {
+            const response = await octokit.repos.getContent({
+            owner,
+            repo,
+            path,
+            });
+        
+            // Ensure the response is a file and not a directory
+            if (Array.isArray(response.data) || !response.data.content) {
+            throw new Error("Specified path is not a file");
+            }
+        
+            // Decode base64 content
+            let content = Buffer.from(response.data.content, "base64").toString();
+            content = JSON.parse(content)
+            return content;
+        } catch (error) {
+            console.error("Error reading file:", error.message);
+            throw error;
+        }
+        }
+        
+        // Example usage:
+        const owner = "Gajendrasuman";
+        const repo = "vizack-blogs";
+        const path = "blogs.json";
+        
+        readFileFromRepo(owner, repo, path)
+        .then(content => {
+            setData(content)
+            console.log("File content:", content);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
     return (
         <>
         <div className="bg-default w-full min-h-10 h-fit py-2 flex flex-wrap items-center px-5" >
@@ -26,15 +70,18 @@ export default function Blogs() {
                 {/* blogs */}
                 <h1 className="text-3xl font-serif underline decoration-2">Recent Posts</h1>
                 <div className="flex">
-                    <div className="flex-5 mt-3"> 
-                        <RecentPost 
-                        title={"Exploring Big Data: A Beginner's Guide to Understanding Analytics"} 
-                        disc={"In today's digital age, data is everywhere. From the websites we visit to the products we buy, every interaction generates a trail of information waiting to be explored. But what exactly is....."}
-                        route={'/blogs/exploring-big-data'}
-                        imgSrc={'/assets/blogs/big-data.jpg'}
-                        category={'BIG DATA'}
-                        date={"25.03.2024"}
-                        />
+                    <div className="flex-5 mt-3">
+                        {(
+                            <RecentPost 
+                            title={data[0].data.blog.name} 
+                            disc={data[0].data.blog.description}
+                            route={data[0].data.blog.route}
+                            imgSrc={data[0].data.blog.image}
+                            category={data[0].data.blog.category}
+                            date={data[0].data.blog.time}
+                            />
+                        )}
+                        
                         <RecentPost 
                         title={"Exploring Graphic Design and Digital Art"} 
                         disc={"Graphic design is the art of creating visual content to communicate messages and ideas. It encompasses a wide range of mediums, including print, digital, and multimedia. Graphic designers use elements like typography....."}
