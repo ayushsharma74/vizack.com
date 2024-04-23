@@ -47,6 +47,7 @@ const ReadFileFromRepo = () => {
   }, []);
 }
 
+ReadFileFromRepo()
 
     return (
         <>
