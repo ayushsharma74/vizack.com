@@ -32,7 +32,7 @@ export default function BlogPage() {
             </h1>
         </div>
             <div className='cont my-10'>
-                <BlogTitle title={" Unveiling the Marvels: The Role of AI in Digital Marketing"} writer={"Gajender"} date={"21.04.2024"} category={"AI"}/>
+                <BlogTitle title={"Unveiling the Marvels: The Role of AI in Digital Marketing"} writer={"Gajender"} date={"21.04.2024"} category={"AI"}/>
                 <p className='font-serif text-lg mb-4'></p>
                 <h1 className='font-bold text-2xl'></h1>
                 <p className='font-serif text-lg mb-4'>In the vast and dynamic realm of digital marketing, there&apos;s a quiet revolution brewing, one powered by intelligence that's not human. Yes, you guessed it right! Artificial Intelligence, the marvel of modern technology, is reshaping the landscape of digital marketing in ways unimaginable. So, let&apos;s embark on a journey to unravel the mysteries and unveil the wonders of AI in digital marketing.</p>

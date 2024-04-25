@@ -1,39 +1,23 @@
 import Image from "next/image";
-import Link from "next/link";
 
 const imgloader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 95}`;
 };
 
 
-export default function heading(props){
+export default function Heading(props){
     return (
         <h1 className='font-bold text-2xl'>{props.content}</h1>
     );
 }
 
-export function par(props){
+function Par(props){
     return (
         <p className='font-serif text-lg'>{props.content}</p>
     );
 }
 
-export function img(props){
-    return (
-        <Image 
-            loader={imgloader}
-            src={props.link}
-            width={100}
-            height={100}
-            loading='lazy'
-            quality={100}
-            className='min-w-[70%] mx-auto'
-            alt={props.alt}
-        />
-    );
-}
-
-export function MainImg(props){
+function MainImg(props){
     return (
         <Image 
             loader={imgloader}
@@ -47,3 +31,5 @@ export function MainImg(props){
         />
     );
 }
+
+export {Heading, Par, MainImg}

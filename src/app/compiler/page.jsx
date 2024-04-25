@@ -1,7 +1,7 @@
 "use client"
-import { useState } from "react"
+import { useState,  useEffect } from "react"
 import React from "react"
-import axios from 'axios';
+import CreateBlogs from "@/components/createBlog";
 import { toast } from "react-toastify";
 // import { AxiosRequestConfig } from "axios";
 
@@ -11,15 +11,23 @@ export default function Compiler() {
 
     // preloaded Content
     const cmd = `/*    Commands   */
+category(Category)
+publisher(Name)
 title(Blog Title)
+heading(Heading)
 par(Paragraph)
-mainimage(Image Address, Image Alt)
-image(Image Address, Image Alt)
+image-full(FullImage Address, Image Alt)
+image-<size>(Image Address, Image Alt)
     `
     const [name, setName] = useState('Untitled')
     const [content, setContent] = useState(cmd)
     const [contentHistory, setContentHistory] = useState([cmd]);
     const [historyIndex, setHistoryIndex] = useState(0);
+    const [banner, setBanner] = useState({
+        title: "",
+        publisher: "Admin",
+        category: ""
+    })
     const updateName = (e) => {
         setName(e.target.value)
     }
@@ -104,210 +112,100 @@ image(Image Address, Image Alt)
                 console.error('Error pasting text:', error);
             });
     };
+    let time =  new Date();
+    time = `${time.getDate()}.${time.getMonth() + 1}.${time.getFullYear()}`
+    let pageData =""
+    let mainData = ""
+    
 
-    let pageData = ''
-    let title = []
-    let data2 = ""
-    const header = {
-        banner: "",
-        image: "",
-        name: "",
-        about: "",
-        facebook: "",
-        linkedin: "",
-        twitter: "",
-        instagram: "",
-        date: "",
-    }
-    let Banner;
     const PageBuilder = () => {
         let code = document.querySelector("main textarea");
         code = code.value
         code = code.split("\n")
         code.forEach(element => {
-            if (element.includes('banner(')) {
-                let key = element.split('banner(')
-                key = key[1].split(')');
-                key = key[0]
-                header.banner = key
-            }
-            else if (element.includes('publisher.image(')) {
-                let key = element.split('publisher.image(')
-                key = key[1].split(')');
-                key = key[0]
-                header.image = key
-            }
-            else if (element.includes('publisher.name(')) {
-                let key = element.split('publisher.name(')
-                key = key[1].split(')');
-                key = key[0]
-                header.name = key
-            }
-            else if (element.includes('publisher.about(')) {
-                let key = element.split('publisher.about(')
-                key = key[1].split(')');
-                key = key[0]
-                header.about = key
-                data2 += `\<AboutPublisher img={"${header.image}"} name={"${header.name}"} about="${header.about}" facebook="${header.facebook}" twitter="${header.twitter}" instagram="${header.instagram}" linkedin="${header.instagram}" />`;
-            }
-            else if (element.includes('publisher.facebook(')) {
-                let key = element.split('publisher.facebook(')
-                key = key[1].split(')');
-                key = key[0]
-                header.facebook = key
-            }
-            else if (element.includes('publisher.linkedin(')) {
-                let key = element.split('publisher.linkedin(')
-                key = key[1].split(')');
-                key = key[0]
-                header.linkedin = key
-            }
-            else if (element.includes('publisher.instagram(')) {
-                let key = element.split('publisher.instagram(')
-                key = key[1].split(')');
-                key = key[0]
-                header.instagram = key
-            }
-            else if (element.includes('publisher.twitter(')) {
-                let key = element.split('publisher.twitter(')
-                key = key[1].split(')');
-                key = key[0]
-                header.twitter = key
-            }
-            else if (element.includes('publisher.date(')) {
-                let key = element.split('publisher.date(')
-                key = key[1].split(')');
-                key = key[0]
-                header.date = key
-            }
-            else if (element.includes('title(')) {
+            if (element.includes('title(')) {
                 let key = element.split('title(')
                 key = key[1].split(')');
                 key = key[0]
-                title.push(key)
-                if (title.length > 1) {
-                    data2 += `\n<Title Title={"${key}"} />`
-                }
+                banner.title = key;
             }
             else if (element.includes('par(')) {
                 let key = element.split('par(')
                 key = key[1].split(')');
                 key = key[0]
-                data2 += `\n<Par p={"${key}"} />`;
+                pageData += `<par content={'${key}'} />\n`
             }
-            else if (element.includes('note(')) {
-                let key = element.split('note(')
+
+
+            else if (element.includes('heading(')) {
+                let key = element.split('heading(')
+                key = key[1].split(')');
+                key = key[0]
+                pageData += `<heading content={'${key}'} />\n`
+            }
+            else if (element.includes('publisher(')) {
+                let key = element.split('publisher(')
+                key = key[1].split(')');
+                key = key[0]
+                banner.publisher = key;
+            }
+            else if (element.includes('category(')) {
+                let key = element.split('category(')
+                key = key[1].split(')');
+                key = key[0]
+                banner.category = key;
+                
+            }
+            else if (element.includes('image-full(')) {
+                let key = element.split('image-full(')
                 key = key[1].split(')');
                 let keys = key[0].lastIndexOf(",")
                 let key0 = key[0].substring(0, keys)
                 let key1 = key[0].substring(keys + 1)
 
                 if (key.length == 1) {
-                    data2 += `\n<Note p={"${key0}"} Title={""} />`;
+                    pageData += `<MainImg link={'${key0}'} alt="" />\n`
                 }
                 else {
-                    data2 += `\n<Note p={"${key0}"} Title={"${key1}"} />`;
+                    pageData += `<MainImg link={'${key0}'} alt={'${key1}'} />\n`
                 }
             }
-            else if (element.includes('image(')) {
-                let key = element.split('image(')
+            else if (element.includes('image-')) {
+                let key = element.split('image-')
+                key = key[1].split('(');
+                let num = parseInt(key[0])
                 key = key[1].split(')');
                 key = key[0].split(",")
-                if (key.length == 1) {
-                    data2 += `\n<Images img={"${key[0]}"} alt={""} />`;
+
+                if(num <= 100){
+                        pageData += `<Image 
+    loader={imgloader}
+    src={${key[0]}}
+    width={100}
+    height={100}
+    loading='lazy'
+    quality={100}
+    className='min-w-[${num}%] mx-auto'
+    alt={'${key[1]}'}
+/>\n`
                 }
-                else {
-                    data2 += `\n<Images img={"${key[0]}"} alt={"${key[1]}"} />`;
+                else{
+                    pageData += `<MainImg link={'${key[0]}'} alt={'${key[1]}'} />\n`
                 }
             }
-            else if (element.includes('sub(')) {
-                let key = element.split('sub(')
-                key = key[1].split(')');
-                key = key[0]
-                data2 += `\n<SubTitle Title={"${key}"} />`;
-            }
-            else if (element.includes('tags(')) {
-                let key = element.split('tags(')
-                key = key[1].split(')');
-                key = key[0].split(",")
-                data2 += `\n<div className="tags flex flex-wrap justify-between my-8 border-t-[1px] border-b-[1px] border-[#E2E2E2]">
-                            <div className="tags flex gap-2 items-center">
-                                <h1 className="text-dark text-xl font-semibold">Tags: </h1>
-                                <div className="flex flex-wrap gap-6 px-4 flex-auto py-6">`
-                key.forEach(k => {
-                    data2 += `\n<Tag name={"${k}"} />`;
-                });
-                data2 += `\n</div>
-                            </div>
-                            <div className="share">
-                                <div className="tags flex gap-2 items-center">
-                                    <h1 className="text-dark text-xl font-semibold">Share: </h1>
-                                    <div className="flex flex-wrap gap-2 px-4 flex-auto py-6">
-                                        <Link rel="noopener noreferrer" href={"https://www.facebook.com/sharer/sharer.php?u=https://vizackcom.vercel.app/blogs/${title[0].split(":")[0].replaceAll(" ", "")}/"} target="_blank" className="hover:text-[#ff6900] transition-colors duration-300" >Facebook</Link>
-                                        <Link rel="noopener noreferrer" href={"https://twitter.com/intent/tweet?url=https://vizackcom.vercel.app/blogs/${title[0].split(":")[0].replaceAll(" ", "")}/&text=${title[0].split(":")[0].replaceAll(" ", "%20")}"} target="_blank" className="hover:text-[#ff6900] transition-colors duration-300" >X</Link>
-                                        <Link rel="noopener noreferrer" href={"https://www.linkedin.com/shareArticle?url=https://vizackcom.vercel.app/blogs/${title[0].split(":")[0].replaceAll(" ", "")}/&title=${title[0].split(":")[0].replaceAll(" ", "%20")}"} target="_blank" className="hover:text-[#ff6900] transition-colors duration-300" >Linkedin</Link>
-                                        <Link rel="noopener noreferrer" href={"whatsapp://send?text=https://vizackenterprises.com/blogs/${title[0].split(":")[0].replaceAll(" ", "")}/"} data-action="share/whatsapp/share" target="_blank" className="hover:text-[#ff6900] transition-colors duration-300" >Whatsapp</Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>\n
-                    `;
-            }
-            
         })
-        Banner = `\n<TopHeader banner={"${header.banner}"} bannerAlt={"${title[0]}"} publisher={"${header.image}"} publisherName={"${header.name}"} date={"${header.date}"}  />\n<div className="parg px-4 py-6 mb-4">`;
-        const blogTitle = `\n<Title Title={"${title[0]}"} />\n`;
-        pageData += Banner + blogTitle + data2;
-        let titles = title[0].split(":")[0]
-        return {name: titles, data: pageData, publisher: header.name}
+        
+        mainData += `<BlogTitle title={"${banner.title}"} writer={"${banner.publisher}"} date={"${time}"} category={"${banner.category}"} />` + pageData;
+        return {name: banner.title, data: mainData, publisher: banner.publisher}
     }
-
-    const [rands, setRands] = useState("Nothing is Triggered");
-
     function preview() {
-        const git_token = process.env.GITHUB_TOKEN;
-        const { Octokit } = require("@octokit/rest");
-        const octokit = new Octokit({
-        auth: git_token,
-        });
-        // Read File Content
-        // async function readFileFromRepo(owner, repo, path) {
-        //     try {
-        //       const response = await octokit.repos.getContent({
-        //         owner,
-        //         repo,
-        //         path,
-        //       });
-          
-        //       // Ensure the response is a file and not a directory
-        //       if (Array.isArray(response.data) || !response.data.content) {
-        //         throw new Error("Specified path is not a file");
-        //       }
-          
-        //       // Decode base64 content
-        //       const content = Buffer.from(response.data.content, "base64").toString();
-          
-        //       return content;
-        //     } catch (error) {
-        //       console.error("Error reading file:", error.message);
-        //       throw error;
-        //     }
-        //   }
-          
-        //   // Example usage:
-        //   const owner = "Gajendrasuman";
-        //   const repo = "UniSys";
-        //   const path = "index.html";
-          
-        //   readFileFromRepo(owner, repo, path)
-        //     .then(content => {
-        //         setRands(content)
-        //       console.log("File content:", content);
-        //     })
-        //     .catch(error => {
-        //       console.error("Error:", error);
-        //     });
-
+        const build = PageBuilder()
+        console.log(CreateBlogs(build.data, build.publisher,  build.name));
+        // const git_token = process.env.GITHUB_TOKEN;
+        // const { Octokit } = require("@octokit/rest");
+        // const octokit = new Octokit({
+        // auth: git_token,
+        // });
 
         // Create Directory
         // async function createDirectory() {
@@ -418,7 +316,7 @@ image(Image Address, Image Alt)
     //     saveData()
     // }
     return (
-        <main className="px-6 py-8 w-full">
+        <main className="px-6 my-96 py-8 w-full">
             <div className="menu border-2 h-12 w-full flex items-center justify-between gap-10">
                 <div className="flex items-center gap-4">
                     <h1 className="IcoFont text-2xl flex items-center h-full gap-2 px-2"><span><object type="image/svg+xml" data={"/assets/logo/editor.svg"} width="40" height="40"></object></span> <span className="text-default">VZ</span> Editor &nbsp;&nbsp;|</h1>
@@ -444,7 +342,6 @@ image(Image Address, Image Alt)
             </div>
 
             <div className="w-full min-h-64 border">
-                {<div dangerouslySetInnerHTML={{ __html: rands }} />}
             </div>
         </main>
     )
