@@ -14,7 +14,11 @@ export default async function CreateBlogs(data, publisher, title) {
         repo: repo,
         path: path,
         message: "Create new directory",
-        content: Buffer.from(data).toString("base64"), // empty content
+        content: Buffer.from(data).toString("base64"),
+        committer: {
+            name: "Gajendrasuman",
+            email: "Gajendrasuman868@gmail.com"
+          }
         });
         return {msg: "Success"}
     } catch (error) {
