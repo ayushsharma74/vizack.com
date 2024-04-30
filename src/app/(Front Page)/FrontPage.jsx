@@ -1,7 +1,7 @@
 import { Anton } from 'next/font/google';
+const anton = Anton({ subsets: ['latin'], weight: "400" });
 import { Typewriter } from "react-simple-typewriter";
 import Image from 'next/image';
-const anton = Anton({ subsets: ['latin'], weight: "400" });
 import Link from 'next/link';
 
 export default function Mainpage() {
