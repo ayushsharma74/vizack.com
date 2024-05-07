@@ -2,7 +2,7 @@
 import UpperPost from "@/components/blogComponents/UpperPost";
 import RecentPost from "@/components/blogComponents/RecentPost";
 import Sidebar from "@/components/blogComponents/Sidebar";
-import "./blogs.css";
+import '@/styles/blogs.css'
 import Link from "next/link";
 import getMainBlogs from "@/components/getMainBlogs";
 import { useState, useEffect } from "react";

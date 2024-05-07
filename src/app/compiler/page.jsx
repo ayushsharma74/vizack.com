@@ -1,13 +1,12 @@
 "use client"
 import { useState,  useEffect } from "react"
 import React from "react"
-import CreateBlogs from "@/components/createBlog";
-import { toast } from "react-toastify";
+import CreateBlogs from "@/components/BlogsSystem/createBlog";
+import { Toaster, toast } from "react-hot-toast";
 // import { AxiosRequestConfig } from "axios";
 
 
 export default function Compiler() {
-
 
     // preloaded Content
     const cmd = `/*    Commands   */
@@ -16,7 +15,7 @@ publisher(Name)
 title(Blog Title)
 heading(Heading)
 par(Paragraph)
-image-full(FullImage Address, Image Alt)
+banner(Banner Image Link)
 image-<size>(Image Address, Image Alt)
     `
     const [name, setName] = useState('Untitled')
@@ -115,8 +114,7 @@ image-<size>(Image Address, Image Alt)
     let time =  new Date();
     time = `${time.getDate()}.${time.getMonth() + 1}.${time.getFullYear()}`
     let pageData =""
-    let mainData = ""
-    
+    let dscr = 0, img = 0;
 
     const PageBuilder = () => {
         let code = document.querySelector("main textarea");
@@ -133,7 +131,8 @@ image-<size>(Image Address, Image Alt)
                 let key = element.split('par(')
                 key = key[1].split(')');
                 key = key[0]
-                pageData += `<par content={'${key}'} />\n`
+                if(dscr == 0){dscr = key}
+                pageData += `\npar-${key}\n`
             }
 
 
@@ -141,7 +140,7 @@ image-<size>(Image Address, Image Alt)
                 let key = element.split('heading(')
                 key = key[1].split(')');
                 key = key[0]
-                pageData += `<heading content={'${key}'} />\n`
+                pageData += `\nhead-${key}\n`
             }
             else if (element.includes('publisher(')) {
                 let key = element.split('publisher(')
@@ -156,19 +155,11 @@ image-<size>(Image Address, Image Alt)
                 banner.category = key;
                 
             }
-            else if (element.includes('image-full(')) {
-                let key = element.split('image-full(')
+            else if (element.includes('banner(')) {
+                let key = element.split('banner(')
                 key = key[1].split(')');
-                let keys = key[0].lastIndexOf(",")
-                let key0 = key[0].substring(0, keys)
-                let key1 = key[0].substring(keys + 1)
-
-                if (key.length == 1) {
-                    pageData += `<MainImg link={'${key0}'} alt="" />\n`
-                }
-                else {
-                    pageData += `<MainImg link={'${key0}'} alt={'${key1}'} />\n`
-                }
+                key = key[0]
+                if (img == 0) { img = key }
             }
             else if (element.includes('image-')) {
                 let key = element.split('image-')
@@ -178,145 +169,84 @@ image-<size>(Image Address, Image Alt)
                 key = key[0].split(",")
 
                 if(num <= 100){
-                        pageData += `<Image 
-    loader={imgloader}
-    src={${key[0]}}
-    width={100}
-    height={100}
-    loading='lazy'
-    quality={100}
-    className='min-w-[${num}%] mx-auto'
-    alt={'${key[1]}'}
-/>\n`
+                    pageData += `\nlink-${key[0]} alt-${key[1]} size-${num}\n`
                 }
                 else{
-                    pageData += `<MainImg link={'${key[0]}'} alt={'${key[1]}'} />\n`
+                    pageData += `\nlink-${key[0]} alt-${key[1]} size-full\n`
                 }
             }
         })
         
-        mainData += `<BlogTitle title={"${banner.title}"} writer={"${banner.publisher}"} date={"${time}"} category={"${banner.category}"} />` + pageData;
-        return {name: banner.title, data: mainData, publisher: banner.publisher}
-    }
-    function preview() {
-        const build = PageBuilder()
-        console.log(CreateBlogs(build.data, build.publisher,  build.name));
-        // const git_token = process.env.GITHUB_TOKEN;
-        // const { Octokit } = require("@octokit/rest");
-        // const octokit = new Octokit({
-        // auth: git_token,
-        // });
-
-        // Create Directory
-        // async function createDirectory() {
-        // try {
-        //     await octokit.repos.({
-        //     owner: "Gajendrasuman",
-        //     repo: "ViZack-Enterprises",
-        //     path: "src/app/blog/GSTECH",
-        //     message: "Create new directory",
-        //     content: Buffer.from("HEllo GSTECH").toString("base64"), // empty content
-        //     });
-        //     console.log("New directory created successfully!");
-        // } catch (error) {
-        //     console.error("Error creating directory:", error.message);
-        // }
-        // }
-
-        // createDirectory();
-
-        // const build = PageBuilder()
-        // async function saveData() {
-        //     const urls = `https://vi-zack-enterprises.vercel.app/api/saveData`;
-        //     await axios({
-        //         url: urls,
-        //         method: "POST",
-        //         headers: {
-        //             'Content-Type': 'application/json',
-        //         },
-        //         params: { filename: build.name, content: build.data, reqType: "Preview" }, 
-        //     }).then((res) => {
-        //         toast.success('Page Build Successfully', {
-        //             position: "bottom-right",
-        //             pauseOnHover: true,
-        //             theme: "dark"
-        //         });
-                
-        //         // window.open(`/blogs/Temp/${build.name.replaceAll(" ", "").toLowerCase()}`, '_blank');
-                
-        //     }).catch((err) => {
-        //         toast.error('Page Build  Failed', {
-        //             position: "bottom-right",
-        //             pauseOnHover: true,
-        //             theme: "dark"
-        //         });
-        //         console.log("Error: ", err);
-        //     });
-        // }
-        // saveData()
+        if (img == 0) { img = "" }
+        if (dscr == 0) { dscr = "" }
+        return {name: banner.title, data: pageData, publisher: banner.publisher, description: dscr, category: banner.category, banner: img, time: time}
     }
     
-    // function submit() {
-    //     const build = PageBuilder()
-    //     async function saveData() {
+    const preview = async () => {
+        const build = PageBuilder()
+        let newTab;
+        let createORUpdateBlogs = await CreateBlogs(build.data, build.publisher, build.name, build.description, build.category, build.banner, build.time, "Preview");
+        
+        if (createORUpdateBlogs.message == "Success" || createORUpdateBlogs == "Success") {
+            let name = build.name;
+            name = name.includes(":") ? name.replaceAll(" ", "").replaceAll("-", "").split(":")[1].toLowerCase() : name.replaceAll(" ", "").replaceAll("-", "").toLowerCase();
+            newTab = window.open(`/blogs/preview/${build.publisher.replaceAll(" ", "")}/${build.category}/${name}`, '_blank');
+            if (newTab) {
+                toast.success("Preview Window Launched", {
+                    position: "bottom-right",
+                    duration: 3000,
+                })
+            } else {
+                toast.warn("Pop-up window has been blocked by the Browser", {
+                    position: "bottom-right",
+                    duration: 3000
+                })
+            }
+        }
+    }
 
-    //         const urls = `https://vi-zack-enterprises.vercel.app/api/saveData`;
-    //         await axios({
-    //             method: 'post',
-    //             url: urls,
-    //             headers: {
-    //                 'Content-Type': 'application/json', // Set the Content-Type header
-    //             },
-    //             params: { filename: build.name, content: build.data, reqType: "Submit" },
-    //         }).then((res) => {
-    //             toast.success('Page Build Successfully', {
-    //                 position: "bottom-right",
-    //                 pauseOnHover: true,
-    //                 theme: "dark"
-    //             });
-    //             async function handleSubmit() {
-    //                 let url = `${process.env.API_URL}/blogs/src/app/employee/blogs/blog/${build.name.replaceAll(" ", "").toLowerCase()}`
-    //                 const response = await fetch("https://api.web3forms.com/submit", {
-    //                     method: "POST",
-    //                     headers: {
-    //                         "Content-Type": "application/json",
-    //                         Accept: "application/json",
-    //                     },
-    //                     body: JSON.stringify({
-    //                         access_key: "e0097a3b-ef4b-416a-aea2-796a645d8714",
-    //                         name: build.publisher,
-    //                         email: "gajendrasuman868@gmail.com",
-    //                         message: url,
-    //                     }),
-    //                 }).then(() => {
-    //                     toast.success('Approval Sent Successfully', {
-    //                         position: "bottom-right",
-    //                         pauseOnHover: true,
-    //                         theme: "dark"
-    //                     });
-    //                 }).catch((error) => {
-    //                     toast.error('Failed to Send Mail. Try to Contact later.', {
-    //                         position: "bottom-right",
-    //                         pauseOnHover: true,
-    //                         theme: "dark"
-    //                     });
-    //                 })
-    //             }
-    //             handleSubmit()                
 
-    //         }).catch((error) => {
-    //             toast.error('Page Build  Failed', {
-    //                 position: "bottom-right",
-    //                 pauseOnHover: true,
-    //                 theme: "dark"
-    //             });
-    //             console.log("Error: ", error);
-    //         });
-    //     }
-    //     saveData()
-    // }
+    const submit = async () => {
+        const build = PageBuilder()
+        await CreateBlogs(build.data, build.publisher, build.name, build.description, build.category, build.banner, build.time, "Submit").then(async (response) => {
+            console.log(response)
+            if (response.message == "Success") {
+                let name = build.name;
+                name = name.includes(":") ? name.replaceAll(" ", "").replaceAll("-", "").split(":")[1].toLowerCase() : name.replaceAll(" ", "").replaceAll("-", "").toLowerCase();
+                const res = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Accept: "application/json",
+                    },
+                    body: JSON.stringify({
+                        access_key: "e0097a3b-ef4b-416a-aea2-796a645d8714",
+                        name: build.publisher,
+                        message: `http://localhost:3000//blogs/submit/Admin/${response.id}/${build.publisher.replaceAll(" ", "")}/${build.category.replaceAll(" ", "%20")}/${name}`,
+                    }),
+                });
+                const result = await res.json();
+                if (result.success) {
+                    downloadFile()
+                    toast.success("Blog Submited Successfully", {
+                        position: "bottom-right",
+                        duration: 3000,
+                    });
+                } 
+            }
+            
+        }).catch((error) => {
+            console.log(error)
+            toast.error("Blog Submission Failed", {
+                position: "bottom-right",
+                duration: 3000,
+            });
+        })
+
+    }
+
     return (
-        <main className="px-6 my-96 py-8 w-full">
+        <main className="px-6 py-8 w-full">
             <div className="menu border-2 h-12 w-full flex items-center justify-between gap-10">
                 <div className="flex items-center gap-4">
                     <h1 className="IcoFont text-2xl flex items-center h-full gap-2 px-2"><span><object type="image/svg+xml" data={"/assets/logo/editor.svg"} width="40" height="40"></object></span> <span className="text-default">VZ</span> Editor &nbsp;&nbsp;|</h1>
@@ -332,7 +262,7 @@ image-<size>(Image Address, Image Alt)
                     <li><i onClick={copy} className="hover:before:content-['Copy']  hover:text-default text-default-gray cursor-pointer icofont-ui-copy"></i></li>
                     <li><i onClick={paste} className="hover:before:content-['Paste']  hover:text-default text-default-gray cursor-pointer icofont-file-alt"></i></li>
                     <li><i onClick={preview} className="hover:before:content-['Preview']  hover:text-default text-default-gray cursor-pointer icofont-presentation-alt"></i></li>
-                    <li><i onClick={preview} className="hover:before:content-['Submit']  hover:text-default text-default-gray cursor-pointer icofont-read-book"></i></li>
+                    <li><i onClick={submit} className="hover:before:content-['Submit']  hover:text-default text-default-gray cursor-pointer icofont-read-book"></i></li>
                 </ul>
             </div>
             <div className="editor w-full min-h-96 border-2 ">
@@ -340,6 +270,7 @@ image-<size>(Image Address, Image Alt)
                    
                 </textarea>
             </div>
+            <Toaster />
 
             <div className="w-full min-h-64 border">
             </div>
