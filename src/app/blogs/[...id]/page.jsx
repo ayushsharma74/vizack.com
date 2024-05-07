@@ -67,12 +67,12 @@ export default function BlogPage({ params }) {
 
             getBlogContent(`${user}/pending/${blogName}/page.jsx`).then((data) => {
                 let dt = data.split("\n");
-                let parsedData = dt.map((line) => {
+                let parsedData = dt.map((line, index) => {
                     if (line.includes("head-")) {
-                        return <Heading content={line.split("head-")[1]} key={line} />;
+                        return <Heading content={line.split("head-")[1]} key={index} />;
                     }
                     else if (line.includes("par-")) {
-                        return <Par content={line.split("par-")[1]} key={line} />;
+                        return <Par content={line.split("par-")[1]} key={index} />;
                     }
                     else if (line.includes("link-")) {
                         let key = line.split("link-")[1].split(" alt-")
@@ -81,7 +81,7 @@ export default function BlogPage({ params }) {
                         let alt = key[0]
                         let size = key[1]
 
-                        return <MainImg link={link} alt={alt} size={size} key={line} />;
+                        return <MainImg link={link} alt={alt} size={size} key={index} />;
                     }
                     return null;
                 });
@@ -111,12 +111,12 @@ export default function BlogPage({ params }) {
                         setUserData(data)
                         getBlogContent(`${user}/pending/${blogName}/page.jsx`).then((data) => {
                             let dt = data.split("\n");
-                            let parsedData = dt.map((line) => {
+                            let parsedData = dt.map((line, index) => {
                                 if (line.includes("head-")) {
-                                    return <Heading content={line.split("head-")[1]} />;
+                                    return <Heading content={line.split("head-")[1]} key={index} />;
                                 }
                                 else if (line.includes("par-")) {
-                                    return <Par content={line.split("par-")[1]} />;
+                                    return <Par content={line.split("par-")[1]} key={index} />;
                                 }
                                 else if (line.includes("link-")) {
                                     let key = line.split("link-")[1].split(" alt-")
