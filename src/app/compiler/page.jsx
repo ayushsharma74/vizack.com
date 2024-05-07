@@ -111,11 +111,12 @@ image-<size>(Image Address, Image Alt)
                 console.error('Error pasting text:', error);
             });
     };
+
     let time =  new Date();
     time = `${time.getDate()}.${time.getMonth() + 1}.${time.getFullYear()}`
     let pageData =""
     let dscr = 0, img = 0;
-
+    let testPreview = 0;
     const PageBuilder = () => {
         let code = document.querySelector("main textarea");
         code = code.value
@@ -183,6 +184,7 @@ image-<size>(Image Address, Image Alt)
     }
     
     const preview = async () => {
+        testPreview = 1;
         const build = PageBuilder()
         let newTab;
         let createORUpdateBlogs = await CreateBlogs(build.data, build.publisher, build.name, build.description, build.category, build.banner, build.time, "Preview");
@@ -207,6 +209,9 @@ image-<size>(Image Address, Image Alt)
 
 
     const submit = async () => {
+        if(testPreview === 0){
+            preview()
+        }
         const build = PageBuilder()
         await CreateBlogs(build.data, build.publisher, build.name, build.description, build.category, build.banner, build.time, "Submit").then(async (response) => {
             console.log(response)
@@ -222,7 +227,7 @@ image-<size>(Image Address, Image Alt)
                     body: JSON.stringify({
                         access_key: "e0097a3b-ef4b-416a-aea2-796a645d8714",
                         name: build.publisher,
-                        message: `http://localhost:3000//blogs/submit/Admin/${response.id}/${build.publisher.replaceAll(" ", "")}/${build.category.replaceAll(" ", "%20")}/${name}`,
+                        message: `https://www.vizackenterprises.com/blogs/submit/Admin/${response.id}/${build.publisher.replaceAll(" ", "")}/${build.category.replaceAll(" ", "%20")}/${name}`,
                     }),
                 });
                 const result = await res.json();
