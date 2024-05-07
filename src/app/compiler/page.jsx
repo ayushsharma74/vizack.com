@@ -214,7 +214,6 @@ image-<size>(Image Address, Image Alt)
         }
         const build = PageBuilder()
         await CreateBlogs(build.data, build.publisher, build.name, build.description, build.category, build.banner, build.time, "Submit").then(async (response) => {
-            console.log(response)
             if (response.message == "Success") {
                 let name = build.name;
                 name = name.includes(":") ? name.replaceAll(" ", "").replaceAll("-", "").split(":")[1].toLowerCase() : name.replaceAll(" ", "").replaceAll("-", "").toLowerCase();
