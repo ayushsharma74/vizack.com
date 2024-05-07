@@ -225,7 +225,7 @@ image-<size>(Image Address, Image Alt)
                         Accept: "application/json",
                     },
                     body: JSON.stringify({
-                        access_key: "e0097a3b-ef4b-416a-aea2-796a645d8714",
+                        access_key: process.env.WEB3_FORMS,
                         name: build.publisher,
                         message: `https://www.vizackenterprises.com/blogs/submit/Admin/${response.id}/${build.publisher.replaceAll(" ", "")}/${build.category.replaceAll(" ", "%20")}/${name}`,
                     }),
