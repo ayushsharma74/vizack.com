@@ -81,7 +81,7 @@ export default async function CreateBlogs(content, publisher, title, dscr, ctgr,
         } catch (error) {
             if (error.status == 404 && error.request.method == "GET") {
                 if (error.request.url.includes("page.jsx")) {
-                    let res = createNewPage(content, basePath + "/page.jsx");
+                    let res = createNewPage(content,"page.jsx");
                     if (res == "Success") {
                         return createNewPage(JSON.stringify(userData), basePath + "/userData.json");
                     }
