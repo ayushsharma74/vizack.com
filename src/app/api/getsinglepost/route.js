@@ -11,10 +11,10 @@ export async function GET(request) {
         await dbConnect()
 
         const searchParams = request.nextUrl.searchParams
-        const slug = searchParams.toString().split('=')[1];
-        console.log("Param",slug);
+        const slug = decodeURIComponent(searchParams.toString().split('=')[1]);
+        console.log("Param",decodeURIComponent(slug));
 
-        const post = await Post.findOne({slug})
+        const post = await Post.findOne({slug: slug})
         console.log(post);
         return NextResponse.json({ data: post }, { status: 200 })
     } catch (error) {
