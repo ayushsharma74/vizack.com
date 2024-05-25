@@ -34,6 +34,7 @@
     "react-simple-typewriter": "^5.0.1",
     "react-toastify": "^10.0.4",
     "sharp": "^0.33.2",
+    "styled-components": "^6.1.11",
     "uploadthing": "^6.10.4"
   },
   "devDependencies": {

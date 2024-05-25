@@ -3,6 +3,16 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import '@/styles/blogs.css'
 import BlogTitle from "@/components/blogComponents/BlogTitle"
+import styled from "styled-components"
+
+const Content = styled.div`
+    p {
+        font-family: serif;
+        font-size: 1.200rem;
+        line-height: 1.75rem;
+        margin-bottom: 1rem
+    }
+`
 
 export default function Posts({ params }) {
 
@@ -24,7 +34,7 @@ export default function Posts({ params }) {
     return (
         <div className='cont my-10'>
             <BlogTitle title={data.title} writer={"Farhan Ahmad Khan"} date={"23.3.2024"} category={"DATA SCIENCE"}/>
-            <div dangerouslySetInnerHTML={{__html: data.html}} />
+            <Content dangerouslySetInnerHTML={{__html: data.html}} />
         </div>
     )
 }
