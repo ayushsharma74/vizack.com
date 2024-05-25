@@ -6,8 +6,10 @@ import '@/styles/blogs.css'
 import Link from "next/link";
 import getMainBlogs from "@/components/getMainBlogs";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 export default function Blogs() {
+  const [data, setData] = useState([])
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
@@ -19,6 +21,17 @@ export default function Blogs() {
         console.error(error)
       });
   }, []);
+
+  useEffect(() => {
+    (async () => {
+      const res = await axios.get(`/api/getallposts`)
+      console.log(res.data);
+      setData(res.data.data)
+    })()
+  }, [])
+
+  console.log("Data in state",data);
+
   return (
     <>
       <div className="bg-default w-full min-h-10 h-fit py-2 flex flex-wrap items-center px-5">
@@ -46,7 +59,13 @@ export default function Blogs() {
                 date={blog.data.blog.time}
               />
             ))}
+            {data.map((post) => (
+              <Link href={`/blogs/${post.slug}`} key={post._id}>
+                <h1>{post.title}</h1>
+              </Link>
+            ))}
           </div>
+
           <div className="flex-2 hidden flex-col gap-5 w-[55.5rem] lg:flex md:flex">
             <Sidebar />
           </div>

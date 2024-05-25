@@ -7,8 +7,8 @@ const imgloader = ({ src, width, quality }) => {
 };
 
 const toggleArrow = (e)=>{
-    const bt = document.querySelector(".blog-title")
-    e.target.children[0].classList.toggle("hidden")
+    // const bt = document.querySelector(".blog-title")
+    // e.target.children[0].classList.toggle("hidden")
 }
 
 

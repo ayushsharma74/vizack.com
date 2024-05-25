@@ -1,11 +1,9 @@
 "use client"
-// import {v2 as cloudinary} from 'cloudinary'
 import "@blocknote/core/fonts/inter.css";
 import { useCreateBlockNote } from "@blocknote/react";
 import { BlockNoteView } from "@blocknote/mantine";
 import "@blocknote/mantine/style.css";
 import { useEffect, useState } from "react";
-import { CldImage } from 'next-cloudinary';
 import axios from "axios";
 
 export default function Editor() {
@@ -24,12 +22,10 @@ export default function Editor() {
   const cloudName = 'ayush';
   const apiKey = '668891823293998';
   const apiSecret = 'cOcu1KZeJFOpzMYj-Jp5jnrN3qQ';
-
   const uploadUrl = `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`;
-
   const timestamp = Math.floor(Date.now() / 1000);
 
-  const signature = require('crypto-js').HmacSHA1(`timestamp=${timestamp}&api_key=${apiKey}`, apiSecret).toString();
+//   const signature = require('crypto-js').HmacSHA1(`timestamp=${timestamp}&api_key=${apiKey}`, apiSecret).toString();
 
 
   // Creates a new editor instance.
@@ -55,26 +51,6 @@ export default function Editor() {
   .catch(error => {
     console.error('Error uploading image:', error.message);
   });
-
-    // const ret = await fetch("https://api.cloudinary.com/v1_1/ayushsharma/upload", {
-    //   method: "POST",
-    //   body: body,
-    // });
-
-    // console.log("Response", ret);
-
-    // const res = await cloudinary.uploader.upload(file,
-    //   {
-    //       resource_type: "auto"
-    //   })
-    //   console.log(res);
-
-    //   return res.url
-
-    // return (await ret.json()).data.url.replace(
-    //   "tmpfiles.org/",
-    //   "tmpfiles.org/dl/"
-    // );
   }
 
 
@@ -89,8 +65,9 @@ export default function Editor() {
     setSlug(newSlug)
   }, [title])
 
-  function onsubmit() {
+   async function onsubmit() {
     console.log({ html: html, title: title, slug: slug });
+    await axios.post("/api/addpost",{ "html": html, "title": title, "slug": slug})
   }
 
 
@@ -110,23 +87,12 @@ export default function Editor() {
         }}
 
       />
-
-
       <BlockNoteView editor={editor}
         onChange={onChange}
       />
       <h1>html: {html}</h1>
       <h1>Slug: {slug}</h1>
       <button onClick={onsubmit}>Send</button>
-      <CldImage
-        src="cld-sample-5" // Use this sample image or upload your own via the Media Explorer
-        width="500" // Transform the image: auto-crop to square aspect_ratio
-        height="500"
-        crop={{
-          type: 'auto',
-          source: true
-        }}
-      />
     </>
   );
 }
