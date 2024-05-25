@@ -48,22 +48,22 @@ export default function Blogs() {
         <h1 className="text-3xl font-serif underline decoration-2">Recent Posts</h1>
         <div className="flex">
           <div className="flex-5 mt-3">
-            {blogs.map((blog, index) => (
+            {data.map((blog) => (
               <RecentPost
-                key={index}
-                title={blog.data.blog.name}
-                disc={blog.data.blog.description}
-                route={blog.data.blog.route}
-                category={blog.data.blog.category}
-                imgSrc={blog.data.blog.image}
-                date={blog.data.blog.time}
+                key={blog._id}
+                title={blog.title}
+                disc={"diuhfuihsdfihd dihfiusd hdh f8uh 89s dh8f h8sd ghgf hgfh fgh fg hg gfhgf  fg h vcb vc b  vcfg fd g fd fdg f8d 8f7 87dsh8fh 8sd f8sdh8f 7h8 8 ds8fh 8"}
+                route={blog.slug}
+                // category={blog.data.blog.category}
+                // imgSrc={blog.data.blog.image}
+                // date={blog.data.blog.time}
               />
             ))}
-            {data.map((post) => (
+            {/* {data.map((post) => (
               <Link href={`/blogs/${post.slug}`} key={post._id}>
                 <h1>{post.title}</h1>
               </Link>
-            ))}
+            ))} */}
           </div>
 
           <div className="flex-2 hidden flex-col gap-5 w-[55.5rem] lg:flex md:flex">

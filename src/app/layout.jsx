@@ -8,6 +8,7 @@ import { Analytics } from '@vercel/analytics/react';
 import Footer from "@/components/Footer";
 import Padding from "@/components/topPadding";
 // import ToastProvider from "@/components/ToastProvider";
+import { Toaster } from "react-hot-toast";
 // import { url } from "inspector";
 const logo = "/assets/logo/footer.png";
 export const metadata = {
@@ -52,10 +53,12 @@ export default function RootLayout({ children }) {
       <body className="max-w-full overflow-x-hidden">
         {/* <ToastProvider> */}
           <NextTopLoader showSpinner={false} color="orange"/>
-          {/* <Padding />
-          <Navbar /> */}
+          <Toaster position="bottom-left"/>
+           <Padding />
+          <Navbar /> 
           {children}
           <Footer />
+          
         {/* </ToastProvider> */}
         <SpeedInsights />
         <Analytics />

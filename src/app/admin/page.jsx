@@ -5,6 +5,7 @@ import { BlockNoteView } from "@blocknote/mantine";
 import "@blocknote/mantine/style.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 export default function Editor() {
   const [html, setHTML] = useState("");
@@ -66,8 +67,15 @@ export default function Editor() {
   }, [title])
 
    async function onsubmit() {
-    console.log({ html: html, title: title, slug: slug });
-    await axios.post("/api/addpost",{ "html": html, "title": title, "slug": slug})
+    try {
+      console.log({ html: html, title: title, slug: slug });
+      const load = toast.loading("Sending...")
+      await axios.post("/api/addpost",{ "html": html, "title": title, "slug": slug})
+      toast.remove(load)
+      toast.success("Uploaded")
+    } catch (error) {
+      toast.error("Post Upload Failed")
+    }
   }
 
 

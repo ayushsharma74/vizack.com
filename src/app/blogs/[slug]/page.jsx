@@ -10,22 +10,27 @@ const Content = styled.div`
         font-family: serif;
         font-size: 1.200rem;
         line-height: 1.75rem;
-        margin-bottom: 1rem
+        margin-bottom: 1rem;
+    }
+    strong {
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 2rem
     }
 `
 
 export default function Posts({ params }) {
 
-    const [data,setData] = useState([])
+    const [data, setData] = useState([])
 
     useEffect(() => {
         (async () => {
-            console.log("At client",params.slug);
+            console.log("At client", params.slug);
             const res = await axios.get(`/api/getsinglepost/?slug=${params.slug}`)
-            console.log("Data IN Useeffect",res);
+            console.log("Data IN Useeffect", res);
             setData(res.data.data)
         })()
-    },[])
+    }, [])
 
     console.log(data);
 
@@ -33,8 +38,8 @@ export default function Posts({ params }) {
 
     return (
         <div className='cont my-10'>
-            <BlogTitle title={data.title} writer={"Farhan Ahmad Khan"} date={"23.3.2024"} category={"DATA SCIENCE"}/>
-            <Content dangerouslySetInnerHTML={{__html: data.html}} />
+            <BlogTitle title={data.title} writer={"Farhan Ahmad Khan"} date={"23.3.2024"} category={"DATA SCIENCE"} />
+            <Content dangerouslySetInnerHTML={{ __html: data.html }} />
         </div>
     )
 }
