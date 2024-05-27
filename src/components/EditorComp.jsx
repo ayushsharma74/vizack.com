@@ -6,6 +6,8 @@ import "@blocknote/mantine/style.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { CldUploadWidget } from "next-cloudinary";
+import { fileURLToPath } from "url";
 
 export default function Editor() {
   const [html, setHTML] = useState("");
@@ -25,8 +27,8 @@ export default function Editor() {
   const apiSecret = 'cOcu1KZeJFOpzMYj-Jp5jnrN3qQ';
   const uploadUrl = `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`;
   const timestamp = Math.floor(Date.now() / 1000);
+  //   const signature = require('crypto-js').HmacSHA1(`timestamp=${timestamp}&api_key=${apiKey}`, apiSecret).toString();
 
-//   const signature = require('crypto-js').HmacSHA1(`timestamp=${timestamp}&api_key=${apiKey}`, apiSecret).toString();
 
 
   // Creates a new editor instance.
@@ -34,24 +36,48 @@ export default function Editor() {
 
 
   async function uploadFile(file) {
-    // const body = new FormData();
-    // body.append("file", file.body.path);
-    console.log(file);
 
-    const formData = new FormData();
-    formData.append('file', file);
-    formData.append('timestamp', timestamp);
-    formData.append('api_key', apiKey);
-    formData.append('signature', signature);
+    // const url = URL.createObjectURL(file)
+    // const path = file.mozFullPath()
+    // console.log("Url is",path);
+    // const reader = new FileReader()
+    // reader.readAsArrayBuffer(file)
+    // reader.onloadend = async () => {
+      //   const arrayBuffer = reader.result;
+      //   console.log(arrayBuffer);
+      // body.append('file',file)
+      
+    //   try {
+    //     const response = await axios.post("/api/upload-image",body)
+    //   } catch (err){
+    //     console.log(err);
+    //   }
+    // }
 
-   await axios.post(uploadUrl, formData)
-  .then(response => {
-    console.log('Image uploaded successfully:', response.data);
-    return response.url
-  })
-  .catch(error => {
-    console.error('Error uploading image:', error.message);
-  });
+    // console.log(file);
+    const body = new FormData();
+
+    // const arrayBuffer = await file.arrayBuffer()
+    // const buffer = new Uint8Array(arrayBuffer)
+    // console.log("Buffer Is", arrayBuffer);
+    // console.log(buffer);
+
+    // await uploadImage(buffer)
+    body.append("file", file);
+
+   try {
+     const res = await axios.post("/api/upload-image", body)
+     console.log("response",res);
+   } catch (error) {
+    console.log(error);
+   }
+    // .then(response => {
+    //   console.log('Image uploaded successfully:', response.data);
+    //   return response.url
+    // })
+    // .catch(error => {
+    //   console.error('Error uploading image:', error.message);
+    // });
   }
 
 
@@ -67,11 +93,11 @@ export default function Editor() {
     setSlug(newSlug)
   }, [title])
 
-   async function onsubmit() {
+  async function onsubmit() {
     try {
       console.log({ html: html, title: title, slug: slug });
       const load = toast.loading("Sending...")
-      await axios.post("/api/addpost",{ "html": html, "title": title, "slug": slug})
+      await axios.post("/api/addpost", { "html": html, "title": title, "slug": slug })
       toast.remove(load)
       toast.success("Uploaded")
     } catch (error) {
@@ -101,6 +127,15 @@ export default function Editor() {
       />
       <h1>html: {html}</h1>
       <h1>Slug: {slug}</h1>
+      <CldUploadWidget uploadPreset="vizack_preset">
+        {({ open }) => {
+          return (
+            <button onClick={() => open()}>
+              Upload an Image
+            </button>
+          );
+        }}
+      </CldUploadWidget>
       <button onClick={onsubmit}>Send</button>
     </>
   );
