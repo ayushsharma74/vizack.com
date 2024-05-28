@@ -12,10 +12,8 @@ export async function GET(request) {
 
         const searchParams = request.nextUrl.searchParams
         const slug = decodeURIComponent(searchParams.toString().split('=')[1]);
-        console.log("Param",decodeURIComponent(slug));
 
         const post = await Post.findOne({slug: slug})
-        console.log(post);
         return NextResponse.json({ data: post }, { status: 200 })
     } catch (error) {
         return NextResponse.json({ message: "Error" }, { status: 500 })

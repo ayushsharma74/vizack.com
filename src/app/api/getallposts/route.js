@@ -10,8 +10,6 @@ export async function GET(NextRequest){
         await dbConnect()
         
         const posts = await Post.find({})
-
-        console.log(posts);
         
         return NextResponse.json({data: posts },{status: 200} )
     } catch (error) {
