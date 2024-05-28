@@ -1,6 +1,7 @@
 // import { propagateServerField } from "next/dist/server/lib/render-server";
 import Link from "next/link";
 import Image from "next/image";
+import { unstable_noStore as noStore } from 'next/cache';
 
 const imgloader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 95}`;
@@ -14,6 +15,7 @@ const toggleArrow = (e)=>{
 
 
 export default function RecentFunction(props) {
+    noStore()
     return (
         <div className="flex flex-col md:flex-row lg:flex-row items-center gap-5 mb-7">
         <Link href={props.route}><Image src={props.imgSrc} alt={props.title} width={250} height={250} loader={imgloader} loading="lazy" className="md:hidden lg:hidden w-full h-full" /></Link>
