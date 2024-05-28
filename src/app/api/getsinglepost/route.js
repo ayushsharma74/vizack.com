@@ -3,7 +3,7 @@ import dbConnect from "@/db/connect";
 import Post from "@/models/post.model";
 // import { useSearchParams } from "next/navigation";
 import { NextRequest, NextResponse } from "next/server";
-
+export const dynamic = "force-dynamic"
 
 export async function GET(request) {
     try {

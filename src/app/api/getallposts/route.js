@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic"
 
 import dbConnect from "@/db/connect";
 import Post from "@/models/post.model";
