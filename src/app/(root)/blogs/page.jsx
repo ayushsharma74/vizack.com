@@ -4,26 +4,13 @@ import RecentPost from "@/components/blogComponents/RecentPost";
 import Sidebar from "@/components/blogComponents/Sidebar";
 import '@/styles/blogs.css'
 import Link from "next/link";
-import getMainBlogs from "@/components/getMainBlogs";
 import { useState, useEffect } from "react";
-import axios from "axios";
-import { unstable_noStore as noStore } from 'next/cache';
-export const dynamic = 'force-dynamic'
+
+
 
 export default function Blogs() {
-  noStore()
   const [data, setData] = useState([])
   const [blogs, setBlogs] = useState([]);
-
-  // useEffect(() => {
-  //   getMainBlogs()
-  //     .then((success) => {
-  //       setBlogs(success);
-  //     })
-  //     .catch((error) => {
-  //       console.error(error)
-  //     });
-  // }, []);
 
   useEffect(() => {
     (async () => {
@@ -31,17 +18,9 @@ export default function Blogs() {
       const res = await fetch(`/api/getallposts?timestamp=${timestamp}`, {
         cache: 'no-store',
       })
-      // console.log("Data",await res.json());
       const data = await res.json()
       setData(data.data)
       console.log(data);
-      // const res = await axios.get(`/api/getallposts?timestamp=${timestamp}`,{
-      //   headers: {
-      //     'Cache-Control': 'no-cache',
-      //     'Pragma': 'no-cache',
-      //     'Expires': '0',
-      //   },
-      // })
     })()
   }, [])
 
@@ -67,7 +46,7 @@ export default function Blogs() {
               <RecentPost
                 key={blog._id}
                 title={blog.title}
-                disc={"diuhfuihsdfihd dihfiusd hdh f8uh 89s dh8f h8sd ghgf hgfh fgh fg hg gfhgf  fg h vcb vc b  vcfg fd g fd fdg f8d 8f7 87dsh8fh 8sd f8sdh8f 7h8 8 ds8fh 8"}
+                disc={"diuhfuihsdfihd dihfiusd hdh f8uh 89sS SDHSJA dh8f h8sd ghgf hgfh fgh fg hg gfhgf  fg h vcb vc b  vcfg fd g fd fdg f8d 8f7 87dsh8fh 8sd f8sdh8f 7h8 8 ds8fh 8..."}
                 route={blog.slug}
                 // category={blog.data.blog.category}
                 // imgSrc={blog.data.blog.image}

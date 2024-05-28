@@ -5,7 +5,7 @@ const Editor = dynamic(() => import("@/components/EditorComp"), { ssr: false });
 
 export default function Page() {
   return (
-    <div>
+    <div className="">
       <Editor />
     </div>
   )

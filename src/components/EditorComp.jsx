@@ -6,8 +6,7 @@ import "@blocknote/mantine/style.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { CldUploadWidget } from "next-cloudinary";
-import { fileURLToPath } from "url";
+import '@/styles/blogs.css'
 
 export default function Editor() {
   const [html, setHTML] = useState("");
@@ -63,9 +62,9 @@ export default function Editor() {
 
   async function onsubmit() {
     try {
-      console.log({ html: html, title: title, slug: slug });
-      const load = toast.loading("Sending...")
-      await axios.post("/api/addpost", { "html": html, "title": title, "slug": slug })
+      setDescription(prev => prev + '...')
+      const load = toast.loading("Posting...")
+      await axios.post("/api/addpost", { "html": html, "title": title, "slug": slug, "description": description })
       toast.remove(load)
       toast.success("Uploaded")
     } catch (error) {
@@ -77,14 +76,16 @@ export default function Editor() {
 
   // Renders the editor instance using a React component.
   return (
-    <>
-      <input type="text" placeholder="title"
+    <div className="cont">
+    
+      <input type="text" placeholder="Title" className="block p-4 text-2xl"
         onChange={(e) => {
           setTitle(e.target.value)
         }}
-
-      />
-      <input type="text" placeholder="description"
+        
+        />
+        <h1 className="text-sm text-gray-600">Slug: {slug}</h1>
+      <textarea type="text" placeholder="Description" className="block p-4 text-xl w-full" maxLength={'155'}
         onChange={(e) => {
           setDescription(e.target.value)
         }}
@@ -93,18 +94,7 @@ export default function Editor() {
       <BlockNoteView editor={editor}
         onChange={onChange}
       />
-      <h1>html: {html}</h1>
-      <h1>Slug: {slug}</h1>
-      <CldUploadWidget uploadPreset="vizack_preset">
-        {({ open }) => {
-          return (
-            <button onClick={() => open()}>
-              Upload an Image
-            </button>
-          );
-        }}
-      </CldUploadWidget>
-      <button onClick={onsubmit}>Send</button>
-    </>
+      <button className="py-1 mt-3 px-5 rounded bg-orange-600 hover:bg-orange-400" onClick={onsubmit}>Post</button>
+      </div>
   );
 }
