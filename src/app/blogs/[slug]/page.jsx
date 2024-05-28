@@ -30,7 +30,7 @@ export default function Posts({ params }) {
             console.log("Data IN Useeffect", res);
             setData(res.data.data)
         })()
-    }, [])
+    }, [params.slug])
 
     console.log(data);
 
