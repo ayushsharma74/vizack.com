@@ -1,4 +1,5 @@
 "use client"
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
 function AllPosts() {
@@ -16,10 +17,16 @@ function AllPosts() {
         })()
       }, [])
 
+      const handleClick = async (_id) => {
+        const res = await axios.post(`/api/deletepost`, {id: _id})
+        console.log(res);
+      }
+
+
   return (
     <div className=''>
         {data.map((post) => (
-            <div class="space-y-8 lg:divide-y lg:divide-gray-100 px-16 shadow-lg py-5 overflow-scroll" key={post._id}>
+            <div class="space-y-8 lg:divide-y lg:divide-gray-100 px-16 shadow-lg py-5" key={post._id}>
             <div class="pt-8 sm:flex lg:items-end group ">
               <div>
                 <span class="text-sm text-gray-500">August 20.20.21</span>
@@ -29,7 +36,7 @@ function AllPosts() {
                 <p class="mt-2 text-lg text-gray-500">{post.description}</p>
               </div>
             </div>
-              <button className='px-5 py-2 rounded hover:bg-red-400 bg-red-600'>Delete</button>
+              <button className='px-5 py-2 rounded hover:bg-red-400 bg-red-600' onClick={() => handleClick(post._id)}>Delete</button>
             </div>
         ))}
     
