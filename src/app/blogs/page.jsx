@@ -7,8 +7,10 @@ import Link from "next/link";
 import getMainBlogs from "@/components/getMainBlogs";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { unstable_noStore as noStore } from 'next/cache';
 
 export default function Blogs() {
+  noStore()
   const [data, setData] = useState([])
   const [blogs, setBlogs] = useState([]);
 
