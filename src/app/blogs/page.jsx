@@ -12,15 +12,15 @@ export default function Blogs() {
   const [data, setData] = useState([])
   const [blogs, setBlogs] = useState([]);
 
-  useEffect(() => {
-    getMainBlogs()
-      .then((success) => {
-        setBlogs(success);
-      })
-      .catch((error) => {
-        console.error(error)
-      });
-  }, []);
+  // useEffect(() => {
+  //   getMainBlogs()
+  //     .then((success) => {
+  //       setBlogs(success);
+  //     })
+  //     .catch((error) => {
+  //       console.error(error)
+  //     });
+  // }, []);
 
   useEffect(() => {
     (async () => {
