@@ -27,17 +27,22 @@ export default function Blogs() {
   useEffect(() => {
     (async () => {
       const timestamp = Date.parse(new Date().toString());
-      const res = await axios.get(`/api/getallposts?timestamp=${timestamp}`,{
-        headers: {
-          'Cache-Control': 'no-cache',
-          'Pragma': 'no-cache',
-          'Expires': '0',
-        },
+      const res = await fetch(`/api/getallposts?timestamp=${timestamp}`, {
+        cache: 'no-store',
       })
-      console.log(res.data);
-      setData(res.data.data)
+      // console.log("Data",await res.json());
+      const data = await res.json()
+      setData(data.data)
+      console.log(data);
+      // const res = await axios.get(`/api/getallposts?timestamp=${timestamp}`,{
+      //   headers: {
+      //     'Cache-Control': 'no-cache',
+      //     'Pragma': 'no-cache',
+      //     'Expires': '0',
+      //   },
+      // })
     })()
-  }, [data])
+  }, [])
 
   console.log("Data in state",data);
 
