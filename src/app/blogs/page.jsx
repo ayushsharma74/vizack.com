@@ -8,6 +8,7 @@ import getMainBlogs from "@/components/getMainBlogs";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { unstable_noStore as noStore } from 'next/cache';
+export const dynamic = 'force-dynamic'
 
 export default function Blogs() {
   noStore()

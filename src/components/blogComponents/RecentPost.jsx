@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { unstable_noStore as noStore } from 'next/cache';
+export const dynamic = 'force-dynamic'
 
 const imgloader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 95}`;

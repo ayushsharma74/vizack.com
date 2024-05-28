@@ -8,6 +8,7 @@ import { Analytics } from '@vercel/analytics/react';
 import Footer from "@/components/Footer";
 import Padding from "@/components/topPadding";
 // import ToastProvider from "@/components/ToastProvider";
+export const dynamic = 'force-dynamic'
 import { Toaster } from "react-hot-toast";
 // import { url } from "inspector";
 const logo = "/assets/logo/footer.png";
