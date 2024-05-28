@@ -28,7 +28,7 @@ export default function Blogs() {
       console.log(res.data);
       setData(res.data.data)
     })()
-  }, [])
+  }, [data])
 
   console.log("Data in state",data);
 
