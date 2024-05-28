@@ -24,7 +24,7 @@ export default function Blogs() {
 
   useEffect(() => {
     (async () => {
-      const res = await axios.get(`/api/getallposts`)
+      const res = await axios.get(`/api/getallposts?timestamp=123456789`)
       console.log(res.data);
       setData(res.data.data)
     })()
