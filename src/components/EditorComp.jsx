@@ -36,48 +36,16 @@ export default function Editor() {
 
 
   async function uploadFile(file) {
-
-    // const url = URL.createObjectURL(file)
-    // const path = file.mozFullPath()
-    // console.log("Url is",path);
-    // const reader = new FileReader()
-    // reader.readAsArrayBuffer(file)
-    // reader.onloadend = async () => {
-      //   const arrayBuffer = reader.result;
-      //   console.log(arrayBuffer);
-      // body.append('file',file)
-      
-    //   try {
-    //     const response = await axios.post("/api/upload-image",body)
-    //   } catch (err){
-    //     console.log(err);
-    //   }
-    // }
-
-    // console.log(file);
     const body = new FormData();
-
-    // const arrayBuffer = await file.arrayBuffer()
-    // const buffer = new Uint8Array(arrayBuffer)
-    // console.log("Buffer Is", arrayBuffer);
-    // console.log(buffer);
-
-    // await uploadImage(buffer)
     body.append("file", file);
 
    try {
      const res = await axios.post("/api/upload-image", body)
-     console.log("response",res);
+     console.log("response",res.data.result.url);
+     return res.data.result.url
    } catch (error) {
     console.log(error);
    }
-    // .then(response => {
-    //   console.log('Image uploaded successfully:', response.data);
-    //   return response.url
-    // })
-    // .catch(error => {
-    //   console.error('Error uploading image:', error.message);
-    // });
   }
 
 
