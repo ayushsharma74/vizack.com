@@ -13,6 +13,7 @@ export default function Editor() {
   const [title, setTitle] = useState("");
   const [slug, setSlug] = useState("");
   const [description, setDescription] = useState("")
+  const [image, setImage] = useState(null)
 
 
   // cloudinary.config({ 
@@ -61,10 +62,17 @@ export default function Editor() {
   }, [title])
 
   async function onsubmit() {
+    console.log(image);
     try {
       setDescription(prev => prev + '...')
+      const body = new FormData()
+      body.append('html',html)
+      body.append('title',title)
+      body.append('slug',slug)
+      body.append('description',description)
+      body.append('featImage',image)
       const load = toast.loading("Posting...")
-      await axios.post("/api/addpost", { "html": html, "title": title, "slug": slug, "description": description })
+      await axios.post("/api/addpost", body)
       toast.remove(load)
       toast.success("Uploaded")
     } catch (error) {
@@ -89,8 +97,11 @@ export default function Editor() {
         onChange={(e) => {
           setDescription(e.target.value)
         }}
+        
 
       />
+      <input type="file" name="" id="" onChange={e => setImage(e.target.files[0])}/>
+
       <BlockNoteView editor={editor}
         onChange={onChange}
       />

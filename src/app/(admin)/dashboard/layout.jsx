@@ -3,6 +3,12 @@ import '@/styles/globals.css'
 import Link from 'next/link';
 import NextTopLoader from 'nextjs-toploader';
 import { Toaster } from 'react-hot-toast';
+const logo =  "/assets/dashboard/logo.png"
+
+export const metadata = {
+  title: "Admin | ViZack"
+}
+
 export default function DashboardLayout({ children }) {
 
   return (
