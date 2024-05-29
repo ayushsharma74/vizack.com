@@ -13,7 +13,8 @@ export async function POST(req) {
 
     const USERNAME = "admin"
     const PASSWORD = "admin"
-    if (username !== USERNAME && password !== PASSWORD) {
+
+    if (username != USERNAME && password != PASSWORD) {
         return NextResponse.json({ error: "error response" })
     }
 
