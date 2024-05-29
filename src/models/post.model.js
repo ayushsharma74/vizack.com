@@ -16,6 +16,12 @@ const postSchema = new Schema({
     },
     featImage: {
         type: String
+    },
+    publishDate: {
+        type: String
+    },
+    category:{
+        type: String
     }
 })
 

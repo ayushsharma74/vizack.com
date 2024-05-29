@@ -46,11 +46,11 @@ export default function Blogs() {
               <RecentPost
                 key={blog._id}
                 title={blog.title}
-                disc={"diuhfuihsdfihd dihfiusd hdh f8uh 89sS SDHSJA dh8f h8sd ghgf hgfh fgh fg hg gfhgf  fg h vcb vc b  vcfg fd g fd fdg f8d 8f7 87dsh8fh 8sd f8sdh8f 7h8 8 ds8fh 8..."}
+                disc={blog.description}
                 route={blog.slug}
-                // category={blog.data.blog.category}
-                // imgSrc={blog.data.blog.image}
-                // date={blog.data.blog.time}
+                category={blog.category}
+                imgSrc={blog.featImage}
+                date={blog.publishDate}
               />
             ))}
             {/* {data.map((post) => (

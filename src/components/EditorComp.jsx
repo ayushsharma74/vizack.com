@@ -13,6 +13,7 @@ export default function Editor() {
   const [title, setTitle] = useState("");
   const [slug, setSlug] = useState("");
   const [description, setDescription] = useState("")
+  const [category, setCategory] = useState("")
   const [image, setImage] = useState(null)
 
 
@@ -39,20 +40,19 @@ export default function Editor() {
     const body = new FormData();
     body.append("file", file);
 
-   try {
-     const res = await axios.post("/api/upload-image", body)
-     console.log("response",res.data.result.url);
-     return res.data.result.url
-   } catch (error) {
-    console.log(error);
-   }
+    try {
+      const res = await axios.post("/api/upload-image", body)
+      console.log("response", res.data.result.url);
+      return res.data.result.url
+    } catch (error) {
+      console.log(error);
+    }
   }
 
 
   const onChange = async () => {
     // Converts the editor's contents from Block objects to HTML and store to state.
     const html = await editor.blocksToHTMLLossy(editor.document);
-    console.log(html);
     setHTML(html);
   };
 
@@ -66,15 +66,19 @@ export default function Editor() {
     try {
       setDescription(prev => prev + '...')
       const body = new FormData()
-      body.append('html',html)
-      body.append('title',title)
-      body.append('slug',slug)
-      body.append('description',description)
-      body.append('featImage',image)
+      body.append('html', html)
+      body.append('title', title)
+      body.append('slug', slug)
+      body.append('description', description)
+      body.append('featImage', image)
+      body.append('category',category)
       const load = toast.loading("Posting...")
-      await axios.post("/api/addpost", body)
+      const res = await axios.post("/api/addpost", body)
       toast.remove(load)
-      toast.success("Uploaded")
+      if (res.status == 200) {
+
+        toast.success("Uploaded")
+      }
     } catch (error) {
       toast.error("Post Upload Failed")
     }
@@ -85,27 +89,29 @@ export default function Editor() {
   // Renders the editor instance using a React component.
   return (
     <div className="cont mt-4">
-    
+
       <input type="text" placeholder="Title" className="block p-4 text-2xl w-full"
         onChange={(e) => {
           setTitle(e.target.value)
         }}
-        
-        />
-        <h1 className="text-sm text-gray-600">Slug: {slug}</h1>
+
+      />
+      <h1 className="text-sm text-gray-600">Slug: {slug}</h1>
       <textarea type="text" placeholder="Description" className="block p-4 text-xl w-full mb-4" maxLength={'155'}
         onChange={(e) => {
           setDescription(e.target.value)
         }}
-        
+
 
       />
-      <input type="file" name="" id="" onChange={e => setImage(e.target.files[0])}/>
+      <input type="text" name="" id="" placeholder="Category" onChange={e => setCategory(e.target.value)} className="p-4 text-xl w-full mb-3" />
+      <p className="text-sm">Featured Image</p>
+      <input type="file" name="" id="" onChange={e => setImage(e.target.files[0])} className="block mb-3"/>
 
       <BlockNoteView editor={editor}
         onChange={onChange}
       />
       <button className="py-1 mt-3 px-5 rounded bg-orange-600 hover:bg-orange-400" onClick={onsubmit}>Post</button>
-      </div>
+    </div>
   );
 }
