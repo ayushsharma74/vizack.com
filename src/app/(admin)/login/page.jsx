@@ -14,7 +14,10 @@ export default function Login() {
             username,password
         })
         console.log(res);
-        router.push('/dashboard')
+        if (res.status == 200) {
+            router.push('/dashboard')
+            
+        }
     }
     return (
         <div className="h-screen w-full flex justify-center items-center ">
