@@ -1,6 +1,7 @@
 "use client"
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import toast from 'react-hot-toast'
 
 function AllPosts() {
     const [data,setData] = useState([])
@@ -18,8 +19,16 @@ function AllPosts() {
       }, [])
 
       const handleClick = async (_id) => {
-        const res = await axios.post(`/api/deletepost`, {id: _id})
-        console.log(res);
+        try {
+          const res = await axios.post(`/api/deletepost`, {id: _id})
+          console.log(res.status);
+          if (res.status === 200) {
+            setData(data.filter(post => post._id !== _id))
+          }
+          toast.success("Post Deleted Successfully")
+        } catch (error) {
+          toast.error("Error While Deleting Post")
+        }
       }
 
 

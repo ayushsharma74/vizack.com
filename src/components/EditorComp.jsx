@@ -76,16 +76,16 @@ export default function Editor() {
 
   // Renders the editor instance using a React component.
   return (
-    <div className="cont">
+    <div className="cont mt-4">
     
-      <input type="text" placeholder="Title" className="block p-4 text-2xl"
+      <input type="text" placeholder="Title" className="block p-4 text-2xl w-full"
         onChange={(e) => {
           setTitle(e.target.value)
         }}
         
         />
         <h1 className="text-sm text-gray-600">Slug: {slug}</h1>
-      <textarea type="text" placeholder="Description" className="block p-4 text-xl w-full" maxLength={'155'}
+      <textarea type="text" placeholder="Description" className="block p-4 text-xl w-full mb-4" maxLength={'155'}
         onChange={(e) => {
           setDescription(e.target.value)
         }}
