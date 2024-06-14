@@ -7,7 +7,9 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import Footer from "@/components/Footer";
 import Padding from "@/components/topPadding";
-import ToastProvider from "@/components/ToastProvider";
+// import ToastProvider from "@/components/ToastProvider";
+export const dynamic = 'force-dynamic'
+import { Toaster } from "react-hot-toast";
 // import { url } from "inspector";
 const logo = "/assets/logo/footer.png";
 export const metadata = {
@@ -42,23 +44,27 @@ export default function RootLayout({ children }) {
   
   return (
     <>
-      <Head>
+      <html>
+      {/* <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="canonical" href="https://www.vizackenterprises.com" />
         <link rel="alternate" href="https://www.vizackenterprises.com" hreflang="x-default" />
         <link rel="alternate" href="https://www.vizackenterprises.com" hreflang="en-us" />
-      </Head>
+      </head> */}
       <body className="max-w-full overflow-x-hidden">
-        <ToastProvider>
+        {/* <ToastProvider> */}
           <NextTopLoader showSpinner={false} color="orange"/>
-          <Padding />
-          <Navbar />
+          <Toaster position="bottom-left"/>
+           <Padding />
+          <Navbar /> 
           {children}
           <Footer />
-        </ToastProvider>
+          
+        {/* </ToastProvider> */}
         <SpeedInsights />
         <Analytics />
       </body>
+      </html>
     </>
   );
 }

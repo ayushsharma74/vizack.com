@@ -4,21 +4,28 @@ import RecentPost from "@/components/blogComponents/RecentPost";
 import Sidebar from "@/components/blogComponents/Sidebar";
 import '@/styles/blogs.css'
 import Link from "next/link";
-import getMainBlogs from "@/components/getMainBlogs";
 import { useState, useEffect } from "react";
 
+
+
 export default function Blogs() {
+  const [data, setData] = useState([])
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    getMainBlogs()
-      .then((success) => {
-        setBlogs(success);
+    (async () => {
+      const timestamp = Date.parse(new Date().toString());
+      const res = await fetch(`/api/getallposts?timestamp=${timestamp}`, {
+        cache: 'no-store',
       })
-      .catch((error) => {
-        console.error(error)
-      });
-  }, []);
+      const data = await res.json()
+      setData(data.data)
+      console.log(data);
+    })()
+  }, [])
+
+  console.log("Data in state",data);
+
   return (
     <>
       <div className="bg-default w-full min-h-10 h-fit py-2 flex flex-wrap items-center px-5">
@@ -35,18 +42,24 @@ export default function Blogs() {
         <h1 className="text-3xl font-serif underline decoration-2">Recent Posts</h1>
         <div className="flex">
           <div className="flex-5 mt-3">
-            {blogs.map((blog, index) => (
+            {data.map((blog) => (
               <RecentPost
-                key={index}
-                title={blog.data.blog.name}
-                disc={blog.data.blog.description}
-                route={blog.data.blog.route}
-                category={blog.data.blog.category}
-                imgSrc={blog.data.blog.image}
-                date={blog.data.blog.time}
+                key={blog._id}
+                title={blog.title}
+                disc={blog.description}
+                route={blog.slug}
+                category={blog.category}
+                imgSrc={blog.featImage}
+                date={blog.publishDate}
               />
             ))}
+            {/* {data.map((post) => (
+              <Link href={`/blogs/${post.slug}`} key={post._id}>
+                <h1>{post.title}</h1>
+              </Link>
+            ))} */}
           </div>
+
           <div className="flex-2 hidden flex-col gap-5 w-[55.5rem] lg:flex md:flex">
             <Sidebar />
           </div>
